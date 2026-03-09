@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
 import { DoorOpen, Send, Clock, Shield, Zap, AlertTriangle, CheckCircle } from 'lucide-react';
-import { decisionGatesData } from '../data/decision_gates';
+import { decisionGates as decisionGatesData } from '../data/decision_gates';
 
 const API_URL = process.env.REACT_APP_BACKEND_URL || '';
 
