@@ -4,72 +4,113 @@ import { Link } from 'react-router-dom';
 import { 
   Target, 
   Users, 
-  Linkedin, 
-  Mail,
-  ArrowRight,
+  Award, 
   CheckCircle,
+  ArrowRight,
+  History,
   Globe
 } from 'lucide-react';
 
+const values = [
+  {
+    icon: Target,
+    titleEn: 'Rigor',
+    titleFr: 'Rigueur',
+    descEn: 'Data-verified analyses, transparent methodologies, measurable results.',
+    descFr: 'Analyses vérifiées par les données, méthodologies transparentes, résultats mesurables.'
+  },
+  {
+    icon: Globe,
+    titleEn: 'Clarity',
+    titleFr: 'Clarté',
+    descEn: 'Direct communication, jargon-free, action-oriented recommendations.',
+    descFr: 'Communication directe, sans jargon, recommandations orientées action.'
+  },
+  {
+    icon: Users,
+    titleEn: 'Partnership',
+    titleFr: 'Partenariat',
+    descEn: 'Long-term relationships built on trust and shared success.',
+    descFr: 'Relations durables fondées sur la confiance et le succès partagé.'
+  },
+  {
+    icon: Award,
+    titleEn: 'Excellence',
+    titleFr: 'Excellence',
+    descEn: 'Commitment to delivering exceptional value in every engagement.',
+    descFr: 'Engagement à délivrer une valeur exceptionnelle à chaque mission.'
+  }
+];
+
+const milestones = [
+  { year: '2020', titleEn: 'Foundation', titleFr: 'Fondation', descEn: 'Industrial Decision is founded in Paris', descFr: 'Industrial Decision est fondé à Paris' },
+  { year: '2021', titleEn: 'First Major Client', titleFr: 'Premier Client Majeur', descEn: 'Engagement with leading OEM manufacturer', descFr: 'Mission avec un fabricant OEM leader' },
+  { year: '2022', titleEn: 'Team Expansion', titleFr: 'Expansion de l\'Équipe', descEn: 'Growth to full-service consulting firm', descFr: 'Évolution vers un cabinet de conseil complet' },
+  { year: '2023', titleEn: 'Market Leadership', titleFr: 'Leadership de Marché', descEn: '30+ companies benchmarked, 66K+ failures analyzed', descFr: '30+ entreprises auditées, 66K+ défaillances analysées' },
+  { year: '2024', titleEn: 'Innovation', titleFr: 'Innovation', descEn: 'Launch of decision-grade methodology framework', descFr: 'Lancement du framework méthodologique décisionnel' }
+];
+
 export default function About() {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const currentLang = i18n.language;
   
   return (
     <div className="animate-fade-in" data-testid="about-page">
       {/* Hero */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#1a1a1a] to-[#262626]">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-            {currentLang === 'fr' 
-              ? 'Stratégie Digitale & Architecture Web Industrielle'
-              : 'Digital Strategy & Industrial Web Architecture'}
-          </h1>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            {currentLang === 'fr' 
-              ? 'Nous aidons les dirigeants industriels à prendre de meilleures décisions grâce à des systèmes de clarté stratégique.'
-              : 'We help industrial leaders make better decisions through strategic clarity systems.'}
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/" className="btn btn-primary">
-              {currentLang === 'fr' ? 'Interface Décision' : 'Decision Interface'}
-              <ArrowRight size={16} />
-            </Link>
-            <Link to="/contact" className="btn btn-secondary">
-              {currentLang === 'fr' ? 'Nous contacter' : 'Contact Us'}
-            </Link>
+      <section className="py-20 md:py-32 bg-gradient-to-br from-[#f5f7fa] to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="section-label">
+                {currentLang === 'fr' ? 'À Propos' : 'About Us'}
+              </span>
+              <h1 className="text-5xl md:text-6xl font-bold text-[#1a1a1a] mb-6">
+                {currentLang === 'fr' 
+                  ? 'Clarifier les Décisions Industrielles'
+                  : 'Clarifying Industrial Decisions'
+                }
+              </h1>
+              <p className="text-xl text-[#4a5568] leading-relaxed mb-8">
+                {currentLang === 'fr'
+                  ? 'Dans un contexte de plus de 66 000 défaillances d\'entreprises en France, les dirigeants industriels ont besoin de clarté stratégique. Industrial Decision fournit les méthodologies et l\'accompagnement nécessaires.'
+                  : 'In a context of over 66,000 business failures in France, industrial leaders need strategic clarity. Industrial Decision provides the methodologies and guidance needed.'
+                }
+              </p>
+              <Link to="/contact" className="btn-primary">
+                {currentLang === 'fr' ? 'Nous Contacter' : 'Contact Us'}
+                <ArrowRight size={18} />
+              </Link>
+            </div>
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+                alt="Office"
+                className="rounded-2xl shadow-xl w-full"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-[#207bff] rounded-xl p-6 text-white shadow-lg">
+                <div className="text-4xl font-bold">5+</div>
+                <div className="text-sm opacity-80">
+                  {currentLang === 'fr' ? 'Années d\'Excellence' : 'Years of Excellence'}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       
       {/* Mission */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">
-                {currentLang === 'fr' ? 'Notre Mission' : 'Our Mission'}
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                {currentLang === 'fr' 
-                  ? 'Dans un contexte de plus de 66 000 défaillances d\'entreprises en France, les dirigeants industriels ont besoin de clarté pour prendre des décisions critiques.'
-                  : 'In a context of over 66,000 business failures in France, industrial leaders need clarity to make critical decisions.'}
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                {currentLang === 'fr' 
-                  ? 'Industrial Decision fournit les données, les méthodologies et l\'accompagnement nécessaires pour réduire l\'incertitude décisionnelle.'
-                  : 'Industrial Decision provides the data, methodologies, and guidance needed to reduce decision uncertainty.'}
-              </p>
-            </div>
-            <div className="bg-[#2a2a2a] border border-white/5 rounded-lg p-8">
-              <Target size={40} className="text-[#e89565] mb-4" />
-              <h3 className="text-xl font-bold text-foreground mb-2">
-                {currentLang === 'fr' ? 'Clarifier. Rassurer. Déclencher.' : 'Clarify. Reassure. Trigger.'}
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                {currentLang === 'fr' 
-                  ? 'Notre framework en trois étapes pour accompagner les décisions stratégiques.'
-                  : 'Our three-step framework for supporting strategic decisions.'}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-6">
+              {currentLang === 'fr' ? 'Notre Mission' : 'Our Mission'}
+            </h2>
+            <div className="quote-block text-left bg-[#f5f7fa] rounded-2xl p-8 md:p-12">
+              <p className="text-2xl md:text-3xl text-[#1a1a1a] font-medium leading-relaxed">
+                {currentLang === 'fr'
+                  ? 'Transformer l\'incertitude industrielle en clarté décisionnelle, en combinant données rigoureuses, expertise sectorielle et méthodologies éprouvées.'
+                  : 'Transform industrial uncertainty into decision clarity, combining rigorous data, sector expertise, and proven methodologies.'
+                }
               </p>
             </div>
           </div>
@@ -77,115 +118,92 @@ export default function About() {
       </section>
       
       {/* Values */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1a1a1a]">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
-            {currentLang === 'fr' ? 'Nos Valeurs' : 'Our Values'}
-          </h2>
+      <section className="py-20 bg-[#f5f7fa]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="section-header">
+            <span className="section-label">
+              {currentLang === 'fr' ? 'Nos Valeurs' : 'Our Values'}
+            </span>
+            <h2 className="section-title">
+              {currentLang === 'fr' ? 'Ce Qui Nous Guide' : 'What Guides Us'}
+            </h2>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto bg-[#e89565]/10 rounded-full flex items-center justify-center mb-4">
-                <CheckCircle size={28} className="text-[#e89565]" />
-              </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">
-                {currentLang === 'fr' ? 'Rigueur' : 'Rigor'}
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                {currentLang === 'fr' 
-                  ? 'Données vérifiées, méthodologies transparentes, résultats mesurables.'
-                  : 'Verified data, transparent methodologies, measurable results.'}
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto bg-[#e89565]/10 rounded-full flex items-center justify-center mb-4">
-                <Globe size={28} className="text-[#e89565]" />
-              </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">
-                {currentLang === 'fr' ? 'Clarté' : 'Clarity'}
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                {currentLang === 'fr' 
-                  ? 'Communication directe, sans jargon, orientée action.'
-                  : 'Direct communication, jargon-free, action-oriented.'}
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto bg-[#e89565]/10 rounded-full flex items-center justify-center mb-4">
-                <Users size={28} className="text-[#e89565]" />
-              </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">
-                {currentLang === 'fr' ? 'Engagement' : 'Commitment'}
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                {currentLang === 'fr' 
-                  ? 'Accompagnement sur mesure, réactivité, confidentialité.'
-                  : 'Tailored support, responsiveness, confidentiality.'}
-              </p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => {
+              const Icon = value.icon;
+              return (
+                <div 
+                  key={index}
+                  className="card-premium text-center hover-lift"
+                >
+                  <div className="w-16 h-16 mx-auto mb-6 bg-[#f0f7ff] rounded-2xl flex items-center justify-center">
+                    <Icon size={28} className="text-[#207bff]" />
+                  </div>
+                  <h3 className="text-xl font-bold text-[#1a1a1a] mb-3">
+                    {currentLang === 'fr' ? value.titleFr : value.titleEn}
+                  </h3>
+                  <p className="text-[#4a5568] leading-relaxed">
+                    {currentLang === 'fr' ? value.descFr : value.descEn}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
       
-      {/* Leadership */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
-            {currentLang === 'fr' ? 'Direction' : 'Leadership'}
-          </h2>
+      {/* Timeline */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="section-header">
+            <span className="section-label">
+              {currentLang === 'fr' ? 'Notre Histoire' : 'Our Journey'}
+            </span>
+            <h2 className="section-title">
+              {currentLang === 'fr' ? 'Jalons Clés' : 'Key Milestones'}
+            </h2>
+          </div>
           
-          <div className="max-w-md mx-auto bg-[#2a2a2a] border border-white/5 rounded-lg p-8 text-center">
-            <div className="w-24 h-24 mx-auto bg-[#e89565] rounded-full flex items-center justify-center mb-4">
-              <span className="text-3xl font-bold text-[#262626]">LA</span>
-            </div>
-            <h3 className="text-xl font-bold text-foreground">Lucas Ansel</h3>
-            <p className="text-sm text-[#e89565] mb-4">
-              {currentLang === 'fr' ? 'Fondateur & Directeur' : 'Founder & Director'}
-            </p>
-            <p className="text-sm text-muted-foreground mb-6">
-              {currentLang === 'fr' 
-                ? 'Stratégie digitale et architecture web industrielle.'
-                : 'Digital strategy and industrial web architecture.'}
-            </p>
-            <div className="flex justify-center gap-4">
-              <a 
-                href="mailto:direction@industrialdecision.com"
-                className="text-muted-foreground hover:text-[#e89565] transition-colors"
-              >
-                <Mail size={20} />
-              </a>
-              <a 
-                href="https://www.linkedin.com/in/lucas-ansel"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-[#e89565] transition-colors"
-              >
-                <Linkedin size={20} />
-              </a>
+          <div className="max-w-3xl mx-auto">
+            <div className="timeline">
+              {milestones.map((milestone, index) => (
+                <div key={index} className="timeline-item">
+                  <div className="flex items-start gap-6">
+                    <div className="text-3xl font-bold text-[#207bff] min-w-[80px]">
+                      {milestone.year}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-[#1a1a1a] mb-2">
+                        {currentLang === 'fr' ? milestone.titleFr : milestone.titleEn}
+                      </h3>
+                      <p className="text-[#4a5568]">
+                        {currentLang === 'fr' ? milestone.descFr : milestone.descEn}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
       
       {/* CTA */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#e89565]/10 border-y border-[#e89565]/20">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-foreground mb-4">
-            {currentLang === 'fr' ? 'Prêt à clarifier vos décisions ?' : 'Ready to clarify your decisions?'}
-          </h2>
-          <p className="text-muted-foreground mb-8">
+      <section className="py-20 bg-gradient-to-br from-[#207bff] to-[#4ea5ff]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             {currentLang === 'fr' 
-              ? 'Explorez notre interface décision ou contactez-nous pour un échange confidentiel.'
-              : 'Explore our decision interface or contact us for a confidential discussion.'}
-          </p>
+              ? 'Prêt à Travailler avec Nous ?'
+              : 'Ready to Work with Us?'
+            }
+          </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/" className="btn btn-primary">
-              {currentLang === 'fr' ? 'Interface Décision' : 'Decision Interface'}
+            <Link to="/team" className="btn-secondary bg-white text-[#207bff] border-none">
+              {currentLang === 'fr' ? 'Rencontrer l\'Équipe' : 'Meet the Team'}
             </Link>
-            <Link to="/decision-gates" className="btn btn-secondary">
-              {currentLang === 'fr' ? 'Points d\'entrée' : 'Entry Points'}
+            <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-3 border-2 border-white text-white font-semibold rounded-sm hover:bg-white/10 transition-colors">
+              {currentLang === 'fr' ? 'Nous Contacter' : 'Contact Us'}
             </Link>
           </div>
         </div>
