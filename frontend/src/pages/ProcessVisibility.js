@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, Clock, AlertCircle, CheckCircle2, Circle } from 'lucide-react';
-import { processFlowsData } from '../data/process_flows';
+import { processFlows as processFlowsData } from '../data/process_flows';
 
 export default function ProcessVisibility() {
   const { t, i18n } = useTranslation();
