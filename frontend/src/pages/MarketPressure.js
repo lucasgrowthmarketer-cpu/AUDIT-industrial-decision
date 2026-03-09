@@ -9,9 +9,8 @@ import {
 import { scaleQuantize } from 'd3-scale';
 import { Info } from 'lucide-react';
 import { 
-  pressureByRegion, 
-  nationalTrendData,
-  regionCodeMap 
+  regionalData,
+  nationalTrendData
 } from '../data/industrial_pressure';
 import { franceRegionsGeoJSON, regionNames } from '../assets/geo/france';
 import { calculateIPI, getScoreColor } from '../lib/indices';
@@ -24,6 +23,20 @@ export default function MarketPressure() {
   
   const currentLang = i18n.language;
   const years = [2021, 2022, 2023, 2024, 2025];
+  
+  // Transform regionalData to pressureByRegion format
+  const pressureByRegion = useMemo(() => {
+    const result = {};
+    years.forEach(year => {
+      result[year] = {};
+      regionalData.forEach(region => {
+        if (region.years && region.years[year]) {
+          result[year][region.code] = region.years[year].altares || 0;
+        }
+      });
+    });
+    return result;
+  }, []);
   
   // Get data for selected year
   const yearData = pressureByRegion[selectedYear] || {};
@@ -98,7 +111,7 @@ export default function MarketPressure() {
         
         <div className="kpi-widget">
           <div className="kpi-header">
-            <span className="kpi-title">{t('marketPressure.totalFailures')} {selectedYear}</span>
+            <span className="kpi-title">{t('marketPressure.totalFailures') || 'Total Failures'} {selectedYear}</span>
           </div>
           <div className="kpi-value">{(yearTotals.total || 0).toLocaleString()}</div>
           <div className="kpi-source">{t('common.source')}: {t('common.banqueDeFrance')}</div>
@@ -106,7 +119,7 @@ export default function MarketPressure() {
         
         <div className="kpi-widget">
           <div className="kpi-header">
-            <span className="kpi-title">{t('common.yoyVariation')}</span>
+            <span className="kpi-title">{t('common.yoyVariation') || 'YoY Variation'}</span>
           </div>
           <div className="kpi-value" style={{ color: '#ef4444' }}>
             {prevYearTotals.total ? 
@@ -121,7 +134,7 @@ export default function MarketPressure() {
       <section className="data-panel">
         <div className="map-controls">
           <div className="control-group">
-            <span className="control-label">{t('common.year')}</span>
+            <span className="control-label">{t('common.year') || 'Year'}</span>
             <div className="toggle-group">
               {years.map(year => (
                 <button
@@ -194,7 +207,7 @@ export default function MarketPressure() {
             >
               <div className="font-semibold text-foreground">{hoveredRegion.name}</div>
               <div className="text-muted-foreground">
-                {hoveredRegion.value.toLocaleString()} {t('marketPressure.failures')}
+                {hoveredRegion.value.toLocaleString()} {t('marketPressure.failures') || 'failures'}
               </div>
             </div>
           )}
@@ -202,7 +215,7 @@ export default function MarketPressure() {
         
         {/* Legend */}
         <div className="flex items-center justify-center gap-4 mt-4">
-          <span className="text-sm text-muted-foreground">{t('marketPressure.lowPressure')}</span>
+          <span className="text-sm text-muted-foreground">{t('marketPressure.lowPressure') || 'Low'}</span>
           <div className="flex gap-1">
             {['#2a2a2a', '#4a3a2a', '#6a4a3a', '#8a5a4a', '#aa6a5a', '#ca7a6a', '#e89565'].map((color, i) => (
               <div 
@@ -212,7 +225,7 @@ export default function MarketPressure() {
               />
             ))}
           </div>
-          <span className="text-sm text-muted-foreground">{t('marketPressure.highPressure')}</span>
+          <span className="text-sm text-muted-foreground">{t('marketPressure.highPressure') || 'High'}</span>
         </div>
       </section>
       
@@ -221,8 +234,8 @@ export default function MarketPressure() {
         <div className="flex items-start gap-3">
           <Info size={20} className="text-[#e89565] flex-shrink-0 mt-0.5" />
           <div>
-            <h3 className="info-block-title">{t('marketPressure.dataSource')}</h3>
-            <p className="info-block-text">{t('marketPressure.sourceDescription')}</p>
+            <h3 className="info-block-title">{t('marketPressure.dataSource') || 'Data Source'}</h3>
+            <p className="info-block-text">{t('marketPressure.sourceDescription') || 'Industrial failure data sourced from Banque de France and Altares statistics.'}</p>
           </div>
         </div>
       </section>
