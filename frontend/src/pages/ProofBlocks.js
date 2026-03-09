@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Shield, TrendingUp, ChevronRight, BarChart3 } from 'lucide-react';
-import { proofBlocksData } from '../data/proof_blocks';
+import { proofBlocks as proofBlocksData } from '../data/proof_blocks';
 
 export default function ProofBlocks() {
   const { t, i18n } = useTranslation();
