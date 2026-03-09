@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { AlertTriangle, ChevronRight, Clock, HelpCircle, List } from 'lucide-react';
-import { scenariosData } from '../data/scenarios';
+import { decisionScenarios as scenariosData } from '../data/scenarios';
 
 export default function DecisionScenarios() {
   const { t, i18n } = useTranslation();
