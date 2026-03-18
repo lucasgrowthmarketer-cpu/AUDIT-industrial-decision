@@ -3,10 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'sonner';
 import './i18n/config';
 
-// Layout
 import MainLayout from './layouts/MainLayout';
+import Landing from './pages/Landing';
 
-// Pages
 import Home from './pages/Home';
 import About from './pages/About';
 import Team from './pages/Team';
@@ -14,7 +13,6 @@ import Expertise from './pages/Expertise';
 import Sectors from './pages/Sectors';
 import Insights from './pages/Insights';
 import CaseStudies from './pages/CaseStudies';
-import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 
 import './App.css';
@@ -26,18 +24,19 @@ function App() {
         Skip to main content
       </a>
       <Routes>
+        {/* Landing page — standalone, no layout */}
+        <Route path="/" element={<Landing />} />
+        
+        {/* Main site with header/footer layout */}
         <Route element={<MainLayout />}>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/team" element={<Team />} />
           <Route path="/expertise" element={<Expertise />} />
           <Route path="/expertise/:serviceId" element={<Expertise />} />
           <Route path="/sectors" element={<Sectors />} />
-          <Route path="/sectors/:sectorId" element={<Sectors />} />
-          <Route path="/insights" element={<Insights />} />
-          <Route path="/insights/:articleId" element={<Insights />} />
           <Route path="/case-studies" element={<CaseStudies />} />
-          <Route path="/careers" element={<Careers />} />
+          <Route path="/insights" element={<Insights />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>

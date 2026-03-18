@@ -18,19 +18,18 @@ const navItems = [
   { path: '/team', labelEn: 'Team', labelFr: 'Équipe' },
   { 
     path: '/expertise', 
-    labelEn: 'Expertise', 
-    labelFr: 'Expertise',
+    labelEn: 'Services', 
+    labelFr: 'Services',
     dropdown: [
-      { path: '/expertise/strategic-clarity', labelEn: 'Strategic Clarity', labelFr: 'Clarté Stratégique' },
-      { path: '/expertise/market-intelligence', labelEn: 'Market Intelligence', labelFr: 'Intelligence de Marché' },
-      { path: '/expertise/process-design', labelEn: 'Process Design', labelFr: 'Design de Processus' },
-      { path: '/expertise/governance', labelEn: 'Governance', labelFr: 'Gouvernance' },
+      { path: '/expertise/audit-drs', labelEn: 'Decision Readiness Audit', labelFr: 'Audit DRS' },
+      { path: '/expertise/site-decisionnel', labelEn: 'Decision-Grade Website', labelFr: 'Site Décisionnel' },
+      { path: '/expertise/strategie-acquisition', labelEn: 'Acquisition Strategy', labelFr: 'Stratégie d\'Acquisition' },
+      { path: '/expertise/accompagnement', labelEn: 'Ongoing Advisory', labelFr: 'Accompagnement' },
     ]
   },
   { path: '/sectors', labelEn: 'Sectors', labelFr: 'Secteurs' },
   { path: '/case-studies', labelEn: 'Case Studies', labelFr: 'Études de Cas' },
-  { path: '/insights', labelEn: 'Insights', labelFr: 'Perspectives' },
-  { path: '/careers', labelEn: 'Careers', labelFr: 'Carrières' },
+  { path: '/insights', labelEn: 'Insights', labelFr: 'Ressources' },
 ];
 
 function Header() {
@@ -70,7 +69,7 @@ function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
+          <Link to="/home" className="flex items-center gap-3 group">
             <div className="w-10 h-10 bg-[#207bff] rounded-lg flex items-center justify-center transition-transform group-hover:scale-105">
               <span className="text-white font-bold text-lg">ID</span>
             </div>
@@ -205,8 +204,8 @@ function Footer() {
             </div>
             <p className="text-[#a0aec0] leading-relaxed max-w-md mb-6">
               {currentLang === 'fr' 
-                ? 'Cabinet de conseil stratégique spécialisé dans l\'accompagnement des dirigeants industriels vers une prise de décision éclairée.'
-                : 'Strategic consulting firm specialized in guiding industrial leaders towards informed decision-making.'
+                ? 'Cabinet spécialisé dans l\'audit et la transformation digitale des acteurs industriels en France. Machine-outil, restructuration, services industriels.'
+                : 'Specialized firm in digital audit and transformation for industrial actors in France. Machine tools, restructuring, industrial services.'
               }
             </p>
             <div className="flex gap-4">
@@ -235,10 +234,10 @@ function Footer() {
             <ul className="space-y-3">
               {[
                 { path: '/about', en: 'About', fr: 'À propos' },
-                { path: '/expertise', en: 'Expertise', fr: 'Expertise' },
+                { path: '/expertise', en: 'Services', fr: 'Services' },
                 { path: '/sectors', en: 'Sectors', fr: 'Secteurs' },
                 { path: '/case-studies', en: 'Case Studies', fr: 'Études de Cas' },
-                { path: '/careers', en: 'Careers', fr: 'Carrières' },
+                { path: '/insights', en: 'Resources', fr: 'Ressources' },
               ].map((item) => (
                 <li key={item.path}>
                   <Link 
