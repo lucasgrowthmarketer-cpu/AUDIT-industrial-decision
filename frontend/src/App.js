@@ -35,6 +35,7 @@ function App() {
           <Route path="/expertise" element={<Expertise />} />
           <Route path="/expertise/:serviceId" element={<Expertise />} />
           <Route path="/sectors" element={<Sectors />} />
+          <Route path="/sectors/:sectorId" element={<Sectors />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/contact" element={<Contact />} />
