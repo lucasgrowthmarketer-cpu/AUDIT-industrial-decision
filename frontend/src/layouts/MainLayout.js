@@ -69,13 +69,11 @@ function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/home" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-[#207bff] rounded-lg flex items-center justify-center transition-transform group-hover:scale-105">
-              <span className="text-white font-bold text-lg">ID</span>
-            </div>
+          <Link to="/home" className="flex items-center gap-2.5 group">
+            <img src="/logo-id.png" alt="ID" className="w-8 h-8 rounded-md transition-transform group-hover:scale-105" />
             <div className="hidden sm:block">
-              <span className="text-lg font-bold text-[#1a1a1a]">Industrial</span>
-              <span className="text-lg font-bold text-[#207bff]">Decision</span>
+              <span className="text-base font-bold text-[#1a1a1a]">Industrial</span>
+              <span className="text-base font-bold text-[#207bff]">Decision</span>
             </div>
           </Link>
           
@@ -194,12 +192,10 @@ function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-[#207bff] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">ID</span>
-              </div>
+              <img src="/logo-id.png" alt="ID" className="w-8 h-8 rounded-md" />
               <div>
-                <span className="text-lg font-bold text-white">Industrial</span>
-                <span className="text-lg font-bold text-[#207bff]">Decision</span>
+                <span className="text-base font-bold text-white">Industrial</span>
+                <span className="text-base font-bold text-[#207bff]">Decision</span>
               </div>
             </div>
             <p className="text-[#a0aec0] leading-relaxed max-w-md mb-6">

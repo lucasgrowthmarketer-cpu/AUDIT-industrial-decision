@@ -38,9 +38,9 @@ function CNCMachine({ mouse }) {
     <primitive
       ref={meshRef}
       object={scene}
-      scale={0.012}
-      position={[0, -1, 0]}
-      rotation={[0.1, 0, 0]}
+      scale={0.022}
+      position={[2.5, -1.5, 0]}
+      rotation={[0.1, -0.3, 0]}
     />
   );
 }
@@ -348,7 +348,7 @@ const Landing = () => {
             </div>
           )}
           <Canvas
-            camera={{ position: [6, 4, 6], fov: 40 }}
+            camera={{ position: [8, 5, 8], fov: 38 }}
             style={{ background: 'transparent' }}
             onCreated={() => setLoaded(true)}
             gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
@@ -378,7 +378,7 @@ const Landing = () => {
         {/* Interface Overlay */}
         <div className="landing-interface">
           <div className="landing-logo">
-            <div className="landing-logo-mark">ID</div>
+            <img src="/logo-id.png" alt="ID" style={{ width: '36px', height: '36px', borderRadius: '6px' }} />
             <div className="landing-logo-text">
               Industrial<span>Decision</span>
             </div>
