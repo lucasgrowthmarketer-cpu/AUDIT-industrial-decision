@@ -69,9 +69,9 @@
     "@craco/craco": "7.1.0"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test"
+    "start": "npx craco start",
+    "build": "npm install ajv@6.12.6 ajv-keywords@3.5.2 ajv-formats@2.1.1 --legacy-peer-deps --no-save 2>/dev/null; npx craco build",
+    "test": "npx craco test"
   },
   "browserslist": {
     "production": [
