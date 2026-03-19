@@ -99,6 +99,10 @@
     "tailwindcss": "^3.4.17"
   },
   "engines": {
-    "node": "18.x"
+    "node": ">=20.0.0"
+  },
+  "overrides": {
+    "ajv": "6.12.6",
+    "ajv-keywords": "3.5.2"
   }
 }
