@@ -238,6 +238,7 @@ function Footer() {
                 { path: '/sectors', en: 'Sectors', fr: 'Secteurs' },
                 { path: '/case-studies', en: 'Case Studies', fr: 'Études de Cas' },
                 { path: '/insights', en: 'Resources', fr: 'Ressources' },
+                { path: '/contact', en: 'Contact', fr: 'Contact' },
               ].map((item) => (
                 <li key={item.path}>
                   <Link 
