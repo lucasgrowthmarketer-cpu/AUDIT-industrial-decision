@@ -345,56 +345,212 @@ function ServiceCardStack({ services, lang }) {
 }
 
 /* ════════════════════════════════════════════
-   SERVICE DETAIL PAGE
+   SERVICE DETAIL PAGE — Hero + Bento Features Grid
    ════════════════════════════════════════════ */
+
+const serviceDetails = {
+  'audit-drs': {
+    kpis: [
+      { value: '1–4', labelEn: 'DRS Scoring Scale', labelFr: 'Échelle DRS' },
+      { value: '4', labelEn: 'Decision Axes', labelFr: 'Axes Décisionnels' },
+      { value: '30+', labelEn: 'OEM Benchmark', labelFr: 'Benchmark OEM' },
+      { value: '2-3', labelEn: 'Weeks Delivery', labelFr: 'Semaines de Livraison' },
+    ],
+    bentoCards: [
+      { type: 'tall', titleEn: 'Scored Report', titleFr: 'Rapport Chiffré', descEn: 'Your website scored 1-4 on each axis with detailed gap analysis. Every score is backed by evidence from our 30-OEM benchmark database.', descFr: 'Votre site noté de 1 à 4 sur chaque axe avec analyse détaillée des écarts. Chaque score est étayé par notre base benchmark de 30 OEM.', accent: '#207bff', icon: 'Search' },
+      { type: 'small', titleEn: 'Scenario Coverage', titleFr: 'Couverture Scénarios', descEn: 'Does your site address the 5 critical decision scenarios your buyers face?', descFr: 'Votre site couvre-t-il les 5 scénarios de décision critiques de vos acheteurs ?', stat: '5', statLabel: 'scenarios' },
+      { type: 'small', titleEn: 'Process Visibility', titleFr: 'Visibilité Processus', descEn: 'Are your engagement steps, timelines, and commitments visible before contact?', descFr: 'Vos étapes, délais et engagements sont-ils visibles avant le contact ?', stat: '100%', statLabel: 'transparency' },
+      { type: 'small', titleEn: 'Proof Blocks', titleFr: 'Blocs de Preuve', descEn: 'Anonymized case studies with verifiable metrics that build trust.', descFr: 'Études de cas anonymisées avec métriques vérifiables qui créent la confiance.', stat: 'URI', statLabel: 'index' },
+      { type: 'small', titleEn: 'Entry Points', titleFr: 'Points d\'Entrée', descEn: 'Contextual contact pathways adapted to urgency and confidentiality needs.', descFr: 'Parcours de contact contextuels adaptés à l\'urgence et la confidentialité.', stat: '4', statLabel: 'gates' },
+      { type: 'wide', titleEn: 'Prioritized Action Plan', titleFr: 'Plan d\'Action Priorisé', descEn: 'A concrete roadmap of improvements ranked by impact and effort. Each action is linked to a specific DRS axis improvement.', descFr: 'Une feuille de route concrète d\'améliorations classées par impact et effort. Chaque action est liée à un axe DRS spécifique.' },
+    ],
+  },
+  'site-decisionnel': {
+    kpis: [
+      { value: '4', labelEn: 'Decision Axes', labelFr: 'Axes Décisionnels' },
+      { value: '5', labelEn: 'Buyer Scenarios', labelFr: 'Scénarios Acheteur' },
+      { value: '8-12', labelEn: 'Weeks Delivery', labelFr: 'Semaines de Livraison' },
+      { value: 'CMS', labelEn: 'Content System', labelFr: 'Système de Contenu' },
+    ],
+    bentoCards: [
+      { type: 'tall', titleEn: 'Decision Scenarios', titleFr: 'Scénarios de Décision', descEn: 'Custom pages for each buyer situation: site closure, asset liquidation, activity transfer, emergency downtime, discreet exit. Each scenario maps needs, blockers, and pathways.', descFr: 'Pages sur-mesure pour chaque situation acheteur : fermeture de site, liquidation, transfert, arrêt d\'urgence, sortie discrète. Chaque scénario cartographie besoins, blocages et parcours.', accent: '#207bff', icon: 'Target' },
+      { type: 'small', titleEn: 'Visible Processes', titleFr: 'Processus Visibles', descEn: 'Every engagement step shown with inputs, outputs, timelines and commitments.', descFr: 'Chaque étape d\'engagement avec entrées, sorties, délais et engagements.', stat: 'SLA', statLabel: 'defined' },
+      { type: 'small', titleEn: 'Proof Integration', titleFr: 'Intégration Preuves', descEn: 'Anonymized case studies embedded at decision-relevant moments.', descFr: 'Études de cas anonymisées intégrées aux moments clés de la décision.', stat: 'URI', statLabel: 'optimized' },
+      { type: 'small', titleEn: 'Decision Gates', titleFr: 'Portes de Décision', descEn: 'Discreet, exploratory, urgent, post-crisis — each with its own protocol.', descFr: 'Discret, exploratoire, urgent, post-crise — chacune avec son protocole.', stat: '4', statLabel: 'gates' },
+      { type: 'small', titleEn: 'Analytics Setup', titleFr: 'Setup Analytics', descEn: 'Full tracking of decision pathways, conversion funnels, and engagement quality.', descFr: 'Tracking complet des parcours de décision, funnels et qualité d\'engagement.', stat: 'KPI', statLabel: 'tracked' },
+      { type: 'wide', titleEn: 'Full Website Delivery', titleFr: 'Livraison Site Complet', descEn: 'Design, development, CMS integration, content migration, analytics setup, and launch support. Responsive, bilingual, and optimized for industrial decision-makers.', descFr: 'Design, développement, intégration CMS, migration contenu, analytics et support de lancement. Responsive, bilingue, optimisé pour les décideurs industriels.' },
+    ],
+  },
+  'strategie-acquisition': {
+    kpis: [
+      { value: '6', labelEn: 'Month Roadmap', labelFr: 'Mois de Roadmap' },
+      { value: 'SEO', labelEn: 'Technical Audit', labelFr: 'Audit Technique' },
+      { value: '13', labelEn: 'Regions Data', labelFr: 'Données Régionales' },
+      { value: 'KPI', labelEn: 'Dashboard', labelFr: 'Dashboard' },
+    ],
+    bentoCards: [
+      { type: 'tall', titleEn: 'Intent-Based Keywords', titleFr: 'Mots-Clés Intentionnels', descEn: 'We map the exact search queries your industrial decision-makers use at each stage of their journey. Not vanity keywords — decision-intent clusters tied to real buying scenarios.', descFr: 'Nous cartographions les requêtes exactes que vos décideurs utilisent à chaque étape. Pas de mots-clés de vanité — des clusters d\'intention liés à de vrais scénarios d\'achat.', accent: '#207bff', icon: 'Zap' },
+      { type: 'small', titleEn: 'Content Clusters', titleFr: 'Clusters de Contenu', descEn: 'Thematic content groups aligned with decision scenarios and search intent.', descFr: 'Groupes de contenu thématiques alignés avec les scénarios de décision.', stat: '5+', statLabel: 'clusters' },
+      { type: 'small', titleEn: 'Technical SEO', titleFr: 'SEO Technique', descEn: 'Site structure, speed, indexation, schema markup — the foundation.', descFr: 'Structure site, vitesse, indexation, schema markup — les fondations.', stat: '100%', statLabel: 'coverage' },
+      { type: 'small', titleEn: 'Market Pressure Data', titleFr: 'Données Pression Marché', descEn: 'Content strategy informed by 51,772 failure analyses across 13 regions.', descFr: 'Stratégie de contenu informée par 51 772 analyses de défaillances sur 13 régions.', stat: 'IPI', statLabel: 'driven' },
+      { type: 'small', titleEn: 'KPI Dashboard', titleFr: 'Dashboard KPI', descEn: 'Monthly visibility into traffic, rankings, conversions, and pipeline impact.', descFr: 'Visibilité mensuelle : trafic, classements, conversions et impact pipeline.', stat: '12+', statLabel: 'metrics' },
+      { type: 'wide', titleEn: '6-Month Actionable Roadmap', titleFr: 'Roadmap Actionable 6 Mois', descEn: 'A phased plan with monthly milestones, content calendar, technical fixes, and measurable KPIs. Not a PDF that sits on a shelf — a living document we execute together.', descFr: 'Un plan phasé avec jalons mensuels, calendrier éditorial, correctifs techniques et KPIs mesurables. Pas un PDF qui dort — un document vivant qu\'on exécute ensemble.' },
+    ],
+  },
+  'accompagnement': {
+    kpis: [
+      { value: '12+', labelEn: 'KPIs Tracked', labelFr: 'KPIs Suivis' },
+      { value: '1/m', labelEn: 'Steering Session', labelFr: 'Session de Pilotage' },
+      { value: '1/q', labelEn: 'Strategy Review', labelFr: 'Revue Stratégique' },
+      { value: '∞', labelEn: 'Ongoing Support', labelFr: 'Support Continu' },
+    ],
+    bentoCards: [
+      { type: 'tall', titleEn: 'Monthly KPI Report', titleFr: 'Rapport KPI Mensuel', descEn: 'A comprehensive monthly report tracking 12+ KPIs across traffic, engagement, conversion, and pipeline. Every metric tied to a business outcome. Trend analysis included.', descFr: 'Un rapport mensuel complet suivant 12+ KPIs sur trafic, engagement, conversion et pipeline. Chaque métrique liée à un résultat business. Analyse de tendances incluse.', accent: '#207bff', icon: 'Shield' },
+      { type: 'small', titleEn: 'Content Refresh', titleFr: 'Mise à Jour Contenu', descEn: 'Regular updates based on market data, seasonal trends, and performance signals.', descFr: 'Mises à jour régulières basées sur données marché, tendances saisonnières et signaux.', stat: 'IPI', statLabel: 'driven' },
+      { type: 'small', titleEn: 'Funnel Optimization', titleFr: 'Optimisation Funnel', descEn: 'Continuous A/B testing and conversion pathway improvements.', descFr: 'Tests A/B continus et amélioration des parcours de conversion.', stat: 'URI', statLabel: 'improved' },
+      { type: 'small', titleEn: 'Steering Sessions', titleFr: 'Sessions de Pilotage', descEn: 'Monthly 1-hour strategic sessions to review results and adjust course.', descFr: 'Sessions stratégiques mensuelles d\'1h pour revoir les résultats et ajuster le cap.', stat: '1/m', statLabel: 'monthly' },
+      { type: 'small', titleEn: 'Quarterly Review', titleFr: 'Revue Trimestrielle', descEn: 'Deep-dive strategic review with updated recommendations and roadmap.', descFr: 'Revue stratégique approfondie avec recommandations et roadmap actualisées.', stat: '1/q', statLabel: 'quarterly' },
+      { type: 'wide', titleEn: 'Continuous Market Intelligence', titleFr: 'Veille Marché Continue', descEn: 'We monitor your competitive landscape, market pressure shifts, and emerging opportunities. Your strategy stays aligned with reality, not assumptions.', descFr: 'Nous surveillons votre paysage concurrentiel, les shifts de pression marché et les opportunités émergentes. Votre stratégie reste alignée sur la réalité.' },
+    ],
+  },
+};
+
+const iconMap = { Search, Target, Zap, Shield, Eye, BarChart3, Route };
+
 function ServiceDetail({ service, lang }) {
   const Icon = service.icon;
+  const details = serviceDetails[service.id] || serviceDetails['audit-drs'];
+
   return (
     <div className="animate-fade-in">
-      <section className="py-20 md:py-32 bg-gradient-to-br from-[#f5f7fa] to-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link to="/expertise" className="inline-flex items-center gap-2 text-[#207bff] font-medium mb-8 hover:gap-3 transition-all"><ArrowRight size={16} className="rotate-180" />{lang === 'fr' ? 'Retour aux services' : 'Back to services'}</Link>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="w-14 h-14 rounded-xl bg-[#f0f7ff] flex items-center justify-center mb-6"><Icon size={28} className="text-[#207bff]" /></div>
-              <h1 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-6" style={{ fontFamily: 'Manrope, sans-serif' }}>{lang === 'fr' ? service.titleFr : service.titleEn}</h1>
-              <p className="text-xl text-[#4a5568] leading-relaxed mb-6">{lang === 'fr' ? service.descFr : service.descEn}</p>
-              <div className="flex flex-wrap gap-3 mb-8">
+      {/* Hero — About style */}
+      <section className="pt-8 pb-16 md:pt-12 md:pb-20 bg-white">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-8">
+          <div className="relative overflow-hidden rounded-2xl">
+            <img src={service.image} alt="" className="w-full h-[240px] md:h-[400px] object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/60 to-transparent" />
+            <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 flex items-center gap-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-[#207bff]">
+                <Icon className="w-3 h-3" /> {lang === 'fr' ? service.durationFr : service.durationEn}
+              </div>
+            </div>
+            <div className="absolute top-6 left-6">
+              <Link to="/expertise" className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-[#1a1a1a] hover:bg-white transition-all">
+                <ArrowRight className="w-3 h-3 rotate-180" /> {lang === 'fr' ? 'Services' : 'Services'}
+              </Link>
+            </div>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 md:gap-16">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1a1a1a] leading-snug" style={{ fontFamily: 'Manrope, sans-serif' }}>
+              {lang === 'fr' ? service.titleFr : service.titleEn}
+            </h1>
+            <div className="space-y-5">
+              <p className="text-[#4a5568] leading-relaxed text-lg">{lang === 'fr' ? service.descFr : service.descEn}</p>
+              <div className="flex flex-wrap gap-3">
                 <span className="bg-[#f0f7ff] text-[#207bff] px-3 py-1.5 rounded-full font-medium text-sm">{lang === 'fr' ? service.deliverableFr : service.deliverableEn}</span>
                 <span className="bg-[#f0f7ff] text-[#207bff] px-3 py-1.5 rounded-full font-medium text-sm">{lang === 'fr' ? service.durationFr : service.durationEn}</span>
               </div>
-              <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-[#207bff] text-white font-semibold rounded-lg hover:bg-[#1a62cc] transition-all">{lang === 'fr' ? 'Discuter de votre projet' : 'Discuss your project'}<ArrowRight size={18} /></Link>
-            </div>
-            <div className="relative rounded-2xl overflow-hidden">
-              <img src={service.image} alt="" className="w-full h-[300px] md:h-[400px] object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#207bff]/20 to-transparent" />
-              <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm rounded-xl p-4">
-                <div className="text-3xl font-bold text-[#207bff]">{service.stat.value}</div>
-                <div className="text-sm text-[#4a5568]">{lang === 'fr' ? service.stat.labelFr : service.stat.labelEn}</div>
-              </div>
+              <Link to="/contact" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#207bff] text-white rounded-lg text-sm font-semibold hover:bg-[#1a62cc] transition-all">
+                {lang === 'fr' ? 'Discuter de votre projet' : 'Discuss your project'} <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </div>
       </section>
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#1a1a1a] mb-12">{lang === 'fr' ? 'Ce que nous délivrons' : 'What we deliver'}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {service.features.map((f, i) => (
-              <div key={i} className="bg-white rounded-xl p-6 border-l-4 border-[#207bff] shadow-sm hover:translate-x-2 transition-transform">
-                <div className="flex items-center gap-4">
-                  <CheckCircle size={24} className="text-[#207bff]" />
-                  <span className="text-lg font-medium text-[#1a1a1a]">{lang === 'fr' ? f.fr : f.en}</span>
-                </div>
+
+      {/* KPI Bar */}
+      <section className="py-10 bg-[#f5f7fa]">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {details.kpis.map((k, i) => (
+              <div key={i} className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-[#207bff] mb-1">{k.value}</div>
+                <div className="text-sm text-[#718096] font-medium">{lang === 'fr' ? k.labelFr : k.labelEn}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
-      <section className="py-20 bg-gradient-to-br from-[#207bff] to-[#4ea5ff]">
+
+      {/* Bento Features Grid */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-6 md:grid-cols-2 md:gap-12 mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a]" style={{ fontFamily: 'Manrope, sans-serif' }}>
+              {lang === 'fr' ? 'Ce que nous délivrons' : 'What we deliver'}
+            </h2>
+            <p className="text-[#4a5568] text-lg self-end">
+              {lang === 'fr' ? 'Chaque élément est conçu pour réduire l\'incertitude de vos décideurs et accélérer leurs décisions.' : 'Every element is designed to reduce your decision-makers\' uncertainty and accelerate their decisions.'}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-5 auto-rows-[minmax(160px,auto)]">
+            {details.bentoCards.map((card, i) => {
+              if (card.type === 'tall') {
+                const CardIcon = iconMap[card.icon] || Search;
+                return (
+                  <div key={i} className="md:col-span-2 md:row-span-3 bg-[#1a1a1a] rounded-2xl p-8 text-white flex flex-col justify-between">
+                    <div>
+                      <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-5">
+                        <CardIcon className="w-6 h-6 text-[#4ea5ff]" />
+                      </div>
+                      <h3 className="text-xl font-bold mb-3">{lang === 'fr' ? card.titleFr : card.titleEn}</h3>
+                      <p className="text-zinc-400 text-sm leading-relaxed">{lang === 'fr' ? card.descFr : card.descEn}</p>
+                    </div>
+                    <div className="mt-6 pt-5 border-t border-white/10">
+                      <Link to="/contact" className="inline-flex items-center gap-2 px-4 py-2 border border-white/20 rounded-lg text-sm font-medium text-white hover:bg-white hover:text-[#1a1a1a] transition-all">
+                        {lang === 'fr' ? 'En discuter' : 'Discuss'} <ChevronRight className="w-4 h-4" />
+                      </Link>
+                    </div>
+                  </div>
+                );
+              }
+              if (card.type === 'wide') {
+                return (
+                  <div key={i} className="md:col-span-4 bg-[#f0f7ff] rounded-2xl p-7 border border-[#207bff]/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+                    <div className="flex-1">
+                      <h3 className="text-lg font-bold text-[#1a1a1a] mb-2">{lang === 'fr' ? card.titleFr : card.titleEn}</h3>
+                      <p className="text-sm text-[#4a5568] leading-relaxed">{lang === 'fr' ? card.descFr : card.descEn}</p>
+                    </div>
+                    <Link to="/contact" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#207bff] text-white text-sm font-semibold rounded-lg hover:bg-[#1a62cc] transition-all flex-shrink-0">
+                      {lang === 'fr' ? 'Commencer' : 'Get started'} <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                );
+              }
+              // small card
+              return (
+                <div key={i} className="md:col-span-2 bg-[#f5f7fa] rounded-2xl p-6 border border-[#e2e8f0] hover:border-[#207bff]/20 transition-all flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-base font-bold text-[#1a1a1a] mb-2">{lang === 'fr' ? card.titleFr : card.titleEn}</h3>
+                    <p className="text-xs text-[#4a5568] leading-relaxed">{lang === 'fr' ? card.descFr : card.descEn}</p>
+                  </div>
+                  {card.stat && (
+                    <div className="mt-4 flex items-baseline gap-2">
+                      <span className="text-3xl font-bold text-[#207bff]">{card.stat}</span>
+                      <span className="text-xs text-[#718096]">{card.statLabel}</span>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-gradient-to-br from-[#207bff] to-[#1a62cc]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">{lang === 'fr' ? 'Prêt à commencer ?' : 'Ready to start?'}</h2>
-          <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#207bff] font-semibold rounded-lg hover:bg-[#f0f7ff] transition-colors">{lang === 'fr' ? 'Planifier une discussion' : 'Schedule a discussion'}<ArrowRight size={18} /></Link>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Manrope, sans-serif' }}>
+            {lang === 'fr' ? 'Prêt à commencer ?' : 'Ready to start?'}
+          </h2>
+          <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">
+            {lang === 'fr' ? 'Discutons de votre projet et définissons ensemble le meilleur parcours.' : 'Let\'s discuss your project and define the best path together.'}
+          </p>
+          <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#207bff] font-semibold rounded-lg hover:bg-[#f0f7ff] transition-colors">
+            {lang === 'fr' ? 'Planifier une discussion' : 'Schedule a discussion'} <ArrowRight className="w-5 h-5" />
+          </Link>
         </div>
       </section>
     </div>
