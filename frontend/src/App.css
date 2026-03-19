@@ -1,0 +1,322 @@
+/* Industrial Decision - Big-4 Style Cabinet */
+/* Additional styles beyond Tailwind */
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(32, 123, 255, 0.03) 0%, rgba(78, 165, 255, 0.05) 100%);
+  pointer-events: none;
+}
+
+.hero-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(32, 123, 255, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(78, 165, 255, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Floating elements */
+.float-element {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #207bff 0%, #4ea5ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Line decoration */
+.line-decoration {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #207bff 0%, #4ea5ff 100%);
+  border-radius: 2px;
+}
+
+/* Image hover zoom */
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img {
+  transition: transform 500ms ease;
+}
+
+.img-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* Case study card */
+.case-study-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.case-study-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+  z-index: 1;
+}
+
+.case-study-card .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  z-index: 2;
+  color: white;
+}
+
+/* Stats counter animation */
+.counter {
+  display: inline-block;
+}
+
+/* Expertise icon container */
+.expertise-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px -3px rgba(32, 123, 255, 0.15);
+}
+
+/* Footer link hover */
+.footer-link {
+  position: relative;
+  color: #4a5568;
+  transition: color 200ms ease;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #207bff;
+  transition: width 200ms ease;
+}
+
+.footer-link:hover {
+  color: #207bff;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+/* Quote decoration */
+.quote-block {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.quote-block::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: -10px;
+  font-size: 4rem;
+  font-family: 'Georgia', serif;
+  color: #207bff;
+  opacity: 0.3;
+  line-height: 1;
+}
+
+/* Timeline styles */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #207bff, #4ea5ff);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: #207bff;
+  border-radius: 50%;
+  transform: translateX(-5px);
+}
+
+/* Sector card overlay */
+.sector-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  height: 320px;
+}
+
+.sector-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.sector-card:hover img {
+  transform: scale(1.1);
+}
+
+.sector-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(32, 123, 255, 0.9) 0%, rgba(32, 123, 255, 0.3) 50%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  color: white;
+}
+
+/* Badge styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-primary {
+  background: rgba(32, 123, 255, 0.1);
+  color: #207bff;
+}
+
+.badge-secondary {
+  background: rgba(78, 165, 255, 0.1);
+  color: #4ea5ff;
+}
+
+.badge-accent {
+  background: rgba(232, 149, 101, 0.1);
+  color: #e89565;
+}
+
+/* Insight card */
+.insight-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 300ms ease, transform 300ms ease;
+}
+
+.insight-card:hover {
+  box-shadow: 0 15px 40px -10px rgba(32, 123, 255, 0.15);
+  transform: translateY(-4px);
+}
+
+.insight-card .image-container {
+  height: 200px;
+  overflow: hidden;
+}
+
+.insight-card .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.insight-card:hover .image-container img {
+  transform: scale(1.05);
+}
+
+/* Marquee for client logos */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-flex;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Number highlight */
+.number-highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.number-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  background: rgba(32, 123, 255, 0.15);
+  z-index: -1;
+}
