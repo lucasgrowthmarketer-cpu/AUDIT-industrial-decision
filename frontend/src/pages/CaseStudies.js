@@ -33,7 +33,7 @@ export default function CaseStudies() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/50 to-transparent" />
             <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-[#207bff]">
-                <BarChart3 className="w-3 h-3" /> {L === 'fr' ? '5 Études de cas' : '5 Case studies'}
+                <BarChart3 className="w-3 h-3" /> {L === 'fr' ? '5 études de cas' : '5 Case studies'}
               </div>
             </div>
           </div>
@@ -49,7 +49,7 @@ export default function CaseStudies() {
             <div className="space-y-5">
               <p className="text-[#4a5568] leading-relaxed text-lg">
                 {L === 'fr'
-                  ? 'Tous les cas sont anonymisés pour respecter la confidentialité. Chaque métrique est vérifiable et liée à un livrable concret de notre méthodologie.'
+                  ? 'Tous les cas sont anonymisés par respect de la confidentialité. Chaque métrique est vérifiable et liée à un livrable concret de notre méthodologie.'
                   : 'All cases are anonymized to respect confidentiality. Every metric is verifiable and linked to a concrete deliverable from our methodology.'}
               </p>
               <Link to="/contact" className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-[#207bff] text-white rounded-lg text-sm font-semibold hover:bg-[#1a62cc] transition-all group">
@@ -74,13 +74,13 @@ export default function CaseStudies() {
       <section className="py-20 bg-gradient-to-br from-[#207bff] to-[#1a62cc]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" style={{ fontFamily: 'Manrope, sans-serif' }}>
-            {L === 'fr' ? 'Vous voulez des résultats similaires ?' : 'Want similar results?'}
+            {L === 'fr' ? 'Vous voulez des résultats concrets ?' : 'Want similar results?'}
           </h2>
           <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">
-            {L === 'fr' ? 'Chaque mission commence par un audit DRS. Discutons de votre contexte.' : 'Every engagement starts with a DRS audit. Let\'s discuss your context.'}
+            {L === 'fr' ? 'Chaque mission commence par un audit DRS. Parlons de votre contexte.' : 'Every engagement starts with a DRS audit. Let\'s discuss your context.'}
           </p>
           <Link to="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-[#207bff] font-semibold rounded-lg hover:bg-[#f0f7ff] transition-colors text-lg">
-            {L === 'fr' ? 'Demander un audit' : 'Request an audit'} <ArrowRight className="w-5 h-5" />
+            {L === 'fr' ? 'Demander un audit gratuit' : 'Request an audit'} <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
       </section>
@@ -116,7 +116,7 @@ function CaseStudyBento({ pb, lang, accent, image, index }) {
       {/* ─ Card 2: Challenge ─ */}
       <div className={`md:col-span-2 bg-white rounded-2xl p-6 border border-[#e2e8f0] flex flex-col justify-between ${isEven ? 'md:order-2' : 'md:order-5'}`}>
         <div>
-          <span className="text-[10px] font-semibold text-[#ef4444] uppercase tracking-wider">{lang === 'fr' ? 'Problème' : 'Challenge'}</span>
+          <span className="text-[10px] font-semibold text-[#ef4444] uppercase tracking-wider">{lang === 'fr' ? 'Problématique' : 'Challenge'}</span>
           <p className="text-[#1a1a1a] text-sm leading-relaxed mt-2 font-medium">{lang === 'fr' ? pb.challengeFr : pb.challenge}</p>
         </div>
         <div className="mt-4 w-full h-1 rounded-full bg-[#fef2f2]">

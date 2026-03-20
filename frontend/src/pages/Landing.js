@@ -398,8 +398,8 @@ const Landing = () => {
 
           <div className="landing-bottom">
             <div className="landing-tagline">
-              <p>[ {L === 'fr' ? 'CONSEIL DIGITAL POUR L\'INDUSTRIE' : 'DIGITAL ADVISORY FOR INDUSTRY'} ]</p>
-              <p>{L === 'fr' ? 'MACHINES-OUTILS · RESTRUCTURATION · ACTIFS INDUSTRIELS' : 'MACHINE TOOLS · RESTRUCTURING · INDUSTRIAL ASSETS'}</p>
+              <p>[ {L === 'fr' ? 'CABINET DIGITAL · INDUSTRIE FRANÇAISE' : 'DIGITAL ADVISORY FOR INDUSTRY'} ]</p>
+              <p>{L === 'fr' ? 'MACHINES-OUTILS · RESTRUCTURATION · SERVICES INDUSTRIELS' : 'MACHINE TOOLS · RESTRUCTURING · INDUSTRIAL ASSETS'}</p>
             </div>
             <button className="landing-cta" onClick={handleEnter}>
               {L === 'fr' ? 'DÉCOUVRIR' : 'EXPLORE'}

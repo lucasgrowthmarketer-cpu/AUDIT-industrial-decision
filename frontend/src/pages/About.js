@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import { ChevronRight, Target, Globe, Users, Award, ArrowRight, Search, BarChart3, Shield, TrendingUp, Eye, Route, Zap, Database } from 'lucide-react';
 
 const achievements = [
-  { valueEn: '51,772', valueFr: '51 772', labelEn: 'Failures Analyzed', labelFr: 'Défaillances Analysées' },
-  { valueEn: '30+', valueFr: '30+', labelEn: 'OEMs Benchmarked', labelFr: 'OEM Benchmarkés' },
-  { valueEn: '13', valueFr: '13', labelEn: 'Regions Covered', labelFr: 'Régions Couvertes' },
-  { valueEn: '4', valueFr: '4', labelEn: 'Proprietary Indices', labelFr: 'Indices Propriétaires' },
+  { valueEn: '51,772', valueFr: '51 772', labelEn: 'Failures Analyzed', labelFr: 'défaillances analysées' },
+  { valueEn: '30+', valueFr: '30+', labelEn: 'OEMs Benchmarked', labelFr: 'OEM benchmarkés' },
+  { valueEn: '13', valueFr: '13', labelEn: 'Regions Covered', labelFr: 'régions couvertes' },
+  { valueEn: '4', valueFr: '4', labelEn: 'Proprietary Indices', labelFr: 'indices propriétaires' },
 ];
 
 export default function About() {
@@ -32,7 +32,7 @@ export default function About() {
             <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-[#207bff]">
                 <span className="w-2 h-2 bg-[#207bff] rounded-full" />
-                {L === 'fr' ? 'Depuis 2024' : 'Since 2024'}
+                {L === 'fr' ? 'Fondé en 2024' : 'Since 2024'}
               </div>
             </div>
           </div>
@@ -48,11 +48,11 @@ export default function About() {
             <div className="space-y-5">
               <p className="text-[#4a5568] leading-relaxed text-lg">
                 {L === 'fr'
-                  ? 'Né d\'un constat simple — les sites web industriels ne sont pas conçus pour aider les décideurs à décider — Industrial Decision combine audit, conception et accompagnement pour créer des sites web de grade décisionnel.'
+                  ? 'Un constat simple nous a lancés : les sites web industriels ne sont pas conçus pour aider les dirigeants à prendre une décision. On a créé Industrial Decision pour changer ça — audit, conception, accompagnement.'
                   : 'Born from a simple observation — industrial websites aren\'t designed to help decision-makers decide — Industrial Decision combines audit, design, and advisory to create decision-grade websites.'}
               </p>
               <Link to="/expertise" className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-[#f5f7fa] border border-[#e2e8f0] rounded-lg text-sm font-medium text-[#1a1a1a] hover:border-[#207bff]/30 hover:bg-[#f0f7ff] transition-all group">
-                {L === 'fr' ? 'Découvrir nos services' : 'Discover our services'}
+                {L === 'fr' ? 'Voir nos services' : 'Discover our services'}
                 <ChevronRight className="w-4 h-4 text-[#207bff] group-hover:translate-x-0.5 transition-transform" />
               </Link>
             </div>
@@ -90,7 +90,7 @@ export default function About() {
             </h2>
             <p className="text-[#4a5568] text-lg leading-relaxed self-end">
               {L === 'fr'
-                ? 'Nous auditons et transformons les sites d\'acteurs industriels. Notre objectif : que chaque visite d\'un décideur rapproche d\'une décision, pas d\'une hésitation.'
+                ? 'On audite et on transforme les sites d\'acteurs industriels. L\'objectif : que chaque visite d\'un décideur le rapproche d\'une décision, pas d\'une hésitation.'
                 : 'We audit and transform industrial websites. Our goal: every visit from a decision-maker brings them closer to a decision, not to hesitation.'}
             </p>
           </div>
@@ -196,21 +196,21 @@ export default function About() {
           <div className="mt-16 mb-14">
             <div className="grid gap-6 md:grid-cols-2 md:gap-12 mb-10">
               <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a]" style={{ fontFamily: 'Manrope, sans-serif' }}>
-                {L === 'fr' ? 'Nos principes' : 'Our principles'}
+                {L === 'fr' ? 'Nos convictions' : 'Our principles'}
               </h2>
               <p className="text-[#4a5568] text-lg self-end">
                 {L === 'fr'
-                  ? 'Quatre convictions qui guident chaque mission, chaque recommandation, chaque livrable.'
+                  ? 'Quatre convictions qui guident chaque mission. Pas des slogans — des règles qu\'on s\'applique.'
                   : 'Four convictions that guide every engagement, every recommendation, every deliverable.'}
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
               {[
-                { icon: Target, titleEn: 'Rigor', titleFr: 'Rigueur', descEn: 'Data-verified analyses. Transparent methodologies. Measurable results. No vanity metrics.', descFr: 'Analyses vérifiées par les données. Méthodologies transparentes. Résultats mesurables. Pas de vanity metrics.', accent: '#207bff' },
-                { icon: Globe, titleEn: 'Clarity', titleFr: 'Clarté', descEn: 'Direct communication, jargon-free, action-oriented. We say what we do and do what we say.', descFr: 'Communication directe, sans jargon, orientée action. On dit ce qu\'on fait et on fait ce qu\'on dit.', accent: '#4ea5ff' },
-                { icon: Users, titleEn: 'Specialization', titleFr: 'Spécialisation', descEn: 'We don\'t do everything for everyone. We do digital strategy for industrial actors in France. Period.', descFr: 'Nous ne faisons pas tout pour tout le monde. Nous faisons la stratégie digitale pour l\'industrie en France. Point.', accent: '#10b981' },
-                { icon: Award, titleEn: 'Proof', titleFr: 'Preuve', descEn: 'Every recommendation is backed by our benchmark of 30 OEMs and 51,000+ failure analyses.', descFr: 'Chaque recommandation s\'appuie sur notre benchmark de 30 OEM et 51 000+ analyses de défaillances.', accent: '#e89565' },
+                { icon: Target, titleEn: 'Rigor', titleFr: 'Rigueur', descEn: 'Data-verified analyses. Transparent methodologies. Measurable results. No vanity metrics.', descFr: 'Des analyses vérifiées par les données, des méthodes transparentes, des résultats mesurables. On ne fait pas dans les vanity metrics.', accent: '#207bff' },
+                { icon: Globe, titleEn: 'Clarity', titleFr: 'Clarté', descEn: 'Direct communication, jargon-free, action-oriented. We say what we do and do what we say.', descFr: 'Communication directe, zéro jargon, orientée action. On dit ce qu\'on fait, on fait ce qu\'on dit.', accent: '#4ea5ff' },
+                { icon: Users, titleEn: 'Specialization', titleFr: 'Spécialisation', descEn: 'We don\'t do everything for everyone. We do digital strategy for industrial actors in France. Period.', descFr: 'On ne fait pas tout pour tout le monde. Stratégie digitale pour l\'industrie en France, point final.', accent: '#10b981' },
+                { icon: Award, titleEn: 'Proof', titleFr: 'Preuve', descEn: 'Every recommendation is backed by our benchmark of 30 OEMs and 51,000+ failure analyses.', descFr: 'Chaque recommandation s\'appuie sur 30 OEM benchmarkés et 51 000+ analyses de défaillances. Pas d\'opinion — des preuves.', accent: '#e89565' },
               ].map((v, i) => {
                 const Icon = v.icon;
                 return (
@@ -230,11 +230,11 @@ export default function About() {
           <div className="mt-16">
             <div className="grid gap-6 md:grid-cols-2 md:gap-12 mb-10">
               <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a]" style={{ fontFamily: 'Manrope, sans-serif' }}>
-                {L === 'fr' ? 'Indices propriétaires' : 'Proprietary indices'}
+                {L === 'fr' ? 'Nos indices' : 'Proprietary indices'}
               </h2>
               <p className="text-[#4a5568] text-lg self-end">
                 {L === 'fr'
-                  ? 'Trois indices développés en interne pour mesurer, comparer et améliorer la performance décisionnelle.'
+                  ? 'Trois indices qu\'on a développés nous-mêmes pour mesurer, comparer et améliorer la performance décisionnelle de vos sites.'
                   : 'Three internally-developed indices to measure, compare, and improve decision performance.'}
               </p>
             </div>
@@ -344,17 +344,17 @@ export default function About() {
       <section className="py-20 bg-gradient-to-br from-[#207bff] to-[#1a62cc]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Manrope, sans-serif' }}>
-            {L === 'fr' ? 'Envie d\'en savoir plus ?' : 'Want to know more?'}
+            {L === 'fr' ? 'Envie d\'aller plus loin ?' : 'Want to know more?'}
           </h2>
           <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">
-            {L === 'fr' ? 'Rencontrez l\'équipe ou discutons de votre projet.' : 'Meet the team or let\'s discuss your project.'}
+            {L === 'fr' ? 'Rencontrez l\'équipe ou parlons de votre projet.' : 'Meet the team or let\'s discuss your project.'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/team" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white text-[#207bff] font-semibold rounded-lg hover:bg-[#f0f7ff] transition-colors">
-              {L === 'fr' ? 'Rencontrer l\'équipe' : 'Meet the team'} <ArrowRight size={16} />
+              {L === 'fr' ? 'Découvrir l\'équipe' : 'Meet the team'} <ArrowRight size={16} />
             </Link>
             <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
-              {L === 'fr' ? 'Nous contacter' : 'Contact us'}
+              {L === 'fr' ? 'Parlons-en' : 'Contact us'}
             </Link>
           </div>
         </div>

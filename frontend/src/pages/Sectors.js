@@ -159,7 +159,7 @@ function SectorsOverview({ lang }) {
 
             {/* Left text */}
             <div className="w-full md:w-1/2 text-center md:text-left">
-              <span className="section-label">{lang === 'fr' ? 'Nos Secteurs' : 'Our Sectors'}</span>
+              <span className="section-label">{lang === 'fr' ? 'Nos secteurs' : 'Our Sectors'}</span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1a1a1a] leading-tight tracking-tight mb-6" style={{ fontFamily: 'Manrope, sans-serif' }}>
                 {lang === 'fr' ? (
                   <>Spécialisés dans <span className="text-[#207bff]">l'industrie</span> française</>
@@ -169,11 +169,11 @@ function SectorsOverview({ lang }) {
               </h1>
               <p className="text-lg text-[#4a5568] max-w-xl mx-auto md:mx-0 mb-8">
                 {lang === 'fr'
-                  ? 'Nous ne travaillons pas avec tout le monde. Machine-outil, restructuration, services industriels — c\'est notre terrain.'
+                  ? 'On ne travaille pas avec tout le monde. Machines-outils, restructuration, services industriels — c\'est notre terrain, point.'
                   : 'We don\'t work with everyone. Machine tools, restructuring, industrial services — that\'s our turf.'}
               </p>
               <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-[#207bff] text-white font-semibold rounded-lg hover:bg-[#1a62cc] transition-all">
-                {lang === 'fr' ? 'Nous contacter' : 'Contact us'} <ArrowRight className="w-4 h-4" />
+                {lang === 'fr' ? 'Parlons-en' : 'Contact us'} <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
@@ -222,9 +222,9 @@ function SectorsOverview({ lang }) {
       <section className="py-20 bg-gradient-to-br from-[#207bff] to-[#1a62cc]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">{lang === 'fr' ? 'Votre secteur est ici ?' : 'Your sector is here?'}</h2>
-          <p className="text-white/70 text-lg mb-8">{lang === 'fr' ? 'Discutons de vos enjeux spécifiques.' : 'Let\'s discuss your specific challenges.'}</p>
+          <p className="text-white/70 text-lg mb-8">{lang === 'fr' ? 'Parlons de vos enjeux concrets.' : 'Let\'s discuss your specific challenges.'}</p>
           <Link to="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-[#207bff] font-semibold rounded-lg hover:bg-[#f0f7ff] transition-colors text-lg">
-            {lang === 'fr' ? 'Nous contacter' : 'Contact us'} <ArrowRight className="w-5 h-5" />
+            {lang === 'fr' ? 'Parlons-en' : 'Contact us'} <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
       </section>
@@ -253,7 +253,7 @@ function SectorDetail({ sector, lang }) {
             </div>
             <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#207bff] rounded-full text-xs font-semibold text-white">
-                <Icon className="w-3 h-3" /> {lang === 'fr' ? 'Secteur spécialisé' : 'Specialized sector'}
+                <Icon className="w-3 h-3" /> {lang === 'fr' ? 'Secteur que l\'on connaît' : 'Specialized sector'}
               </div>
             </div>
           </div>
@@ -265,7 +265,7 @@ function SectorDetail({ sector, lang }) {
             <div className="space-y-5">
               <p className="text-[#4a5568] leading-relaxed text-lg">{lang === 'fr' ? sector.descFr : sector.descEn}</p>
               <Link to="/contact" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#207bff] text-white rounded-lg text-sm font-semibold hover:bg-[#1a62cc] transition-all">
-                {lang === 'fr' ? 'Discuter de vos enjeux' : 'Discuss your challenges'} <ArrowRight className="w-4 h-4" />
+                {lang === 'fr' ? 'Parlons de vos enjeux' : 'Discuss your challenges'} <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -293,10 +293,10 @@ function SectorDetail({ sector, lang }) {
           {/* Challenges */}
           <div className="grid gap-6 md:grid-cols-2 md:gap-12 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a]" style={{ fontFamily: 'Manrope, sans-serif' }}>
-              {lang === 'fr' ? 'Enjeux spécifiques' : 'Specific challenges'}
+              {lang === 'fr' ? 'Les blocages typiques' : 'Specific challenges'}
             </h2>
             <p className="text-[#4a5568] text-lg self-end">
-              {lang === 'fr' ? 'Les blocages que nous voyons systématiquement dans ce secteur.' : 'The blockers we systematically see in this sector.'}
+              {lang === 'fr' ? 'Les freins qu\'on observe systématiquement dans ce secteur.' : 'The blockers we systematically see in this sector.'}
             </p>
           </div>
 
@@ -314,10 +314,10 @@ function SectorDetail({ sector, lang }) {
           {/* Solutions — Bento grid */}
           <div className="grid gap-6 md:grid-cols-2 md:gap-12 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a]" style={{ fontFamily: 'Manrope, sans-serif' }}>
-              {lang === 'fr' ? 'Ce que nous apportons' : 'What we bring'}
+              {lang === 'fr' ? 'Ce qu\'on met en place' : 'What we bring'}
             </h2>
             <p className="text-[#4a5568] text-lg self-end">
-              {lang === 'fr' ? 'Des solutions concrètes testées sur le terrain.' : 'Concrete solutions tested in the field.'}
+              {lang === 'fr' ? 'Des solutions concrètes, testées sur le terrain.' : 'Concrete solutions tested in the field.'}
             </p>
           </div>
 
@@ -359,12 +359,12 @@ function SectorDetail({ sector, lang }) {
                 </h3>
                 <p className="text-sm text-[#4a5568] leading-relaxed">
                   {lang === 'fr'
-                    ? 'Chaque mission commence par un audit DRS adapté à votre contexte. Discutons de vos enjeux spécifiques.'
+                    ? 'Chaque mission commence par un audit DRS adapté à votre contexte. Parlons de vos enjeux concrets.'
                     : 'Every engagement starts with a DRS audit adapted to your context. Let\'s discuss your specific challenges.'}
                 </p>
               </div>
               <Link to="/contact" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#207bff] text-white text-sm font-semibold rounded-lg hover:bg-[#1a62cc] transition-all flex-shrink-0">
-                {lang === 'fr' ? 'Demander un audit' : 'Request an audit'} <ArrowRight className="w-4 h-4" />
+                {lang === 'fr' ? 'Demander un audit gratuit' : 'Request an audit'} <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -374,7 +374,7 @@ function SectorDetail({ sector, lang }) {
       {/* Related services */}
       <section className="py-16 bg-[#f5f7fa]">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-8">{lang === 'fr' ? 'Services recommandés' : 'Recommended services'}</h2>
+          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-8">{lang === 'fr' ? 'Services adaptés à ce secteur' : 'Recommended services'}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {[
               { id: 'audit-drs', icon: Search, en: 'Decision Readiness Audit', fr: 'Audit de Maturité Décisionnelle', time: '2-3 sem.' },
@@ -401,7 +401,7 @@ function SectorDetail({ sector, lang }) {
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-[#207bff] to-[#1a62cc]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">{lang === 'fr' ? 'Prêt à transformer votre présence digitale ?' : 'Ready to transform your digital presence?'}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">{lang === 'fr' ? 'Prêt à passer à l\'action ?' : 'Ready to transform your digital presence?'}</h2>
           <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#207bff] font-semibold rounded-lg hover:bg-[#f0f7ff] transition-colors">
             {lang === 'fr' ? 'Planifier un échange' : 'Schedule a call'} <ArrowRight className="w-5 h-5" />
           </Link>

@@ -17,6 +17,7 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Legal = lazy(() => import('./pages/Legal'));
 
 import './App.css';
+import CookieConsent from './components/CookieConsent';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -63,6 +64,7 @@ function App() {
           }
         }}
       />
+      <CookieConsent />
     </BrowserRouter>
   );
 }

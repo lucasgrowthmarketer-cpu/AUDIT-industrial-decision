@@ -34,9 +34,9 @@ const services = [
 ];
 
 const differentiators = [
-  { titleEn: 'We know your industry', titleFr: 'Nous connaissons votre industrie', descEn: 'Machine tools, industrial restructuring, asset management — we work exclusively with industrial actors in France.', descFr: 'Machines-outils, restructuration industrielle, gestion d\'actifs — nous travaillons exclusivement avec des acteurs industriels en France.' },
-  { titleEn: 'Data, not opinions', titleFr: 'Des données, pas des opinions', descEn: 'Our recommendations rest on 51,000+ failure analyses, 30 OEM benchmarks, and regional market pressure indices.', descFr: 'Nos recommandations s\'appuient sur 51 000+ analyses de défaillances, 30 benchmarks OEM et des indices de pression régionaux.' },
-  { titleEn: 'We prove it live', titleFr: 'On vous le prouve en direct', descEn: 'In every first meeting we open our decision intelligence platform and show you your market, your competitors, and your gaps — live.', descFr: 'À chaque premier RDV, nous ouvrons notre plateforme et vous montrons votre marché, vos concurrents et vos lacunes — en direct.' },
+  { titleEn: 'We know your industry', titleFr: 'On connaît votre industrie', descEn: 'Machine tools, industrial restructuring, asset management — we work exclusively with industrial actors in France.', descFr: 'Machines-outils, restructuration, actifs industriels — on ne travaille qu\'avec l\'industrie en France. Point.' },
+  { titleEn: 'Data, not opinions', titleFr: 'Des données, pas du vent', descEn: 'Our recommendations rest on 51,000+ failure analyses, 30 OEM benchmarks, and regional market pressure indices.', descFr: '51 000+ défaillances analysées, 30 OEM benchmarkés, indices de pression régionaux. Chaque recommandation est étayée par des chiffres.' },
+  { titleEn: 'We prove it live', titleFr: 'La preuve en direct', descEn: 'In every first meeting we open our decision intelligence platform and show you your market, your competitors, and your gaps — live.', descFr: 'Premier rendez-vous ? On ouvre notre plateforme et on vous montre votre marché, vos concurrents, vos lacunes — en temps réel.' },
 ];
 
 const CLIENTS = [
@@ -59,16 +59,16 @@ const StatItem = ({ value, label }) => (
 /* ─── PROBLEM CONNECTOR COMPONENT ─── */
 const ProblemConnectors = ({ lang }) => {
   const problems = [
-    { en: 'Product catalogs', fr: 'Catalogues produits', icon: AlertTriangle },
-    { en: 'Generic forms', fr: 'Formulaires génériques', icon: AlertTriangle },
-    { en: 'Opaque process', fr: 'Processus opaque', icon: AlertTriangle },
-    { en: 'No proof', fr: 'Aucune preuve', icon: AlertTriangle },
+    { en: 'Product catalogs', fr: 'Catalogues sans contexte', icon: AlertTriangle },
+    { en: 'Generic forms', fr: 'Formulaires impersonnels', icon: AlertTriangle },
+    { en: 'Opaque process', fr: 'Processus invisible', icon: AlertTriangle },
+    { en: 'No proof', fr: 'Zéro preuve concrète', icon: AlertTriangle },
   ];
   const solutions = [
-    { en: 'Decision scenarios', fr: 'Scénarios décisionnels', icon: Target },
-    { en: 'Contextual gates', fr: 'Portes contextuelles', icon: Route },
-    { en: 'Visible process', fr: 'Processus visible', icon: Eye },
-    { en: 'Verified proof', fr: 'Preuves vérifiées', icon: ShieldCheck },
+    { en: 'Decision scenarios', fr: 'Scénarios adaptés', icon: Target },
+    { en: 'Contextual gates', fr: 'Points d\'entrée sur-mesure', icon: Route },
+    { en: 'Visible process', fr: 'Processus transparent', icon: Eye },
+    { en: 'Verified proof', fr: 'Preuves vérifiables', icon: ShieldCheck },
   ];
 
   return (
@@ -146,7 +146,7 @@ const ProblemConnectors = ({ lang }) => {
       <div className="relative z-20 flex items-center justify-center rounded-xl border border-[#207bff]/20 bg-[#207bff]/5 px-5 py-2.5 backdrop-blur-sm mb-4">
         <span className="text-xs font-semibold text-[#207bff] tracking-wider uppercase flex items-center gap-2">
           <Zap className="w-3.5 h-3.5" />
-          {lang === 'fr' ? 'Notre méthodologie DRS' : 'Our DRS methodology'}
+          {lang === 'fr' ? 'Méthodologie DRS' : 'Our DRS methodology'}
         </span>
       </div>
 
@@ -388,7 +388,7 @@ const TeamShowcase = ({ lang }) => {
         })}
 
         <Link to="/team" className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-[#207bff] hover:gap-3 transition-all pl-[28px]">
-          {lang === 'fr' ? 'Voir l\'équipe complète' : 'See full team'}
+          {lang === 'fr' ? 'En savoir plus sur l\'équipe' : 'See full team'}
           <ArrowRight size={14} />
         </Link>
       </div>
@@ -450,7 +450,7 @@ export default function Home() {
               <div className="hero-anim hd-100">
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur-md">
                   <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-zinc-300 flex items-center gap-2">
-                    {L === 'fr' ? 'Conseil Digital Industriel' : 'Industrial Digital Advisory'}
+                    {L === 'fr' ? 'Cabinet Digital · Industrie' : 'Industrial Digital Advisory'}
                     <span className="relative flex h-2 w-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#207bff] opacity-75" />
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-[#207bff]" />
@@ -482,7 +482,7 @@ export default function Home() {
               {/* Description */}
               <p className="hero-anim hd-300 max-w-xl text-lg text-zinc-300 leading-relaxed">
                 {L === 'fr'
-                  ? 'Nous auditons et transformons les sites web d\'acteurs de la machine-outil et de l\'industrie en outils d\'aide à la décision. Avec des données, pas des promesses.'
+                  ? 'Nous transformons les sites web industriels en véritables outils d\'aide à la décision. Nos recommandations s\'appuient sur des données vérifiables, pas sur des intuitions.'
                   : 'We audit and transform machine-tool and industrial websites into decision support tools. With data, not promises.'}
               </p>
 
@@ -492,7 +492,7 @@ export default function Home() {
                   to="/contact"
                   className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#207bff] px-8 py-4 text-sm font-semibold text-white transition-all hover:scale-[1.02] hover:bg-[#1a62cc] active:scale-[0.98]"
                 >
-                  {L === 'fr' ? 'Demander un Audit' : 'Request an Audit'}
+                  {L === 'fr' ? 'Demander un audit gratuit' : 'Request an Audit'}
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <Link
@@ -500,7 +500,7 @@ export default function Home() {
                   className="group inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10 hover:border-white/20"
                 >
                   <Play className="w-4 h-4 fill-current" />
-                  {L === 'fr' ? 'Voir nos services' : 'See our services'}
+                  {L === 'fr' ? 'Découvrir nos services' : 'See our services'}
                 </Link>
               </div>
             </div>
@@ -538,7 +538,7 @@ export default function Home() {
 
                   {/* Mini Stats */}
                   <div className="grid grid-cols-5 gap-2 text-center">
-                    <StatItem value="30" label={L === 'fr' ? 'OEM audités' : 'OEMs audited'} />
+                    <StatItem value="30" label={L === 'fr' ? 'OEM analysés' : 'OEMs audited'} />
                     <div className="w-px bg-white/10 mx-auto" />
                     <StatItem value="13" label={L === 'fr' ? 'Régions' : 'Regions'} />
                     <div className="w-px bg-white/10 mx-auto" />
@@ -552,7 +552,7 @@ export default function Home() {
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
                       </span>
-                      {L === 'fr' ? 'DONNÉES À JOUR' : 'DATA UP TO DATE'}
+                      {L === 'fr' ? 'DONNÉES ACTUALISÉES' : 'DATA UP TO DATE'}
                     </div>
                     <div className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-medium tracking-wide text-zinc-300">
                       <Award className="w-3 h-3 text-[#e89565]" />
@@ -569,7 +569,7 @@ export default function Home() {
               {/* Marquee Card */}
               <div className="hero-anim hd-500 relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 py-6 backdrop-blur-xl">
                 <h3 className="mb-4 px-8 text-xs font-medium text-zinc-500 uppercase tracking-wider">
-                  {L === 'fr' ? 'OEM Benchmarkés dans notre audit' : 'OEMs Benchmarked in our audit'}
+                  {L === 'fr' ? 'OEM analysés dans notre benchmark' : 'OEMs Benchmarked in our audit'}
                 </h3>
                 <div
                   className="relative flex overflow-hidden"
@@ -603,16 +603,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="text-xs font-semibold tracking-widest uppercase text-[#207bff] mb-3 block">
-              {L === 'fr' ? 'Le Problème → Notre Solution' : 'The Problem → Our Solution'}
+              {L === 'fr' ? 'Ce qui bloque → Ce que nous résolvons' : 'The Problem → Our Solution'}
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               {L === 'fr'
-                ? 'Les sites industriels perdent des décideurs'
+                ? 'Les sites industriels font fuir les décideurs'
                 : 'Industrial sites are losing decision-makers'}
             </h2>
             <p className="text-zinc-400 max-w-2xl mx-auto">
               {L === 'fr'
-                ? 'Chaque point de friction non résolu augmente l\'incertitude. Notre méthodologie transforme chaque blocage en parcours structuré.'
+                ? 'Chaque point de friction non résolu sur votre site renforce l\'hésitation de vos prospects. Notre méthodologie transforme ces blocages en parcours clairs.'
                 : 'Every unresolved friction point increases uncertainty. Our methodology transforms each blocker into a structured pathway.'}
             </p>
           </div>
@@ -626,11 +626,11 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
             <div>
-              <span className="text-sm font-semibold tracking-widest uppercase text-[#207bff] mb-3 block">{L === 'fr' ? 'Nos Services' : 'Our Services'}</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a]">{L === 'fr' ? 'Ce que nous livrons' : 'What we deliver'}</h2>
+              <span className="text-sm font-semibold tracking-widest uppercase text-[#207bff] mb-3 block">{L === 'fr' ? 'Nos services' : 'Our Services'}</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a]">{L === 'fr' ? 'Ce que nous livrons concrètement' : 'What we deliver'}</h2>
             </div>
             <Link to="/expertise" className="text-sm font-medium text-[#207bff] flex items-center gap-1 hover:gap-2 transition-all">
-              {L === 'fr' ? 'Tout voir' : 'See all'}<ArrowRight size={14} />
+              {L === 'fr' ? 'Voir tout' : 'See all'}<ArrowRight size={14} />
             </Link>
           </div>
 
@@ -641,8 +641,8 @@ export default function Home() {
       {/* ── WHY US ── */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="text-sm font-semibold tracking-widest uppercase text-[#207bff] mb-4 block">{L === 'fr' ? 'Pourquoi Nous' : 'Why Us'}</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-12">{L === 'fr' ? 'Ce qui nous distingue' : 'What sets us apart'}</h2>
+          <span className="text-sm font-semibold tracking-widest uppercase text-[#207bff] mb-4 block">{L === 'fr' ? 'Ce qui nous différencie' : 'Why Us'}</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-12">{L === 'fr' ? 'Trois convictions, pas des slogans' : 'What sets us apart'}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {differentiators.map((d, i) => (
               <div key={i}>
@@ -660,18 +660,18 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-[#4ea5ff] text-sm font-semibold tracking-widest uppercase mb-4 block">{L === 'fr' ? 'Notre Outil Propriétaire' : 'Our Proprietary Tool'}</span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">{L === 'fr' ? 'Plateforme d\'intelligence décisionnelle' : 'Decision intelligence platform'}</h2>
-              <p className="text-[#a0aec0] text-lg leading-relaxed mb-6">{L === 'fr' ? 'En rendez-vous, nous vous montrons en direct : pression marché par région, benchmark concurrents, scénarios de décision, métriques de performance. Pas un PowerPoint — un outil interactif sur données réelles.' : 'In meetings, we show you live: market pressure by region, competitor benchmarks, decision scenarios, performance metrics. Not a PowerPoint — an interactive tool built on real data.'}</p>
+              <span className="text-[#4ea5ff] text-sm font-semibold tracking-widest uppercase mb-4 block">{L === 'fr' ? 'Notre plateforme' : 'Our Proprietary Tool'}</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">{L === 'fr' ? 'Intelligence décisionnelle en direct' : 'Decision intelligence platform'}</h2>
+              <p className="text-[#a0aec0] text-lg leading-relaxed mb-6">{L === 'fr' ? 'En rendez-vous, on vous montre tout en direct : pression marché par région, benchmark concurrents, scénarios de décision. Pas un PowerPoint figé — un outil interactif sur vos données de marché.' : 'In meetings, we show you live: market pressure by region, competitor benchmarks, decision scenarios, performance metrics. Not a PowerPoint — an interactive tool built on real data.'}</p>
               <div className="grid grid-cols-2 gap-4 mb-8">
-                {[{ v: '13', en: 'Regions mapped', fr: 'Régions cartographiées' }, { v: '30+', en: 'OEMs benchmarked', fr: 'OEM benchmarkés' }, { v: '5', en: 'Decision scenarios', fr: 'Scénarios de décision' }, { v: '4', en: 'Entry gates', fr: 'Portes d\'entrée' }].map((s, i) => (
+                {[{ v: '13', en: 'Regions mapped', fr: 'Régions couvertes' }, { v: '30+', en: 'OEMs benchmarked', fr: 'OEM comparés' }, { v: '5', en: 'Decision scenarios', fr: 'Scénarios disponibles' }, { v: '4', en: 'Entry gates', fr: 'Points de contact' }].map((s, i) => (
                   <div key={i} className="bg-white/5 rounded-lg p-4">
                     <div className="text-2xl font-bold text-[#4ea5ff]">{s.v}</div>
                     <div className="text-sm text-[#718096]">{L === 'fr' ? s.fr : s.en}</div>
                   </div>
                 ))}
               </div>
-              <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#207bff] text-white font-semibold rounded-sm hover:bg-[#1a62cc] transition-colors">{L === 'fr' ? 'Réserver une démo' : 'Book a demo'}<ArrowRight size={18} /></Link>
+              <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#207bff] text-white font-semibold rounded-sm hover:bg-[#1a62cc] transition-colors">{L === 'fr' ? 'Réserver une démo gratuite' : 'Book a demo'}<ArrowRight size={18} /></Link>
             </div>
             <div className="bg-[#0f1320] rounded-2xl p-8 border border-white/10">
               <div className="flex items-center gap-2 mb-6"><div className="w-3 h-3 rounded-full bg-[#ef4444]" /><div className="w-3 h-3 rounded-full bg-[#f59e0b]" /><div className="w-3 h-3 rounded-full bg-[#10b981]" /><span className="text-xs text-[#718096] ml-2">Industrial Decision Platform</span></div>
@@ -689,9 +689,9 @@ export default function Home() {
       <section className="py-24 bg-[#fafbfc]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-sm font-semibold tracking-widest uppercase text-[#207bff] mb-3 block">{L === 'fr' ? 'L\'Équipe' : 'The Team'}</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-4">{L === 'fr' ? 'Stratégie digitale + expertise industrielle' : 'Digital strategy + industrial expertise'}</h2>
-            <p className="text-[#4a5568] text-lg max-w-2xl mx-auto">{L === 'fr' ? 'Un architecte stratégie digitale, un CTO full-stack, et un expert opérations industrielles.' : 'A digital strategy architect, a full-stack CTO, and an industrial operations expert.'}</p>
+            <span className="text-sm font-semibold tracking-widest uppercase text-[#207bff] mb-3 block">{L === 'fr' ? 'L\'équipe' : 'The Team'}</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-4">{L === 'fr' ? 'Tech + terrain' : 'Digital strategy + industrial expertise'}</h2>
+            <p className="text-[#4a5568] text-lg max-w-2xl mx-auto">{L === 'fr' ? 'Un stratège digital, un CTO développeur, un expert opérations industrielles. Trois profils complémentaires.' : 'A digital strategy architect, a full-stack CTO, and an industrial operations expert.'}</p>
           </div>
           <TeamShowcase lang={L} />
         </div>
@@ -700,9 +700,9 @@ export default function Home() {
       {/* ── CTA ── */}
       <section className="py-20 bg-gradient-to-br from-[#207bff] to-[#1a62cc] relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">{L === 'fr' ? 'Votre site web aide-t-il vos prospects à décider ?' : 'Does your website help prospects decide?'}</h2>
-          <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">{L === 'fr' ? 'Demandez un audit gratuit de votre maturité décisionnelle. Nous analysons votre site avec notre méthodologie DRS et vous montrons où vous perdez des décideurs.' : 'Request a free decision readiness audit. We analyze your site with our DRS methodology and show you where you\'re losing decision-makers.'}</p>
-          <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-white text-[#207bff] font-semibold rounded-sm hover:bg-[#f0f7ff] transition-colors text-lg">{L === 'fr' ? 'Demander un Audit Gratuit' : 'Request Free Audit'}<ArrowRight size={20} /></Link>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">{L === 'fr' ? 'Votre site aide-t-il vos prospects à se décider ?' : 'Does your website help prospects decide?'}</h2>
+          <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">{L === 'fr' ? 'Demandez un audit gratuit. On analyse votre site avec notre méthodologie DRS et on vous montre concrètement où vous perdez des décideurs.' : 'Request a free decision readiness audit. We analyze your site with our DRS methodology and show you where you\'re losing decision-makers.'}</p>
+          <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-white text-[#207bff] font-semibold rounded-sm hover:bg-[#f0f7ff] transition-colors text-lg">{L === 'fr' ? 'Demander mon audit gratuit' : 'Request Free Audit'}<ArrowRight size={20} /></Link>
         </div>
       </section>
     </div>

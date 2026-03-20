@@ -65,7 +65,7 @@ const services = [
     deliverableFr: 'Document stratégique + roadmap 6 mois + dashboard KPI',
     durationEn: '4-6 weeks', durationFr: '4-6 semaines',
     stat: { value: '6', labelEn: 'month roadmap', labelFr: 'mois de roadmap' },
-    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600',
   },
   {
     id: 'accompagnement',
@@ -131,11 +131,11 @@ export default function Expertise() {
             <div className="space-y-5">
               <p className="text-[#4a5568] leading-relaxed text-lg">
                 {L === 'fr'
-                  ? 'Chaque mission a un livrable concret, un calendrier défini et des métriques de succès mesurables. Pas de promesses vagues — des résultats documentés.'
+                  ? 'Chaque mission a un livrable concret, un calendrier clair et des métriques de succès. Pas de promesses floues — des résultats documentés.'
                   : 'Every engagement has a concrete deliverable, a defined timeline, and measurable success metrics. No vague promises — documented results.'}
               </p>
               <Link to="/contact" className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-[#207bff] text-white rounded-lg text-sm font-semibold hover:bg-[#1a62cc] transition-all group">
-                {L === 'fr' ? 'Demander un audit' : 'Request an audit'}
+                {L === 'fr' ? 'Demander un audit gratuit' : 'Request an audit'}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </Link>
             </div>
@@ -160,11 +160,11 @@ export default function Expertise() {
 
           <div className="grid gap-6 md:grid-cols-2 md:gap-12 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a]" style={{ fontFamily: 'Manrope, sans-serif' }}>
-              {L === 'fr' ? 'Notre approche' : 'Our approach'}
+              {L === 'fr' ? 'Notre méthode' : 'Our approach'}
             </h2>
             <p className="text-[#4a5568] text-lg self-end">
               {L === 'fr'
-                ? 'Chaque intervention suit ce cadre. Nous clarifions le contexte, rassurons avec des données, puis déclenchons l\'action.'
+                ? 'Chaque intervention suit ce cadre : on clarifie le contexte, on rassure avec des données, puis on déclenche l\'action.'
                 : 'Every engagement follows this framework. We clarify the context, reassure with data, then trigger action.'}
             </p>
           </div>
@@ -181,14 +181,14 @@ export default function Expertise() {
                 <h3 className="text-2xl font-bold mb-3">{L === 'fr' ? 'Clarifier' : 'Clarify'}</h3>
                 <p className="text-white/80 text-sm leading-relaxed">
                   {L === 'fr'
-                    ? 'Cartographier la portée complète du contexte décisionnel de votre prospect. Identifier les lacunes dans les scénarios, les processus, les preuves et les points d\'entrée. Comprendre où votre site perd des décideurs.'
+                    ? 'On cartographie le contexte décisionnel complet de vos prospects. On identifie les lacunes dans les scénarios, les processus, les preuves et les points d\'entrée. On comprend exactement où votre site perd des décideurs.'
                     : 'Map the full scope of your prospect\'s decision context. Identify gaps in scenarios, processes, proof, and entry points. Understand where your site is losing decision-makers.'}
                 </p>
               </div>
               <div className="flex items-center gap-4 mt-6 pt-5 border-t border-white/20">
                 <div>
                   <div className="text-2xl font-bold">4</div>
-                  <div className="text-xs text-white/60">{L === 'fr' ? 'Axes analysés' : 'Axes analyzed'}</div>
+                  <div className="text-xs text-white/60">{L === 'fr' ? 'axes analysés' : 'Axes analyzed'}</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold">30+</div>
@@ -209,13 +209,13 @@ export default function Expertise() {
                 <h3 className="text-xl font-bold text-[#1a1a1a] mb-2">{L === 'fr' ? 'Rassurer' : 'Reassure'}</h3>
                 <p className="text-sm text-[#4a5568] leading-relaxed">
                   {L === 'fr'
-                    ? 'Fournir une confiance basée sur les données. Blocs de preuve anonymisés, métriques vérifiables, processus visibles avec délais et engagements. Chaque élément réduit l\'incertitude de votre prospect.'
+                    ? 'On apporte de la confiance par les données : preuves anonymisées, métriques vérifiables, processus visibles avec délais et engagements. Chaque élément réduit l\'incertitude de votre prospect.'
                     : 'Provide data-backed confidence. Anonymized proof blocks, verifiable metrics, visible processes with timelines and commitments. Every element reduces your prospect\'s uncertainty.'}
                 </p>
               </div>
               <div className="mt-5 flex items-baseline gap-2">
                 <span className="text-4xl font-bold text-[#4ea5ff]">URI</span>
-                <span className="text-xs text-[#718096]">{L === 'fr' ? 'Indice de réduction d\'incertitude' : 'Uncertainty Reduction Index'}</span>
+                <span className="text-xs text-[#718096]">{L === 'fr' ? 'indice de réduction d\'incertitude' : 'Uncertainty Reduction Index'}</span>
               </div>
             </div>
 
@@ -231,7 +231,7 @@ export default function Expertise() {
                 <h3 className="text-xl font-bold text-[#1a1a1a] mb-2">{L === 'fr' ? 'Déclencher' : 'Trigger'}</h3>
                 <p className="text-sm text-[#4a5568] leading-relaxed">
                   {L === 'fr'
-                    ? 'Permettre une action décisive avec des parcours structurés. Portes de décision contextuelles (discret, urgent, exploratoire), feuilles de route claires, et mécanismes d\'engagement adaptés au niveau de maturité.'
+                    ? 'On rend l\'action possible avec des parcours structurés : portes de décision contextuelles, feuilles de route claires, mécanismes d\'engagement adaptés à chaque niveau de maturité.'
                     : 'Enable decisive action with structured pathways. Contextual decision gates (discreet, urgent, exploratory), clear roadmaps, and engagement mechanisms adapted to maturity level.'}
                 </p>
               </div>
@@ -247,12 +247,12 @@ export default function Expertise() {
                 <h3 className="text-lg font-bold text-[#1a1a1a] mb-2">{L === 'fr' ? 'Clarifier. Rassurer. Déclencher.' : 'Clarify. Reassure. Trigger.'}</h3>
                 <p className="text-sm text-[#4a5568] leading-relaxed max-w-lg">
                   {L === 'fr'
-                    ? 'Ce framework s\'applique à chaque page, chaque parcours, chaque point de contact de votre site. Le résultat : un site qui convertit les visiteurs en décisions.'
+                    ? 'Ce framework s\'applique à chaque page de votre site. Le résultat : des visiteurs qui passent à l\'action.'
                     : 'This framework applies to every page, every pathway, every touchpoint on your site. The result: a site that converts visitors into decisions.'}
                 </p>
               </div>
               <Link to="/contact" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#207bff] text-white text-sm font-semibold rounded-lg hover:bg-[#1a62cc] transition-all flex-shrink-0">
-                {L === 'fr' ? 'Discuter de votre projet' : 'Discuss your project'} <ArrowRight className="w-4 h-4" />
+                {L === 'fr' ? 'Discutons de votre projet' : 'Discuss your project'} <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -452,7 +452,7 @@ function ServiceDetail({ service, lang }) {
                 <span className="bg-[#f0f7ff] text-[#207bff] px-3 py-1.5 rounded-full font-medium text-sm">{lang === 'fr' ? service.durationFr : service.durationEn}</span>
               </div>
               <Link to="/contact" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#207bff] text-white rounded-lg text-sm font-semibold hover:bg-[#1a62cc] transition-all">
-                {lang === 'fr' ? 'Discuter de votre projet' : 'Discuss your project'} <ArrowRight className="w-4 h-4" />
+                {lang === 'fr' ? 'Discutons de votre projet' : 'Discuss your project'} <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>

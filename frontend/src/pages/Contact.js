@@ -22,10 +22,10 @@ import {
 const API_URL = process.env.REACT_APP_BACKEND_URL || '';
 
 const gateTypes = [
-  { id: 'discreet', labelEn: 'Discreet', labelFr: 'Discret', descEn: 'Confidential, no obligation', descFr: 'Confidentiel, sans obligation', time: '48-72h', color: '#e89565' },
-  { id: 'exploratory', labelEn: 'Exploratory', labelFr: 'Exploratoire', descEn: 'Understand options & feasibility', descFr: 'Comprendre options et faisabilité', time: '3-5j', color: '#207bff' },
-  { id: 'urgent', labelEn: 'Urgent', labelFr: 'Urgent', descEn: 'Fast-track, time-critical', descFr: 'Accéléré, situation critique', time: '12-24h', color: '#ef4444' },
-  { id: 'general', labelEn: 'General', labelFr: 'Général', descEn: 'Inquiry or partnership', descFr: 'Question ou partenariat', time: '24-48h', color: '#10b981' },
+  { id: 'discreet', labelEn: 'Discreet', labelFr: 'Discret', descEn: 'Confidential, no obligation', descFr: 'Échange confidentiel, sans engagement', time: '48-72h', color: '#e89565' },
+  { id: 'exploratory', labelEn: 'Exploratory', labelFr: 'Exploratoire', descEn: 'Understand options & feasibility', descFr: 'Comprendre les options et la faisabilité', time: '3-5j', color: '#207bff' },
+  { id: 'urgent', labelEn: 'Urgent', labelFr: 'Urgent', descEn: 'Fast-track, time-critical', descFr: 'Parcours accéléré, situation urgente', time: '12-24h', color: '#ef4444' },
+  { id: 'general', labelEn: 'General', labelFr: 'Général', descEn: 'Inquiry or partnership', descFr: 'Question générale ou partenariat', time: '24-48h', color: '#10b981' },
 ];
 
 export default function Contact() {
@@ -89,7 +89,7 @@ export default function Contact() {
             </h1>
             <p className="text-lg text-[#4a5568] leading-relaxed">
               {L === 'fr'
-                ? 'Demandez un audit, discutez d\'un projet, ou explorez comment nous pouvons transformer votre présence digitale industrielle.'
+                ? 'Vous avez un projet ? Une question ? Demandez un audit ou explorons ensemble comment transformer votre présence digitale.'
                 : 'Request an audit, discuss a project, or explore how we can transform your industrial digital presence.'}
             </p>
           </div>
@@ -101,9 +101,9 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { icon: Clock, value: '< 48h', label: L === 'fr' ? 'Délai de réponse' : 'Response time' },
-              { icon: Search, value: '30+', label: L === 'fr' ? 'OEM audités' : 'OEMs audited' },
-              { icon: Globe, value: '13', label: L === 'fr' ? 'Régions couvertes' : 'Regions covered' },
+              { icon: Clock, value: '< 48h', label: L === 'fr' ? 'Réponse sous' : 'Response time' },
+              { icon: Search, value: '30+', label: L === 'fr' ? 'OEM analysés' : 'OEMs audited' },
+              { icon: Globe, value: '13', label: L === 'fr' ? 'régions couvertes' : 'Regions covered' },
               { icon: Shield, value: '100%', label: L === 'fr' ? 'Confidentiel' : 'Confidential' },
             ].map((stat, i) => {
               const Icon = stat.icon;
@@ -130,7 +130,7 @@ export default function Contact() {
             <div className="lg:col-span-7 space-y-6">
               <div>
                 <h2 className="text-2xl font-bold text-[#1a1a1a] mb-2">{L === 'fr' ? 'Envoyez-nous un message' : 'Send us a message'}</h2>
-                <p className="text-[#4a5568]">{L === 'fr' ? 'Choisissez votre type d\'échange et décrivez votre besoin.' : 'Choose your exchange type and describe your need.'}</p>
+                <p className="text-[#4a5568]">{L === 'fr' ? 'Choisissez le type d\'échange qui vous convient et décrivez votre besoin.' : 'Choose your exchange type and describe your need.'}</p>
               </div>
 
               {!isSubmitted ? (
@@ -182,14 +182,14 @@ export default function Contact() {
                   {/* Message */}
                   <div className="relative">
                     <MessageSquare className="absolute left-3.5 top-4 h-4 w-4 text-[#718096]" />
-                    <textarea placeholder={L === 'fr' ? 'Décrivez votre projet ou votre besoin...' : 'Describe your project or need...'} rows={5} value={formData.message} onChange={(e) => handleChange('message', e.target.value)} className={`w-full pl-11 pr-4 py-3.5 bg-[#f5f7fa] border rounded-xl text-[#1a1a1a] text-sm placeholder-[#a0aec0] focus:outline-none focus:border-[#207bff] focus:bg-white focus:ring-2 focus:ring-[#207bff]/10 transition-all resize-none ${errors.message ? 'border-[#ef4444]' : 'border-[#e2e8f0]'}`} />
+                    <textarea placeholder={L === 'fr' ? 'Décrivez votre projet, votre contexte ou votre question...' : 'Describe your project or need...'} rows={5} value={formData.message} onChange={(e) => handleChange('message', e.target.value)} className={`w-full pl-11 pr-4 py-3.5 bg-[#f5f7fa] border rounded-xl text-[#1a1a1a] text-sm placeholder-[#a0aec0] focus:outline-none focus:border-[#207bff] focus:bg-white focus:ring-2 focus:ring-[#207bff]/10 transition-all resize-none ${errors.message ? 'border-[#ef4444]' : 'border-[#e2e8f0]'}`} />
                     {errors.message && <p className="text-[#ef4444] text-xs mt-1.5">{errors.message}</p>}
                   </div>
 
                   {/* GDPR */}
                   <div className="flex items-start gap-2.5">
                     <input type="checkbox" required className="mt-1 accent-[#207bff] w-4 h-4" />
-                    <span className="text-xs text-[#718096] leading-relaxed">{L === 'fr' ? 'J\'accepte que mes données soient traitées conformément au RGPD. Elles ne seront jamais partagées sans mon consentement.' : 'I accept that my data will be processed in accordance with GDPR. It will never be shared without my consent.'}</span>
+                    <span className="text-xs text-[#718096] leading-relaxed">{L === 'fr' ? 'J\'accepte le traitement de mes données (RGPD). Elles ne sont jamais partagées sans mon accord.' : 'I accept that my data will be processed in accordance with GDPR. It will never be shared without my consent.'}</span>
                   </div>
 
                   {/* Submit */}
@@ -200,7 +200,7 @@ export default function Contact() {
                       ) : (
                         <>
                           <Send className="h-4 w-4" />
-                          {L === 'fr' ? 'Envoyer le message' : 'Send message'}
+                          {L === 'fr' ? 'Envoyer' : 'Send message'}
                           <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </>
                       )}
@@ -214,7 +214,7 @@ export default function Contact() {
                     <CheckCircle className="w-10 h-10 text-[#10b981]" />
                   </div>
                   <h3 className="text-2xl font-bold text-[#1a1a1a] mb-3">{L === 'fr' ? 'Message envoyé !' : 'Message sent!'}</h3>
-                  <p className="text-[#4a5568] mb-6">{L === 'fr' ? 'Nous vous répondrons sous 48h.' : 'We\'ll get back to you within 48h.'}</p>
+                  <p className="text-[#4a5568] mb-6">{L === 'fr' ? 'On vous répond sous 48h maximum.' : 'We\'ll get back to you within 48h.'}</p>
                   <button onClick={() => { setIsSubmitted(false); setFormData({ name: '', email: '', company: '', message: '', gate_type: 'general' }); }} className="px-6 py-3 bg-white border border-[#e2e8f0] rounded-xl text-[#1a1a1a] hover:border-[#207bff] transition-all text-sm font-medium">
                     {L === 'fr' ? 'Envoyer un autre message' : 'Send another message'}
                   </button>
@@ -225,8 +225,8 @@ export default function Contact() {
             {/* ─── RIGHT — Contact info (5 cols) ─── */}
             <div className="lg:col-span-5 space-y-5">
               <div>
-                <h2 className="text-2xl font-bold text-[#1a1a1a] mb-2">{L === 'fr' ? 'Autres moyens' : 'Other ways'}</h2>
-                <p className="text-[#4a5568]">{L === 'fr' ? 'Choisissez ce qui vous convient.' : 'Choose what works for you.'}</p>
+                <h2 className="text-2xl font-bold text-[#1a1a1a] mb-2">{L === 'fr' ? 'Nous joindre autrement' : 'Other ways'}</h2>
+                <p className="text-[#4a5568]">{L === 'fr' ? 'Le canal qui vous convient.' : 'Choose what works for you.'}</p>
               </div>
 
               {/* Contact cards */}
@@ -256,11 +256,11 @@ export default function Contact() {
                   <div className="w-9 h-9 rounded-lg bg-[#207bff]/10 flex items-center justify-center">
                     <Clock className="w-4 h-4 text-[#207bff]" />
                   </div>
-                  <h4 className="text-sm font-bold text-[#1a1a1a]">{L === 'fr' ? 'Engagement de réponse' : 'Response guarantee'}</h4>
+                  <h4 className="text-sm font-bold text-[#1a1a1a]">{L === 'fr' ? 'Notre engagement' : 'Response guarantee'}</h4>
                 </div>
                 <p className="text-sm text-[#4a5568] leading-relaxed">
                   {L === 'fr'
-                    ? 'Toutes les demandes reçoivent une réponse sous 48h. Demandes urgentes : 12-24h. Chaque échange est confidentiel.'
+                    ? 'Toutes les demandes reçoivent une réponse sous 48h. Urgences : 12-24h. Chaque échange est strictement confidentiel.'
                     : 'All inquiries answered within 48h. Urgent requests: 12-24h. Every exchange is confidential.'}
                 </p>
               </div>
@@ -303,10 +303,10 @@ export default function Contact() {
       {/* ── CTA BOTTOM ── */}
       <section className="py-16 bg-[#f5f7fa]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a1a] mb-4">{L === 'fr' ? 'Vous préférez une démo en direct ?' : 'Prefer a live demo?'}</h2>
-          <p className="text-[#4a5568] mb-8 max-w-xl mx-auto">{L === 'fr' ? 'Nous vous montrons notre plateforme d\'intelligence décisionnelle avec vos données de marché.' : 'We\'ll show you our decision intelligence platform with your market data.'}</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a1a] mb-4">{L === 'fr' ? 'Plutôt une démo en direct ?' : 'Prefer a live demo?'}</h2>
+          <p className="text-[#4a5568] mb-8 max-w-xl mx-auto">{L === 'fr' ? 'On vous montre notre plateforme avec vos propres données de marché.' : 'We\'ll show you our decision intelligence platform with your market data.'}</p>
           <a href="mailto:direction@industrialdecision.com?subject=Demo%20Request" className="btn-primary text-lg px-10 py-4">
-            {L === 'fr' ? 'Réserver une démo' : 'Book a demo'}
+            {L === 'fr' ? 'Réserver une démo gratuite' : 'Book a demo'}
             <ArrowRight size={18} />
           </a>
         </div>

@@ -18,7 +18,7 @@ export default function Insights() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/50 to-transparent" />
             <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-[#207bff]">
-                <BookOpen className="w-3 h-3" /> {L === 'fr' ? 'Études, Données & Partenaires' : 'Studies, Data & Partners'}
+                <BookOpen className="w-3 h-3" /> {L === 'fr' ? 'Études, données & partenaires' : 'Studies, Data & Partners'}
               </div>
             </div>
           </div>
@@ -28,7 +28,7 @@ export default function Insights() {
             </h1>
             <p className="text-[#4a5568] leading-relaxed text-lg self-end">
               {L === 'fr'
-                ? 'Analyses construites sur des données vérifiables — Banque de France, Altares, audits terrain. Enrichies par l\'expertise de nos partenaires industriels, dont ALMA Machines Outils.'
+                ? 'Des analyses construites sur des données vérifiables — Banque de France, Altares, audits terrain — enrichies par l\'expertise de nos partenaires industriels, dont ALMA Machines Outils.'
                 : 'Analyses built on verifiable data — Banque de France, Altares, field audits. Enriched by the expertise of our industrial partners, including ALMA Machines Outils.'}
             </p>
           </div>
@@ -44,8 +44,8 @@ export default function Insights() {
       <section className="py-16 bg-[#f5f7fa]">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 md:grid-cols-2 md:gap-12 mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a]" style={{ fontFamily: 'Manrope, sans-serif' }}>{L === 'fr' ? 'Rapports & Études' : 'Reports & Studies'}</h2>
-            <p className="text-[#4a5568] text-lg self-end">{L === 'fr' ? '4 études propriétaires basées sur des données vérifiables et des méthodologies ouvertes.' : '4 proprietary studies based on verifiable data and open methodologies.'}</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a]" style={{ fontFamily: 'Manrope, sans-serif' }}>{L === 'fr' ? 'Rapports & études' : 'Reports & Studies'}</h2>
+            <p className="text-[#4a5568] text-lg self-end">{L === 'fr' ? '4 études construites sur des données vérifiables et des méthodes ouvertes.' : '4 proprietary studies based on verifiable data and open methodologies.'}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-5 auto-rows-[minmax(180px,auto)]">
@@ -109,9 +109,9 @@ export default function Insights() {
             <div className="md:col-span-1 md:row-span-1 bg-white rounded-2xl p-6 border border-[#e2e8f0] flex flex-col justify-center gap-2.5">
               {[
                 { label: L === 'fr' ? 'Données vérifiables' : 'Verifiable data', accent: '#207bff' },
-                { label: L === 'fr' ? 'Méthodologie ouverte' : 'Open methodology', accent: '#4ea5ff' },
+                { label: L === 'fr' ? 'Méthodologie transparente' : 'Open methodology', accent: '#4ea5ff' },
                 { label: L === 'fr' ? 'Indices propriétaires' : 'Proprietary indices', accent: '#10b981' },
-                { label: L === 'fr' ? 'Validation terrain' : 'Field validation', accent: '#e89565' },
+                { label: L === 'fr' ? 'Validé sur le terrain' : 'Field validation', accent: '#e89565' },
                 { label: 'ALMA Machines Outils', accent: '#207bff' },
               ].map((tag, i) => (
                 <span key={i} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs font-medium" style={{ borderColor: `${tag.accent}40`, color: tag.accent }}>
@@ -161,8 +161,8 @@ export default function Insights() {
 
             {/* ── Col 1, Row 3: Timeline / Journey card ── */}
             <div className="md:col-span-1 md:row-span-1 bg-white rounded-2xl p-6 border border-[#e2e8f0]">
-              <h3 className="text-base font-bold text-[#1a1a1a] mb-1">{L === 'fr' ? 'Publications' : 'Publications'}</h3>
-              <p className="text-xs text-[#718096] mb-3">{L === 'fr' ? 'Chronologie des études' : 'Study timeline'}</p>
+              <h3 className="text-base font-bold text-[#1a1a1a] mb-1">{L === 'fr' ? 'Nos publications' : 'Nos publications'}</h3>
+              <p className="text-xs text-[#718096] mb-3">{L === 'fr' ? 'Chronologie' : 'Study timeline'}</p>
               <div className="space-y-2.5">
                 {[
                   { date: 'Jan. 25', label: 'DRS Benchmark', color: '#207bff' },
@@ -190,7 +190,7 @@ export default function Insights() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 md:grid-cols-2 md:gap-12 mb-10">
             <h2 className="text-2xl font-bold text-[#1a1a1a]">{L === 'fr' ? 'Études complémentaires' : 'Additional studies'}</h2>
-            <p className="text-[#4a5568] self-end">{L === 'fr' ? 'Scénarios de décision et données de marché.' : 'Decision scenarios and market data.'}</p>
+            <p className="text-[#4a5568] self-end">{L === 'fr' ? 'Scénarios de décision et données de marché en accès libre ou sur demande.' : 'Decision scenarios and market data.'}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -283,7 +283,7 @@ export default function Insights() {
             </h2>
             <p className="text-[#4a5568] text-lg self-end">
               {L === 'fr'
-                ? 'Notre méthodologie est enrichie et validée par des experts terrain de l\'industrie machine-outil française.'
+                ? 'Notre méthodologie est construite et validée avec des experts terrain de l\'industrie machine-outil.'
                 : 'Our methodology is enriched and validated by field experts from the French machine-tool industry.'}
             </p>
           </div>
@@ -292,11 +292,11 @@ export default function Insights() {
             {/* ALMA Machines Outils */}
             <div className="bg-white rounded-2xl overflow-hidden border border-[#e2e8f0] hover:border-[#207bff]/20 transition-all group">
               <div className="relative h-52 overflow-hidden">
-                <img src="https://images.unsplash.com//alma-logo.png" alt="ALMA Machines Outils" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img src="/alma-logo.png" style={{objectFit:"contain",background:"#fff",padding:"2rem"}} alt="ALMA Machines Outils" className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/80 to-transparent" />
                 <div className="absolute bottom-4 left-5 right-5">
                   <h3 className="text-xl font-bold text-white">ALMA Machines Outils</h3>
-                  <p className="text-xs text-white/70">{L === 'fr' ? 'Partenaire Industrie & Validation Terrain' : 'Industry Partner & Field Validation'}</p>
+                  <p className="text-xs text-white/70">{L === 'fr' ? 'Partenaire industrie & validation terrain' : 'Industry Partner & Field Validation'}</p>
                 </div>
                 <div className="absolute top-4 right-4">
                   <span className="px-2.5 py-1 rounded-full bg-[#10b981] text-white text-[10px] font-semibold">{L === 'fr' ? 'Partenaire actif' : 'Active partner'}</span>
@@ -329,7 +329,7 @@ export default function Insights() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/80 to-transparent" />
                 <div className="absolute bottom-4 left-5 right-5">
                   <h3 className="text-xl font-bold text-white">Jean-Baptiste Borron</h3>
-                  <p className="text-xs text-white/70">{L === 'fr' ? 'Conseiller Industrie — Machines-Outils' : 'Industry Advisor — Machine Tools'}</p>
+                  <p className="text-xs text-white/70">{L === 'fr' ? 'Conseiller industrie — Machines-outils' : 'Industry Advisor — Machine Tools'}</p>
                 </div>
                 <div className="absolute top-4 right-4">
                   <span className="px-2.5 py-1 rounded-full bg-[#207bff] text-white text-[10px] font-semibold">{L === 'fr' ? 'Conseiller' : 'Advisor'}</span>
@@ -367,8 +367,8 @@ export default function Insights() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 md:grid-cols-2 md:gap-12 mb-10">
-            <h2 className="text-2xl font-bold text-[#1a1a1a]">{L === 'fr' ? 'Sources de données' : 'Data sources'}</h2>
-            <p className="text-[#4a5568] self-end">{L === 'fr' ? 'Toutes nos analyses s\'appuient sur des sources vérifiables.' : 'All our analyses rely on verifiable sources.'}</p>
+            <h2 className="text-2xl font-bold text-[#1a1a1a]">{L === 'fr' ? 'Nos sources' : 'Data sources'}</h2>
+            <p className="text-[#4a5568] self-end">{L === 'fr' ? 'Toutes nos analyses reposent sur des sources publiques et vérifiables.' : 'All our analyses rely on verifiable sources.'}</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {[
@@ -377,7 +377,7 @@ export default function Insights() {
               { name: 'INSEE', desc: { en: 'Regional economics', fr: 'Économie régionale' }, icon: Globe },
               { name: 'Tribunal Commerce', desc: { en: 'Judicial data', fr: 'Données judiciaires' }, icon: Shield },
               { name: 'Gartner', desc: { en: 'B2B decision studies', fr: 'Études décision B2B' }, icon: TrendingUp },
-              { name: 'ALMA MO', desc: { en: 'Field validation', fr: 'Validation terrain' }, icon: Factory },
+              { name: 'ALMA MO', desc: { en: 'Field validation', fr: 'Validé sur le terrain' }, icon: Factory },
             ].map((ds, i) => {
               const Icon = ds.icon;
               return (
@@ -397,10 +397,10 @@ export default function Insights() {
       {/* ── CTA ── */}
       <section className="py-20 bg-gradient-to-br from-[#207bff] to-[#1a62cc]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{L === 'fr' ? 'Voir nos données en direct ?' : 'See our data live?'}</h2>
-          <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">{L === 'fr' ? 'Réservez une démo et nous vous montrons notre plateforme d\'intelligence décisionnelle avec vos données de marché.' : 'Book a demo and we\'ll show you our decision intelligence platform with your market data.'}</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{L === 'fr' ? 'Envie de voir nos données en direct ?' : 'See our data live?'}</h2>
+          <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">{L === 'fr' ? 'Réservez une démo et on vous montre notre plateforme avec vos données de marché.' : 'Book a demo and we\'ll show you our decision intelligence platform with your market data.'}</p>
           <Link to="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-[#207bff] font-semibold rounded-lg hover:bg-[#f0f7ff] transition-colors text-lg">
-            {L === 'fr' ? 'Réserver une démo' : 'Book a demo'} <ArrowRight className="w-5 h-5" />
+            {L === 'fr' ? 'Réserver une démo gratuite' : 'Book a demo'} <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
       </section>
