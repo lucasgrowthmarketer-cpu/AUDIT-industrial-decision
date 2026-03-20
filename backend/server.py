@@ -7,6 +7,9 @@ from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
 import json
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 # Logging setup
 logging.basicConfig(level=logging.INFO)
@@ -174,8 +177,11 @@ async def submit_contact(request: Request, form: ContactForm = Body(...)):
         
         logger.info(f"New lead created: {lead_id} from gate: {form.gate_type}")
         
-        # TODO: Send email notification via Brevo when API key is available
-        # For now, log the lead
+        # Send email notification via Brevo SMTP
+        try:
+            await send_lead_notification(form, lead_id)
+        except Exception as email_err:
+            logger.error(f"Email notification failed: {email_err}")
         
         return ContactResponse(
             success=True,
@@ -283,6 +289,70 @@ async def get_comex_summary():
         "message": "COMEX summary PDF can be downloaded from /comex-summary.pdf",
         "status": "available"
     }
+
+async def send_lead_notification(form, lead_id: str):
+    """Send email notification to direction@industrialdecision.com via Brevo SMTP"""
+    smtp_host = os.environ.get('SMTP_HOST', 'smtp-relay.brevo.com')
+    smtp_port = int(os.environ.get('SMTP_PORT', '2525'))
+    smtp_user = os.environ.get('SMTP_USER', '')
+    smtp_pass = os.environ.get('SMTP_PASS', '')
+    to_email = os.environ.get('LEAD_TO_EMAIL', 'direction@industrialdecision.com')
+    from_email = os.environ.get('LEAD_FROM_EMAIL', 'direction@industrialdecision.com')
+    
+    if not smtp_user or not smtp_pass:
+        logger.warning("SMTP credentials not configured, skipping email")
+        return
+    
+    gate_labels = {
+        'discreet': '🔒 Discret',
+        'exploratory': '🔍 Exploratoire', 
+        'urgent': '🚨 Urgent',
+        'general': '📩 Général'
+    }
+    gate_label = gate_labels.get(form.gate_type, form.gate_type)
+    
+    subject = f"[Industrial Decision] Nouveau lead {gate_label} — {form.name}"
+    
+    html_body = f"""
+    <div style="font-family: -apple-system, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px;">
+        <div style="background: #207bff; color: white; padding: 20px 24px; border-radius: 12px 12px 0 0;">
+            <h1 style="margin: 0; font-size: 20px;">Nouveau lead — {gate_label}</h1>
+            <p style="margin: 4px 0 0; opacity: 0.8; font-size: 14px;">ID: {lead_id}</p>
+        </div>
+        <div style="background: #f8fafc; padding: 24px; border: 1px solid #e2e8f0; border-top: none; border-radius: 0 0 12px 12px;">
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr><td style="padding: 8px 0; color: #718096; font-size: 13px; width: 120px;">Nom</td><td style="padding: 8px 0; font-weight: 600;">{form.name}</td></tr>
+                <tr><td style="padding: 8px 0; color: #718096; font-size: 13px;">Email</td><td style="padding: 8px 0;"><a href="mailto:{form.email}" style="color: #207bff;">{form.email}</a></td></tr>
+                <tr><td style="padding: 8px 0; color: #718096; font-size: 13px;">Entreprise</td><td style="padding: 8px 0;">{form.company or '—'}</td></tr>
+                <tr><td style="padding: 8px 0; color: #718096; font-size: 13px;">Type</td><td style="padding: 8px 0;">{gate_label}</td></tr>
+                <tr><td style="padding: 8px 0; color: #718096; font-size: 13px;">Langue</td><td style="padding: 8px 0;">{form.language or 'fr'}</td></tr>
+                <tr><td style="padding: 8px 0; color: #718096; font-size: 13px;">Source</td><td style="padding: 8px 0;">{form.source_page or '—'}</td></tr>
+            </table>
+            <div style="margin-top: 16px; padding: 16px; background: white; border-radius: 8px; border: 1px solid #e2e8f0;">
+                <p style="margin: 0 0 4px; color: #718096; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em;">Message</p>
+                <p style="margin: 0; line-height: 1.6;">{form.message}</p>
+            </div>
+            <p style="margin-top: 16px; font-size: 12px; color: #a0aec0;">Ce lead a été envoyé depuis le formulaire de contact industrialdecision.com</p>
+        </div>
+    </div>
+    """
+    
+    msg = MIMEMultipart('alternative')
+    msg['Subject'] = subject
+    msg['From'] = from_email
+    msg['To'] = to_email
+    msg['Reply-To'] = form.email
+    msg.attach(MIMEText(html_body, 'html'))
+    
+    try:
+        with smtplib.SMTP(smtp_host, smtp_port) as server:
+            server.starttls()
+            server.login(smtp_user, smtp_pass)
+            server.sendmail(from_email, [to_email], msg.as_string())
+        logger.info(f"Lead notification sent to {to_email} for lead {lead_id}")
+    except Exception as e:
+        logger.error(f"SMTP error: {e}")
+        raise
 
 if __name__ == "__main__":
     import uvicorn

@@ -15,6 +15,7 @@ const Insights = lazy(() => import('./pages/Insights'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Legal = lazy(() => import('./pages/Legal'));
+const Demo = lazy(() => import('./pages/Demo'));
 
 import './App.css';
 import CookieConsent from './components/CookieConsent';
@@ -51,6 +52,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/legal/:page" element={<Legal />} />
+          <Route path="/demo" element={<Demo />} />
         </Route>
       </Routes>
       </Suspense>

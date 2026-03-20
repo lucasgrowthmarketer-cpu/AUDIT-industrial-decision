@@ -398,7 +398,7 @@ export default function Insights() {
       <section className="py-20 bg-gradient-to-br from-[#207bff] to-[#1a62cc]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{L === 'fr' ? 'Envie de voir nos données en direct ?' : 'See our data live?'}</h2>
-          <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">{L === 'fr' ? 'Réservez une démo et on vous montre notre plateforme avec vos données de marché.' : 'Book a demo and we\'ll show you our decision intelligence platform with your market data.'}</p>
+          <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">{L === 'fr' ? 'Réservez une démo et nous vous montrons notre plateforme avec vos données de marché.' : 'Book a demo and we\'ll show you our decision intelligence platform with your market data.'}</p>
           <Link to="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-[#207bff] font-semibold rounded-lg hover:bg-[#f0f7ff] transition-colors text-lg">
             {L === 'fr' ? 'Réserver une démo gratuite' : 'Book a demo'} <ArrowRight className="w-5 h-5" />
           </Link>

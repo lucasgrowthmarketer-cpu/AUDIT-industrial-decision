@@ -34,9 +34,9 @@ const services = [
 ];
 
 const differentiators = [
-  { titleEn: 'We know your industry', titleFr: 'On connaît votre industrie', descEn: 'Machine tools, industrial restructuring, asset management — we work exclusively with industrial actors in France.', descFr: 'Machines-outils, restructuration, actifs industriels — on ne travaille qu\'avec l\'industrie en France. Point.' },
-  { titleEn: 'Data, not opinions', titleFr: 'Des données, pas du vent', descEn: 'Our recommendations rest on 51,000+ failure analyses, 30 OEM benchmarks, and regional market pressure indices.', descFr: '51 000+ défaillances analysées, 30 OEM benchmarkés, indices de pression régionaux. Chaque recommandation est étayée par des chiffres.' },
-  { titleEn: 'We prove it live', titleFr: 'La preuve en direct', descEn: 'In every first meeting we open our decision intelligence platform and show you your market, your competitors, and your gaps — live.', descFr: 'Premier rendez-vous ? On ouvre notre plateforme et on vous montre votre marché, vos concurrents, vos lacunes — en temps réel.' },
+  { titleEn: 'We know your industry', titleFr: 'Nous connaissons votre industrie', descEn: 'Machine tools, industrial restructuring, asset management — we work exclusively with industrial actors in France.', descFr: 'Machines-outils, restructuration, actifs industriels — nous ne travaillons qu\'avec l\'industrie en France. Point.' },
+  { titleEn: 'Data, not opinions', titleFr: 'Des données, pas des opinions', descEn: 'Our recommendations rest on 51,000+ failure analyses, 30 OEM benchmarks, and regional market pressure indices.', descFr: '51 000+ défaillances analysées, 30 OEM benchmarkés, indices de pression régionaux. Chaque recommandation est étayée par des chiffres.' },
+  { titleEn: 'We prove it live', titleFr: 'Nous le prouvons en direct', descEn: 'In every first meeting we open our decision intelligence platform and show you your market, your competitors, and your gaps — live.', descFr: 'Premier rendez-vous ? Nous ouvrons notre plateforme et vous montrons votre marché, vos concurrents, vos lacunes — en temps réel.' },
 ];
 
 const CLIENTS = [
@@ -662,7 +662,7 @@ export default function Home() {
             <div>
               <span className="text-[#4ea5ff] text-sm font-semibold tracking-widest uppercase mb-4 block">{L === 'fr' ? 'Notre plateforme' : 'Our Proprietary Tool'}</span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">{L === 'fr' ? 'Intelligence décisionnelle en direct' : 'Decision intelligence platform'}</h2>
-              <p className="text-[#a0aec0] text-lg leading-relaxed mb-6">{L === 'fr' ? 'En rendez-vous, on vous montre tout en direct : pression marché par région, benchmark concurrents, scénarios de décision. Pas un PowerPoint figé — un outil interactif sur vos données de marché.' : 'In meetings, we show you live: market pressure by region, competitor benchmarks, decision scenarios, performance metrics. Not a PowerPoint — an interactive tool built on real data.'}</p>
+              <p className="text-[#a0aec0] text-lg leading-relaxed mb-6">{L === 'fr' ? 'En rendez-vous, nous vous montrons tout en direct : pression marché par région, benchmark concurrents, scénarios de décision. Pas un PowerPoint figé — un outil interactif sur vos données de marché.' : 'In meetings, we show you live: market pressure by region, competitor benchmarks, decision scenarios, performance metrics. Not a PowerPoint — an interactive tool built on real data.'}</p>
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[{ v: '13', en: 'Regions mapped', fr: 'Régions couvertes' }, { v: '30+', en: 'OEMs benchmarked', fr: 'OEM comparés' }, { v: '5', en: 'Decision scenarios', fr: 'Scénarios disponibles' }, { v: '4', en: 'Entry gates', fr: 'Points de contact' }].map((s, i) => (
                   <div key={i} className="bg-white/5 rounded-lg p-4">

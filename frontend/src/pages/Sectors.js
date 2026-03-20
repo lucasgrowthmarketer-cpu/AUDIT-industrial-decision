@@ -72,8 +72,8 @@ const sectors = [
     nameFr: 'Prestataires de Services Industriels',
     shortEn: 'Digital credibility for maintenance, tooling, and SAV.',
     shortFr: 'Crédibilité digitale pour maintenance, outillage et SAV.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&q=80&w=800',
-    heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&q=80&w=1400',
+    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800',
+    heroImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1400',
     descEn: 'Maintenance, tooling, after-sales, integration — if your clients are industrial decision-makers, your website is your first proof of reliability.',
     descFr: 'Maintenance, outillage, SAV, intégration — si vos clients sont des décideurs industriels, votre site est votre première preuve de fiabilité.',
     challenges: [
@@ -169,7 +169,7 @@ function SectorsOverview({ lang }) {
               </h1>
               <p className="text-lg text-[#4a5568] max-w-xl mx-auto md:mx-0 mb-8">
                 {lang === 'fr'
-                  ? 'On ne travaille pas avec tout le monde. Machines-outils, restructuration, services industriels — c\'est notre terrain, point.'
+                  ? 'Nous ne travaillons pas avec tout le monde. Machines-outils, restructuration, services industriels — c\'est notre terrain.'
                   : 'We don\'t work with everyone. Machine tools, restructuring, industrial services — that\'s our turf.'}
               </p>
               <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-[#207bff] text-white font-semibold rounded-lg hover:bg-[#1a62cc] transition-all">
@@ -253,7 +253,7 @@ function SectorDetail({ sector, lang }) {
             </div>
             <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#207bff] rounded-full text-xs font-semibold text-white">
-                <Icon className="w-3 h-3" /> {lang === 'fr' ? 'Secteur que l\'on connaît' : 'Specialized sector'}
+                <Icon className="w-3 h-3" /> {lang === 'fr' ? 'Secteur spécialisé' : 'Specialized sector'}
               </div>
             </div>
           </div>
@@ -296,7 +296,7 @@ function SectorDetail({ sector, lang }) {
               {lang === 'fr' ? 'Les blocages typiques' : 'Specific challenges'}
             </h2>
             <p className="text-[#4a5568] text-lg self-end">
-              {lang === 'fr' ? 'Les freins qu\'on observe systématiquement dans ce secteur.' : 'The blockers we systematically see in this sector.'}
+              {lang === 'fr' ? 'Les freins que nous observons systématiquement dans ce secteur.' : 'The blockers we systematically see in this sector.'}
             </p>
           </div>
 
@@ -314,7 +314,7 @@ function SectorDetail({ sector, lang }) {
           {/* Solutions — Bento grid */}
           <div className="grid gap-6 md:grid-cols-2 md:gap-12 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a]" style={{ fontFamily: 'Manrope, sans-serif' }}>
-              {lang === 'fr' ? 'Ce qu\'on met en place' : 'What we bring'}
+              {lang === 'fr' ? 'Ce que nous mettons en place' : 'What we bring'}
             </h2>
             <p className="text-[#4a5568] text-lg self-end">
               {lang === 'fr' ? 'Des solutions concrètes, testées sur le terrain.' : 'Concrete solutions tested in the field.'}

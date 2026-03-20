@@ -214,7 +214,7 @@ export default function Contact() {
                     <CheckCircle className="w-10 h-10 text-[#10b981]" />
                   </div>
                   <h3 className="text-2xl font-bold text-[#1a1a1a] mb-3">{L === 'fr' ? 'Message envoyé !' : 'Message sent!'}</h3>
-                  <p className="text-[#4a5568] mb-6">{L === 'fr' ? 'On vous répond sous 48h maximum.' : 'We\'ll get back to you within 48h.'}</p>
+                  <p className="text-[#4a5568] mb-6">{L === 'fr' ? 'Nous vous répondons sous 48h.' : 'We\'ll get back to you within 48h.'}</p>
                   <button onClick={() => { setIsSubmitted(false); setFormData({ name: '', email: '', company: '', message: '', gate_type: 'general' }); }} className="px-6 py-3 bg-white border border-[#e2e8f0] rounded-xl text-[#1a1a1a] hover:border-[#207bff] transition-all text-sm font-medium">
                     {L === 'fr' ? 'Envoyer un autre message' : 'Send another message'}
                   </button>
@@ -304,7 +304,7 @@ export default function Contact() {
       <section className="py-16 bg-[#f5f7fa]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a1a] mb-4">{L === 'fr' ? 'Plutôt une démo en direct ?' : 'Prefer a live demo?'}</h2>
-          <p className="text-[#4a5568] mb-8 max-w-xl mx-auto">{L === 'fr' ? 'On vous montre notre plateforme avec vos propres données de marché.' : 'We\'ll show you our decision intelligence platform with your market data.'}</p>
+          <p className="text-[#4a5568] mb-8 max-w-xl mx-auto">{L === 'fr' ? 'Nous vous montrons notre plateforme avec vos propres données de marché.' : 'We\'ll show you our decision intelligence platform with your market data.'}</p>
           <a href="mailto:direction@industrialdecision.com?subject=Demo%20Request" className="btn-primary text-lg px-10 py-4">
             {L === 'fr' ? 'Réserver une démo gratuite' : 'Book a demo'}
             <ArrowRight size={18} />

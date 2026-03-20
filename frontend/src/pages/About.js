@@ -48,7 +48,7 @@ export default function About() {
             <div className="space-y-5">
               <p className="text-[#4a5568] leading-relaxed text-lg">
                 {L === 'fr'
-                  ? 'Un constat simple nous a lancés : les sites web industriels ne sont pas conçus pour aider les dirigeants à prendre une décision. On a créé Industrial Decision pour changer ça — audit, conception, accompagnement.'
+                  ? 'Un constat simple nous a lancés : les sites web industriels ne sont pas conçus pour aider les dirigeants à prendre une décision. Nous avons créé Industrial Decision pour y remédier — audit, conception, accompagnement.'
                   : 'Born from a simple observation — industrial websites aren\'t designed to help decision-makers decide — Industrial Decision combines audit, design, and advisory to create decision-grade websites.'}
               </p>
               <Link to="/expertise" className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-[#f5f7fa] border border-[#e2e8f0] rounded-lg text-sm font-medium text-[#1a1a1a] hover:border-[#207bff]/30 hover:bg-[#f0f7ff] transition-all group">
@@ -90,7 +90,7 @@ export default function About() {
             </h2>
             <p className="text-[#4a5568] text-lg leading-relaxed self-end">
               {L === 'fr'
-                ? 'On audite et on transforme les sites d\'acteurs industriels. L\'objectif : que chaque visite d\'un décideur le rapproche d\'une décision, pas d\'une hésitation.'
+                ? 'Nous auditons et transformons les sites d\'acteurs industriels. Notre objectif : que chaque visite d\'un décideur le rapproche d\'une décision, pas d\'une hésitation.'
                 : 'We audit and transform industrial websites. Our goal: every visit from a decision-maker brings them closer to a decision, not to hesitation.'}
             </p>
           </div>
@@ -200,17 +200,17 @@ export default function About() {
               </h2>
               <p className="text-[#4a5568] text-lg self-end">
                 {L === 'fr'
-                  ? 'Quatre convictions qui guident chaque mission. Pas des slogans — des règles qu\'on s\'applique.'
+                  ? 'Quatre convictions qui guident chaque mission. Pas des slogans — des règles que nous appliquons.'
                   : 'Four convictions that guide every engagement, every recommendation, every deliverable.'}
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
               {[
-                { icon: Target, titleEn: 'Rigor', titleFr: 'Rigueur', descEn: 'Data-verified analyses. Transparent methodologies. Measurable results. No vanity metrics.', descFr: 'Des analyses vérifiées par les données, des méthodes transparentes, des résultats mesurables. On ne fait pas dans les vanity metrics.', accent: '#207bff' },
-                { icon: Globe, titleEn: 'Clarity', titleFr: 'Clarté', descEn: 'Direct communication, jargon-free, action-oriented. We say what we do and do what we say.', descFr: 'Communication directe, zéro jargon, orientée action. On dit ce qu\'on fait, on fait ce qu\'on dit.', accent: '#4ea5ff' },
-                { icon: Users, titleEn: 'Specialization', titleFr: 'Spécialisation', descEn: 'We don\'t do everything for everyone. We do digital strategy for industrial actors in France. Period.', descFr: 'On ne fait pas tout pour tout le monde. Stratégie digitale pour l\'industrie en France, point final.', accent: '#10b981' },
-                { icon: Award, titleEn: 'Proof', titleFr: 'Preuve', descEn: 'Every recommendation is backed by our benchmark of 30 OEMs and 51,000+ failure analyses.', descFr: 'Chaque recommandation s\'appuie sur 30 OEM benchmarkés et 51 000+ analyses de défaillances. Pas d\'opinion — des preuves.', accent: '#e89565' },
+                { icon: Target, titleEn: 'Rigor', titleFr: 'Rigueur', descEn: 'Data-verified analyses. Transparent methodologies. Measurable results. No vanity metrics.', descFr: 'Des analyses vérifiées par les données, des méthodes transparentes, des résultats mesurables. Nous ne faisons pas dans les vanity metrics.', accent: '#207bff' },
+                { icon: Globe, titleEn: 'Clarity', titleFr: 'Clarté', descEn: 'Direct communication, jargon-free, action-oriented. We say what we do and do what we say.', descFr: 'Communication directe, zéro jargon, orientée action. Nous disons ce que nous faisons, nous faisons ce que nous disons.', accent: '#4ea5ff' },
+                { icon: Users, titleEn: 'Specialization', titleFr: 'Spécialisation', descEn: 'We don\'t do everything for everyone. We do digital strategy for industrial actors in France. Period.', descFr: 'Nous ne faisons pas tout pour tout le monde. Stratégie digitale pour l\'industrie en France. Point.', accent: '#10b981' },
+                { icon: Award, titleEn: 'Proof', titleFr: 'Preuve', descEn: 'Every recommendation is backed by our benchmark of 30 OEMs and 51,000+ failure analyses.', descFr: 'Chaque recommandation s\'appuie sur 30 OEM benchmarkés et 51 000+ analyses de défaillances. Pas d\'opinions — des preuves.', accent: '#e89565' },
               ].map((v, i) => {
                 const Icon = v.icon;
                 return (
@@ -234,7 +234,7 @@ export default function About() {
               </h2>
               <p className="text-[#4a5568] text-lg self-end">
                 {L === 'fr'
-                  ? 'Trois indices qu\'on a développés nous-mêmes pour mesurer, comparer et améliorer la performance décisionnelle de vos sites.'
+                  ? 'Trois indices que nous avons développés pour mesurer, comparer et améliorer la performance décisionnelle de vos sites.'
                   : 'Three internally-developed indices to measure, compare, and improve decision performance.'}
               </p>
             </div>

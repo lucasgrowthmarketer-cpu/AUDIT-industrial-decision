@@ -164,7 +164,7 @@ export default function Expertise() {
             </h2>
             <p className="text-[#4a5568] text-lg self-end">
               {L === 'fr'
-                ? 'Chaque intervention suit ce cadre : on clarifie le contexte, on rassure avec des données, puis on déclenche l\'action.'
+                ? 'Chaque intervention suit ce cadre : nous clarifions le contexte, rassurons avec des données, puis déclenchons l\'action.'
                 : 'Every engagement follows this framework. We clarify the context, reassure with data, then trigger action.'}
             </p>
           </div>
@@ -181,7 +181,7 @@ export default function Expertise() {
                 <h3 className="text-2xl font-bold mb-3">{L === 'fr' ? 'Clarifier' : 'Clarify'}</h3>
                 <p className="text-white/80 text-sm leading-relaxed">
                   {L === 'fr'
-                    ? 'On cartographie le contexte décisionnel complet de vos prospects. On identifie les lacunes dans les scénarios, les processus, les preuves et les points d\'entrée. On comprend exactement où votre site perd des décideurs.'
+                    ? 'Nous cartographions le contexte décisionnel complet de vos prospects. Nous identifions les lacunes dans les scénarios, les processus, les preuves et les points d\'entrée. Nous comprenons exactement où votre site perd des décideurs.'
                     : 'Map the full scope of your prospect\'s decision context. Identify gaps in scenarios, processes, proof, and entry points. Understand where your site is losing decision-makers.'}
                 </p>
               </div>
@@ -209,7 +209,7 @@ export default function Expertise() {
                 <h3 className="text-xl font-bold text-[#1a1a1a] mb-2">{L === 'fr' ? 'Rassurer' : 'Reassure'}</h3>
                 <p className="text-sm text-[#4a5568] leading-relaxed">
                   {L === 'fr'
-                    ? 'On apporte de la confiance par les données : preuves anonymisées, métriques vérifiables, processus visibles avec délais et engagements. Chaque élément réduit l\'incertitude de votre prospect.'
+                    ? 'Nous apportons de la confiance par les données : preuves anonymisées, métriques vérifiables, processus visibles avec délais et engagements. Chaque élément réduit l\'incertitude de votre prospect.'
                     : 'Provide data-backed confidence. Anonymized proof blocks, verifiable metrics, visible processes with timelines and commitments. Every element reduces your prospect\'s uncertainty.'}
                 </p>
               </div>
@@ -231,7 +231,7 @@ export default function Expertise() {
                 <h3 className="text-xl font-bold text-[#1a1a1a] mb-2">{L === 'fr' ? 'Déclencher' : 'Trigger'}</h3>
                 <p className="text-sm text-[#4a5568] leading-relaxed">
                   {L === 'fr'
-                    ? 'On rend l\'action possible avec des parcours structurés : portes de décision contextuelles, feuilles de route claires, mécanismes d\'engagement adaptés à chaque niveau de maturité.'
+                    ? 'Nous rendons l\'action possible avec des parcours structurés : portes de décision contextuelles, feuilles de route claires, mécanismes d\'engagement adaptés à chaque niveau de maturité.'
                     : 'Enable decisive action with structured pathways. Contextual decision gates (discreet, urgent, exploratory), clear roadmaps, and engagement mechanisms adapted to maturity level.'}
                 </p>
               </div>
