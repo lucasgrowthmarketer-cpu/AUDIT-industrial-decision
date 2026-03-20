@@ -116,37 +116,33 @@ function Header() {
             ))}
           </nav>
           
-          {/* Actions */}
-          <div className="flex items-center gap-3">
-            {/* Language Toggle */}
+          {/* Actions — all on one line */}
+          <div className="flex items-center gap-2">
             <button
               onClick={toggleLanguage}
-              className="flex items-center gap-1 px-3 py-2 text-sm text-[#4a5568] hover:text-[#207bff] transition-colors"
+              className="flex items-center gap-1 px-2 py-2 text-sm text-[#4a5568] hover:text-[#207bff] transition-colors"
               data-testid="language-toggle"
             >
-              <Globe size={16} />
-              <span className="font-medium">{currentLang.toUpperCase()}</span>
+              <Globe size={14} />
+              <span className="font-medium text-xs">{currentLang.toUpperCase()}</span>
             </button>
             
-            {/* Demo + Contact CTAs */}
-            <div className="hidden sm:flex items-center gap-2">
-              <Link
-                to="/demo"
-                className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-[#207bff] border border-[#207bff]/20 rounded-lg hover:bg-[#f0f7ff] transition-all"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                {currentLang === 'fr' ? 'Démo' : 'Demo'}
-              </Link>
-              <Link
-                to="/contact"
-                className="flex btn-primary"
-                data-testid="contact-cta"
-              >
-                {currentLang === 'fr' ? 'Nous Contacter' : 'Contact Us'}
-              </Link>
-            </div>
+            <Link
+              to="/demo"
+              className="hidden lg:flex items-center gap-1 px-3 py-1.5 text-xs font-medium text-[#207bff] border border-[#207bff]/20 rounded-md hover:bg-[#f0f7ff] transition-all"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              {currentLang === 'fr' ? 'Démo' : 'Demo'}
+            </Link>
             
-            {/* Mobile Menu Button */}
+            <Link
+              to="/contact"
+              className="hidden lg:flex btn-primary text-xs px-4 py-1.5"
+              data-testid="contact-cta"
+            >
+              {currentLang === 'fr' ? 'Contact' : 'Contact'}
+            </Link>
+            
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden p-2 text-[#4a5568] hover:text-[#207bff]"
