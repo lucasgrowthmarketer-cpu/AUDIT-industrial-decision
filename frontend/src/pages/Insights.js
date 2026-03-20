@@ -292,7 +292,7 @@ export default function Insights() {
             {/* ALMA Machines Outils */}
             <div className="bg-white rounded-2xl overflow-hidden border border-[#e2e8f0] hover:border-[#207bff]/20 transition-all group">
               <div className="relative h-52 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1533106418989-88406c7cc8ca?auto=format&fit=crop&q=80&w=600" alt="ALMA Machines Outils" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img src="https://images.unsplash.com//alma-logo.png" alt="ALMA Machines Outils" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/80 to-transparent" />
                 <div className="absolute bottom-4 left-5 right-5">
                   <h3 className="text-xl font-bold text-white">ALMA Machines Outils</h3>

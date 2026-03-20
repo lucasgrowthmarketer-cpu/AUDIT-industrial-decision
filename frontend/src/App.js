@@ -1,28 +1,37 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useEffect, Suspense, lazy } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Toaster } from 'sonner';
 import './i18n/config';
 
 import MainLayout from './layouts/MainLayout';
 import Landing from './pages/Landing';
-
 import Home from './pages/Home';
-import About from './pages/About';
-import Team from './pages/Team';
-import Expertise from './pages/Expertise';
-import Sectors from './pages/Sectors';
-import Insights from './pages/Insights';
-import CaseStudies from './pages/CaseStudies';
-import Contact from './pages/Contact';
+
+const About = lazy(() => import('./pages/About'));
+const Team = lazy(() => import('./pages/Team'));
+const Expertise = lazy(() => import('./pages/Expertise'));
+const Sectors = lazy(() => import('./pages/Sectors'));
+const Insights = lazy(() => import('./pages/Insights'));
+const CaseStudies = lazy(() => import('./pages/CaseStudies'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Legal = lazy(() => import('./pages/Legal'));
 
 import './App.css';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+}
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>
+      <Suspense fallback={<div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100vh',background:'#f5f7fa'}}><div style={{width:'32px',height:'32px',border:'3px solid #e2e8f0',borderTopColor:'#207bff',borderRadius:'50%',animation:'spin 0.8s linear infinite'}} /><style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style></div>}>
       <Routes>
         {/* Landing page — standalone, no layout */}
         <Route path="/" element={<Landing />} />
@@ -39,8 +48,11 @@ function App() {
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/legal" element={<Legal />} />
+          <Route path="/legal/:page" element={<Legal />} />
         </Route>
       </Routes>
+      </Suspense>
       <Toaster 
         position="bottom-right" 
         toastOptions={{

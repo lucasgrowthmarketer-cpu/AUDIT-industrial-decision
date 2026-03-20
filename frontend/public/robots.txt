@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://audit-industrial-decision-production.up.railway.app/sitemap.xml
+
+Disallow: /api/

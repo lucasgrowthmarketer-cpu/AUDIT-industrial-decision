@@ -279,10 +279,10 @@ function Footer() {
             © {new Date().getFullYear()} Industrial Decision. {currentLang === 'fr' ? 'Tous droits réservés.' : 'All rights reserved.'}
           </p>
           <div className="flex gap-6 text-sm text-[#718096]">
-            <Link to="/contact" className="hover:text-white transition-colors">
+            <Link to="/legal/privacy" className="hover:text-white transition-colors">
               {currentLang === 'fr' ? 'Confidentialité' : 'Privacy'}
             </Link>
-            <Link to="/contact" className="hover:text-white transition-colors">
+            <Link to="/legal" className="hover:text-white transition-colors">
               {currentLang === 'fr' ? 'Mentions légales' : 'Terms'}
             </Link>
           </div>
