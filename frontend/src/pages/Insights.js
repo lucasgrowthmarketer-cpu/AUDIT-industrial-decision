@@ -76,7 +76,7 @@ export default function Insights() {
 
             {/* ── Col 2, Rows 1-3: MAIN FEATURE — DRS Benchmark (tall center) ── */}
             <div className="md:col-span-1 md:row-span-3 rounded-2xl overflow-hidden relative group">
-              <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&q=80&w=600" alt="CNC" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=600" alt="CNC" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/95 via-[#1a1a1a]/40 to-transparent" />
               <div className="absolute top-5 left-5 z-10 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1.5">
                 <p className="text-sm font-bold text-[#207bff] tracking-tight">DRS Benchmark 2025</p>
@@ -292,7 +292,7 @@ export default function Insights() {
             {/* ALMA Machines Outils */}
             <div className="bg-white rounded-2xl overflow-hidden border border-[#e2e8f0] hover:border-[#207bff]/20 transition-all group">
               <div className="relative h-52 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&q=80&w=600" alt="ALMA Machines Outils" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img src="https://images.unsplash.com/photo-1533106418989-88406c7cc8ca?auto=format&fit=crop&q=80&w=600" alt="ALMA Machines Outils" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/80 to-transparent" />
                 <div className="absolute bottom-4 left-5 right-5">
                   <h3 className="text-xl font-bold text-white">ALMA Machines Outils</h3>
@@ -325,7 +325,7 @@ export default function Insights() {
             {/* Jean-Baptiste Borron */}
             <div className="bg-white rounded-2xl overflow-hidden border border-[#e2e8f0] hover:border-[#207bff]/20 transition-all group">
               <div className="relative h-52 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebb6122?auto=format&fit=crop&q=80&w=600" alt="Jean-Baptiste Borron" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=600" alt="Jean-Baptiste Borron" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/80 to-transparent" />
                 <div className="absolute bottom-4 left-5 right-5">
                   <h3 className="text-xl font-bold text-white">Jean-Baptiste Borron</h3>

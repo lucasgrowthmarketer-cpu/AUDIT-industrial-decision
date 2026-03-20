@@ -70,7 +70,7 @@ function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/home" className="flex items-center gap-2.5 group">
-            <img src="/logo-id.png" alt="ID" className="w-8 h-8 rounded-md transition-transform group-hover:scale-105" />
+            <img src="/logo-id.png" alt="ID" className="w-12 h-12 rounded-lg bg-white p-0.5 transition-transform group-hover:scale-105" />
             <div className="hidden sm:block">
               <span className="text-base font-bold text-[#1a1a1a]">Industrial</span>
               <span className="text-base font-bold text-[#207bff]">Decision</span>
@@ -192,7 +192,7 @@ function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <img src="/logo-id.png" alt="ID" className="w-8 h-8 rounded-md" />
+              <img src="/logo-id.png" alt="ID" className="w-12 h-12 rounded-lg bg-white p-0.5" />
               <div>
                 <span className="text-base font-bold text-white">Industrial</span>
                 <span className="text-base font-bold text-[#207bff]">Decision</span>
@@ -214,7 +214,7 @@ function Footer() {
                 <Linkedin size={18} />
               </a>
               <a 
-                href="mailto:contact@industrialdecision.com"
+                href="mailto:direction@industrialdecision.com"
                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-[#207bff] transition-colors"
               >
                 <Mail size={18} />
@@ -257,10 +257,10 @@ function Footer() {
               <li className="flex items-start gap-3">
                 <Mail size={18} className="text-[#207bff] flex-shrink-0 mt-0.5" />
                 <a 
-                  href="mailto:contact@industrialdecision.com"
+                  href="mailto:direction@industrialdecision.com"
                   className="text-[#a0aec0] hover:text-[#207bff] transition-colors"
                 >
-                  contact@industrialdecision.com
+                  direction@industrialdecision.com
                 </a>
               </li>
               <li className="flex items-start gap-3">

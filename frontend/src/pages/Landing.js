@@ -378,7 +378,7 @@ const Landing = () => {
         {/* Interface Overlay */}
         <div className="landing-interface">
           <div className="landing-logo">
-            <img src="/logo-id.png" alt="ID" style={{ width: '36px', height: '36px', borderRadius: '6px' }} />
+            <img src="/logo-id.png" alt="ID" style={{ width: '48px', height: '48px', borderRadius: '8px', background: 'white', padding: '2px' }} />
             <div className="landing-logo-text">
               Industrial<span>Decision</span>
             </div>

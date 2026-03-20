@@ -72,8 +72,8 @@ const sectors = [
     nameFr: 'Prestataires de Services Industriels',
     shortEn: 'Digital credibility for maintenance, tooling, and SAV.',
     shortFr: 'Crédibilité digitale pour maintenance, outillage et SAV.',
-    image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebb6122?auto=format&fit=crop&q=80&w=800',
-    heroImage: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebb6122?auto=format&fit=crop&q=80&w=1400',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&q=80&w=800',
+    heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&q=80&w=1400',
     descEn: 'Maintenance, tooling, after-sales, integration — if your clients are industrial decision-makers, your website is your first proof of reliability.',
     descFr: 'Maintenance, outillage, SAV, intégration — si vos clients sont des décideurs industriels, votre site est votre première preuve de fiabilité.',
     challenges: [

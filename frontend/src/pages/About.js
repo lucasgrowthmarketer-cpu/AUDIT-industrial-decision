@@ -24,7 +24,7 @@ export default function About() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="relative overflow-hidden rounded-2xl">
             <img
-              src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&q=80&w=1400"
+              src="https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&q=80&w=1400"
               alt={L === 'fr' ? 'Usinage industriel' : 'Industrial machining'}
               className="w-full h-[240px] md:h-[420px] object-cover"
             />

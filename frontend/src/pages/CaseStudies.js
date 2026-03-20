@@ -7,9 +7,9 @@ import { proofBlocks } from '../data/proof_blocks';
 /* Accent colors per case study for visual variety */
 const accents = ['#207bff', '#4ea5ff', '#10b981', '#e89565', '#207bff'];
 const images = [
-  'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&q=80&w=600',
-  'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&q=80&w=600',
-  'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600',
+  'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=600',
+  'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=600',
+  'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=600',
   'https://images.unsplash.com/photo-1504917595217-d4dc5ebb6122?auto=format&fit=crop&q=80&w=600',
   'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600',
 ];
@@ -26,7 +26,7 @@ export default function CaseStudies() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="relative overflow-hidden rounded-2xl">
             <img
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1400"
+              src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=1400"
               alt="Industrial"
               className="w-full h-[200px] md:h-[360px] object-cover"
             />
@@ -169,7 +169,7 @@ function CaseStudyBento({ pb, lang, accent, image, index }) {
                   <span className={`text-4xl md:text-5xl font-bold ${isLast ? 'text-white' : ''}`} style={!isLast ? { color: accent } : {}}>
                     {m.value}
                   </span>
-                  <span className={`text-sm ${isLast ? 'text-white/50' : 'text-[#718096]'}`}>/100</span>
+                  <span className={`text-sm ${isLast ? 'text-white/50' : 'text-[#718096]'}`}>{m.label && m.label.includes('DRS') ? '/4' : '/100'}</span>
                 </div>
               )}
             </div>
@@ -179,7 +179,7 @@ function CaseStudyBento({ pb, lang, accent, image, index }) {
               <div
                 className="h-full rounded-full transition-all"
                 style={{
-                  width: m.isIndex ? `${m.value}%` : m.improvement ? `${Math.min(Math.abs(parseInt(m.improvement)), 100)}%` : '50%',
+                  width: m.isIndex ? (m.label && m.label.includes('DRS') ? `${(parseFloat(m.value)/4)*100}%` : `${m.value}%`) : m.improvement ? `${Math.min(Math.abs(parseInt(m.improvement)), 100)}%` : '50%',
                   background: isLast ? 'white' : accent,
                   opacity: isLast ? 0.6 : 1,
                 }}

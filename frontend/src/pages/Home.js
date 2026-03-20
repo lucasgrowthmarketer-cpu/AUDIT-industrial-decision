@@ -311,7 +311,7 @@ const teamMembers = [
     role: 'INDUSTRIAL OPS & ADVISORY',
     roleFr: 'OPÉRATIONS & CONSEIL INDUSTRIEL',
     image: 'https://i.ibb.co/DDKhbt2R/Untitled-design-7.png',
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/david-ansel-7ab435a8/',
   },
 ];
 

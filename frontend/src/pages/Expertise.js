@@ -44,7 +44,7 @@ const services = [
     deliverableFr: 'Site complet + CMS + analytics',
     durationEn: '8-12 weeks', durationFr: '8-12 semaines',
     stat: { value: '4', labelEn: 'decision axes covered', labelFr: 'axes décisionnels couverts' },
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=600',
   },
   {
     id: 'strategie-acquisition',
@@ -65,7 +65,7 @@ const services = [
     deliverableFr: 'Document stratégique + roadmap 6 mois + dashboard KPI',
     durationEn: '4-6 weeks', durationFr: '4-6 semaines',
     stat: { value: '6', labelEn: 'month roadmap', labelFr: 'mois de roadmap' },
-    image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebb6122?auto=format&fit=crop&q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=600',
   },
   {
     id: 'accompagnement',
@@ -86,7 +86,7 @@ const services = [
     deliverableFr: 'Rapport mensuel + session de pilotage',
     durationEn: 'Ongoing (min. 6 months)', durationFr: 'Continu (min. 6 mois)',
     stat: { value: '12', labelEn: 'KPIs tracked', labelFr: 'KPIs suivis' },
-    image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=600',
   },
 ];
 
@@ -107,7 +107,7 @@ export default function Expertise() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="relative overflow-hidden rounded-2xl">
             <img
-              src="https://images.unsplash.com/photo-1504917595217-d4dc5ebb6122?auto=format&fit=crop&q=80&w=1400"
+              src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=1400"
               alt={L === 'fr' ? 'Environnement industriel' : 'Industrial environment'}
               className="w-full h-[240px] md:h-[400px] object-cover"
             />
