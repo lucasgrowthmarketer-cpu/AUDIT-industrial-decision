@@ -33,9 +33,9 @@ function Mentions({ lang }) {
           </section>
           <section>
             <h2 className="text-lg font-bold text-[#1a1a1a] mb-3">{lang === 'fr' ? 'Hébergement' : 'Hosting'}</h2>
-            <p>Railway Corporation<br/>
-            San Francisco, CA, USA<br/>
-            <a href="https://railway.app" target="_blank" rel="noopener noreferrer" className="text-[#207bff]">railway.app</a></p>
+            <p>OVHcloud<br/>
+            2 rue Kellermann, 59100 Roubaix, France<br/>
+            <a href="https://www.ovhcloud.com" target="_blank" rel="noopener noreferrer" className="text-[#207bff]">ovhcloud.com</a></p>
           </section>
           <section>
             <h2 className="text-lg font-bold text-[#1a1a1a] mb-3">{lang === 'fr' ? 'Propriété intellectuelle' : 'Intellectual Property'}</h2>

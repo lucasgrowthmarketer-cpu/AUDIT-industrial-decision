@@ -65,7 +65,7 @@ const services = [
     deliverableFr: 'Document stratégique + roadmap 6 mois + dashboard KPI',
     durationEn: '4-6 weeks', durationFr: '4-6 semaines',
     stat: { value: '6', labelEn: 'month roadmap', labelFr: 'mois de roadmap' },
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600',
   },
   {
     id: 'accompagnement',
