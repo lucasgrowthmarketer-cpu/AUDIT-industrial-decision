@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Lock, Shield } from 'lucide-react';
 
-const DEMO_URL = 'https://strategy-desk-26.preview.emergentagent.com';
+const DEMO_URL = 'https://industrial-decision-production.up.railway.app/';
 const ACCESS_CODE = 'ID2025';
 
 export default function Demo() {

@@ -128,14 +128,23 @@ function Header() {
               <span className="font-medium">{currentLang.toUpperCase()}</span>
             </button>
             
-            {/* Contact CTA */}
-            <Link
-              to="/contact"
-              className="hidden sm:flex btn-primary"
-              data-testid="contact-cta"
-            >
-              {currentLang === 'fr' ? 'Nous Contacter' : 'Contact Us'}
-            </Link>
+            {/* Demo + Contact CTAs */}
+            <div className="hidden sm:flex items-center gap-2">
+              <Link
+                to="/demo"
+                className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-[#207bff] border border-[#207bff]/20 rounded-lg hover:bg-[#f0f7ff] transition-all"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                {currentLang === 'fr' ? 'Démo' : 'Demo'}
+              </Link>
+              <Link
+                to="/contact"
+                className="flex btn-primary"
+                data-testid="contact-cta"
+              >
+                {currentLang === 'fr' ? 'Nous Contacter' : 'Contact Us'}
+              </Link>
+            </div>
             
             {/* Mobile Menu Button */}
             <button
@@ -168,12 +177,23 @@ function Header() {
                 {currentLang === 'fr' ? item.labelFr : item.labelEn}
               </NavLink>
             ))}
-            <Link
-              to="/contact"
-              className="block w-full mt-4 btn-primary text-center"
-            >
-              {currentLang === 'fr' ? 'Nous Contacter' : 'Contact Us'}
-            </Link>
+            <div className="flex gap-2 mt-4">
+              <Link
+                to="/demo"
+                className="flex-1 flex items-center justify-center gap-1.5 px-4 py-3 text-sm font-medium text-[#207bff] border border-[#207bff]/20 rounded-lg"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                {currentLang === 'fr' ? 'Démo' : 'Demo'}
+              </Link>
+              <Link
+                to="/contact"
+                className="flex-1 btn-primary text-center"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {currentLang === 'fr' ? 'Nous Contacter' : 'Contact Us'}
+              </Link>
+            </div>
           </nav>
         </div>
       )}
@@ -235,6 +255,7 @@ function Footer() {
                 { path: '/case-studies', en: 'Case Studies', fr: 'Études de Cas' },
                 { path: '/insights', en: 'Resources', fr: 'Ressources' },
                 { path: '/contact', en: 'Contact', fr: 'Contact' },
+                { path: '/demo', en: 'Platform Demo', fr: 'Démo Plateforme' },
               ].map((item) => (
                 <li key={item.path}>
                   <Link 
