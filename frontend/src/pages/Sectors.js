@@ -43,7 +43,7 @@ const sectors = [
     shortEn: 'Digital entry points for crisis and transition management.',
     shortFr: 'Points d\'entrée digitaux pour la gestion de crise et transition.',
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800',
-    heroImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1400',
+    heroImage: 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=1400',
     descEn: 'Site closures, asset liquidation, activity transfers — leaders managing these situations need discreet, process-visible, proof-backed digital entry points.',
     descFr: 'Fermetures de sites, liquidation d\'actifs, transferts d\'activité — les dirigeants ont besoin de points d\'entrée digitaux discrets, visibles en processus et étayés par des preuves.',
     challenges: [
@@ -72,8 +72,8 @@ const sectors = [
     nameFr: 'Prestataires de Services Industriels',
     shortEn: 'Digital credibility for maintenance, tooling, and SAV.',
     shortFr: 'Crédibilité digitale pour maintenance, outillage et SAV.',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800',
-    heroImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1400',
+    image: 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=800',
+    heroImage: 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=1400',
     descEn: 'Maintenance, tooling, after-sales, integration — if your clients are industrial decision-makers, your website is your first proof of reliability.',
     descFr: 'Maintenance, outillage, SAV, intégration — si vos clients sont des décideurs industriels, votre site est votre première preuve de fiabilité.',
     challenges: [
