@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Sitemap: https://industrialdecision.com/sitemap.xml
+Sitemap: https://www.industrialdecision.com/sitemap.xml
 
 Disallow: /api/
