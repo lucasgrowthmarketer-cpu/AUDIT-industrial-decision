@@ -157,7 +157,7 @@ export default function COMEXOverview() {
           ].map((module, i) => (
             <Link
               key={i}
-              to={module.path}
+              href={module.path}
               className="flex items-center gap-3 p-3 bg-[#1a1a1a] rounded hover:bg-[#2a2a2a] transition-colors"
             >
               <module.icon size={16} className="text-[#e89565]" />

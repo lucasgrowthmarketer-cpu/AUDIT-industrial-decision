@@ -115,7 +115,7 @@ export default function SystemStatus() {
       <section className="mt-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <Link 
-            to="/market-pressure" 
+            href="/market-pressure" 
             className="flex items-center justify-between p-4 bg-[#2a2a2a] border border-white/5 rounded hover:border-[#e89565]/30 transition-colors"
             data-testid="quick-link-market"
           >
@@ -123,7 +123,7 @@ export default function SystemStatus() {
             <ArrowRight size={18} className="text-[#e89565]" />
           </Link>
           <Link 
-            to="/decision-readiness" 
+            href="/decision-readiness" 
             className="flex items-center justify-between p-4 bg-[#2a2a2a] border border-white/5 rounded hover:border-[#e89565]/30 transition-colors"
             data-testid="quick-link-readiness"
           >
@@ -131,7 +131,7 @@ export default function SystemStatus() {
             <ArrowRight size={18} className="text-[#e89565]" />
           </Link>
           <Link 
-            to="/decision-gates" 
+            href="/decision-gates" 
             className="flex items-center justify-between p-4 bg-[#2a2a2a] border border-white/5 rounded hover:border-[#e89565]/30 transition-colors"
             data-testid="quick-link-gates"
           >

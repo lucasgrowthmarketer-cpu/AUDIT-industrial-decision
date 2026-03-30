@@ -243,7 +243,7 @@ const ServiceShowcase = ({ services, lang }) => {
           return (
             <Link
               key={s.id}
-              to={`/expertise/${s.id}`}
+              href={`/expertise/${s.id}`}
               className="group block"
               onMouseEnter={() => { setHoveredIndex(i); setIsVisible(true); }}
               onMouseLeave={() => { setHoveredIndex(null); setIsVisible(false); }}
@@ -490,14 +490,14 @@ export default function HomeClient() {
               {/* CTA Buttons */}
               <div className="hero-anim hd-400 flex flex-col sm:flex-row gap-4">
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#207bff] px-8 py-4 text-sm font-semibold text-white transition-all hover:scale-[1.02] hover:bg-[#1a62cc] active:scale-[0.98]"
                 >
                   {L === 'fr' ? 'Demander un audit gratuit' : 'Request an Audit'}
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <Link
-                  to="/expertise"
+                  href="/expertise"
                   className="group inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10 hover:border-white/20"
                 >
                   <Play className="w-4 h-4 fill-current" />

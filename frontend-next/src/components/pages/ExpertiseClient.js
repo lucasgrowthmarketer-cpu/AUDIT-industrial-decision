@@ -332,7 +332,7 @@ function ServiceCardStack({ services, lang }) {
                 <div className="text-sm font-medium text-[#1a1a1a]">{lang === 'fr' ? active.deliverableFr : active.deliverableEn}</div>
               </div>
               <Link
-                to={`/expertise/${active.id}`}
+                href={`/expertise/${active.id}`}
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#207bff] text-white text-sm font-semibold rounded-lg hover:bg-[#1a62cc] transition-all"
               >
                 {lang === 'fr' ? 'Détails' : 'Details'} <ArrowRight className="w-4 h-4" />

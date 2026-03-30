@@ -203,7 +203,7 @@ function SectorsOverview({ lang }) {
             {sectors.map(sector => {
               const Icon = sector.icon;
               return (
-                <Link key={sector.id} to={`/sectors/${sector.id}`} className="bg-white rounded-2xl p-7 border border-[#e2e8f0] hover:border-[#207bff]/20 hover:shadow-lg hover:shadow-[#207bff]/5 transition-all duration-300 hover:-translate-y-1 group">
+                <Link key={sector.id} href={`/sectors/${sector.id}`} className="bg-white rounded-2xl p-7 border border-[#e2e8f0] hover:border-[#207bff]/20 hover:shadow-lg hover:shadow-[#207bff]/5 transition-all duration-300 hover:-translate-y-1 group">
                   <div className="w-12 h-12 mb-5 rounded-xl bg-[#f0f7ff] flex items-center justify-center">
                     <Icon className="w-6 h-6 text-[#207bff]" />
                   </div>
@@ -383,7 +383,7 @@ function SectorDetail({ sector, lang }) {
             ].map(svc => {
               const SvcIcon = svc.icon;
               return (
-                <Link key={svc.id} to={`/expertise/${svc.id}`} className="bg-white rounded-2xl p-6 border border-[#e2e8f0] hover:border-[#207bff]/20 hover:shadow-sm transition-all flex items-center gap-4 group">
+                <Link key={svc.id} href={`/expertise/${svc.id}`} className="bg-white rounded-2xl p-6 border border-[#e2e8f0] hover:border-[#207bff]/20 hover:shadow-sm transition-all flex items-center gap-4 group">
                   <div className="w-12 h-12 rounded-xl bg-[#f0f7ff] flex items-center justify-center flex-shrink-0 group-hover:bg-[#207bff] group-hover:text-white transition-colors">
                     <SvcIcon className="w-5 h-5 text-[#207bff] group-hover:text-white" />
                   </div>
