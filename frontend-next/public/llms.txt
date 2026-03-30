@@ -1,0 +1,28 @@
+# Industrial Decision
+> Cabinet de conseil digital specialise dans l'industrie francaise. Intelligence decisionnelle, audit DRS proprietaire, strategie d'acquisition digitale, accompagnement continu. Cible : PME/ETI industrielles, 2M-50M EUR CA.
+
+## Equipe
+- Lucas Ansel — Fondateur, Strategie Digitale & Architecture Web Industrielle
+- Ayoub Bouzalmad — CTO, Decision Intelligence & Systemes
+- David Ansel — Operations & Representation terrain
+
+## Contact
+- Site: https://www.industrialdecision.com
+- Email: lucas.growthmarketer@gmail.com
+- LinkedIn: https://www.linkedin.com/company/industrial-decision
+
+## Services
+- Audit Decision Readiness (DRS): /expertise/audit-drs
+- Site Web Decisionnel: /expertise/site-decisionnel
+- Strategie d'Acquisition Digitale: /expertise/strategie-acquisition
+- Accompagnement Continu: /expertise/accompagnement
+
+## Secteurs
+- Negoce de machines-outils: /sectors/machine-tool
+- Restructuration industrielle: /sectors/industrial-restructuring
+- Services industriels & asset management: /sectors/industrial-services
+
+## Methodologie
+- DRS (Decision Readiness Score): scoring proprietaire 0-100 de la maturite decisionnelle digitale
+- 30+ OEM benchmarkes dans le secteur machine-outil
+- 51 772 defaillances industrielles analysees (donnees INSEE/Banque de France)
