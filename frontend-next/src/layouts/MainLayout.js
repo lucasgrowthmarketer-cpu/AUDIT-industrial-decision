@@ -163,7 +163,6 @@ function Header() {
                 key={item.path}
                 href={item.path}
                 className="block px-4 py-3 rounded-lg text-base font-medium transition-colors text-[#4a5568] hover:text-[#207bff] hover:bg-[#f0f7ff]"
-                }
               >
                 {currentLang === 'fr' ? item.labelFr : item.labelEn}
               </Link>
