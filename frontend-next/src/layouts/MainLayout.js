@@ -89,10 +89,8 @@ function Header() {
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 <Link
-                  to={item.path}
-                  className={({ isActive }) =>
-                    `nav-link flex items-center gap-1 ${isActive ? 'active' : ''}`
-                  }
+                  href={item.path}
+                  className="nav-link flex items-center gap-1"
                 >
                   {currentLang === 'fr' ? item.labelFr : item.labelEn}
                   {item.dropdown && <ChevronDown size={14} />}
@@ -105,7 +103,7 @@ function Header() {
                       {item.dropdown.map((subItem) => (
                         <Link
                           key={subItem.path}
-                          to={subItem.path}
+                          href={subItem.path}
                           className="block px-4 py-2 text-sm text-[#4a5568] hover:text-[#207bff] hover:bg-[#f0f7ff] transition-colors"
                         >
                           {currentLang === 'fr' ? subItem.labelFr : subItem.labelEn}
@@ -130,7 +128,7 @@ function Header() {
             </button>
             
             <Link
-              to="/demo"
+              href="/demo"
               className="hidden lg:flex items-center gap-1 px-3 py-1.5 text-xs font-medium text-[#207bff] border border-[#207bff]/20 rounded-md hover:bg-[#f0f7ff] transition-all"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
@@ -138,7 +136,7 @@ function Header() {
             </Link>
             
             <Link
-              to="/contact"
+              href="/contact"
               className="hidden lg:flex btn-primary text-xs px-4 py-1.5"
               data-testid="contact-cta"
             >
@@ -163,13 +161,8 @@ function Header() {
             {navItems.map((item) => (
               <Link
                 key={item.path}
-                to={item.path}
-                className={({ isActive }) =>
-                  `block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
-                    isActive 
-                      ? 'text-[#207bff] bg-[#f0f7ff]' 
-                      : 'text-[#4a5568] hover:text-[#207bff] hover:bg-[#f0f7ff]'
-                  }`
+                href={item.path}
+                className="block px-4 py-3 rounded-lg text-base font-medium transition-colors text-[#4a5568] hover:text-[#207bff] hover:bg-[#f0f7ff]"
                 }
               >
                 {currentLang === 'fr' ? item.labelFr : item.labelEn}
@@ -177,7 +170,7 @@ function Header() {
             ))}
             <div className="flex gap-2 mt-4">
               <Link
-                to="/demo"
+                href="/demo"
                 className="flex-1 flex items-center justify-center gap-1.5 px-4 py-3 text-sm font-medium text-[#207bff] border border-[#207bff]/20 rounded-lg"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -185,7 +178,7 @@ function Header() {
                 {currentLang === 'fr' ? 'Démo' : 'Demo'}
               </Link>
               <Link
-                to="/contact"
+                href="/contact"
                 className="flex-1 btn-primary text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -229,7 +222,7 @@ function Footer() {
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-[#207bff] transition-colors"
               >
-                <Linkedin size={18} />
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
               </a>
               <a 
                 href="mailto:direction@industrialdecision.com"
@@ -257,7 +250,7 @@ function Footer() {
               ].map((item) => (
                 <li key={item.path}>
                   <Link 
-                    to={item.path}
+                    href={item.path}
                     className="text-[#a0aec0] hover:text-[#207bff] transition-colors"
                   >
                     {currentLang === 'fr' ? item.fr : item.en}
