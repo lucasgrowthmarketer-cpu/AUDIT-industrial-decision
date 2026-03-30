@@ -9,7 +9,7 @@ export default function LegalClient({ pageSlug }) {
   const L = i18n.language;
   // pageSlug from props
   
-  if (page === 'privacy') return <Privacy lang={L} />;
+  if (pageSlug === 'privacy') return <Privacy lang={L} />;
   return <Mentions lang={L} />;
 }
 
