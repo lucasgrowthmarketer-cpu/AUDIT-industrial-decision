@@ -1,7 +1,9 @@
 'use client';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import Link from 'next/link';
+
 import {
   ArrowRight,
   Target,
@@ -295,7 +297,7 @@ const teamMembers = [
     name: 'Lucas A.',
     role: 'FOUNDER & STRATEGIC ARCHITECT',
     roleFr: 'FONDATEUR & ARCHITECTE STRATÉGIQUE',
-    image: 'https://i.ibb.co/N6Td5161/Untitled-design-5.png',
+    image: '/team/lucas.png',
     linkedin: 'https://www.linkedin.com/in/lucas-ansel-growth-hacker/',
   },
   {
@@ -303,7 +305,7 @@ const teamMembers = [
     name: 'Ayoub B.',
     role: 'CHIEF TECHNOLOGY OFFICER',
     roleFr: 'DIRECTEUR TECHNIQUE',
-    image: 'https://i.ibb.co/gZS47BmH/Untitled-design-6.png',
+    image: '/team/ayoub.png',
     linkedin: 'https://www.linkedin.com/in/ayoub-bouzalmad-ba17a8139/',
   },
   {
@@ -311,7 +313,7 @@ const teamMembers = [
     name: 'David A.',
     role: 'INDUSTRIAL OPS & ADVISORY',
     roleFr: 'OPÉRATIONS & CONSEIL INDUSTRIEL',
-    image: 'https://i.ibb.co/DDKhbt2R/Untitled-design-7.png',
+    image: '/team/david.png',
     linkedin: 'https://www.linkedin.com/in/david-ansel-7ab435a8/',
   },
 ];
@@ -400,7 +402,7 @@ const TeamShowcase = ({ lang }) => {
 /* ════════════════════════════════════════════
    MAIN COMPONENT
    ════════════════════════════════════════════ */
-export default function HomeClient() {
+export default function Home() {
   const { i18n } = useTranslation();
   const L = i18n.language;
 
