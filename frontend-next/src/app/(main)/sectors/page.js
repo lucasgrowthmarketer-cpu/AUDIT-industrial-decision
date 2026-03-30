@@ -5,4 +5,19 @@ export const metadata = {
   description: 'Nos secteurs : negoce de machines-outils, restructuration industrielle, services industriels et asset management.',
   alternates: { canonical: '/sectors' },
 };
-export default function SectorsPage() { return <SectorsClient />; }
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Industrial Decision",
+  "url": "https://www.industrialdecision.com/sectors",
+  "knowsAbout": ["Machine-outil", "Restructuration industrielle", "Services industriels"],
+  "areaServed": "FR"
+};
+export default function SectorsPage() {
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <SectorsClient />
+    </>
+  );
+}

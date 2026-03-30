@@ -1,9 +1,9 @@
 export const dynamic = "force-dynamic";
 import SectorsClient from '@/components/pages/SectorsClient';
 const sectorMeta = {
-  'machine-tool': { title: 'Secteur Machine-Outil', desc: 'Conseil digital pour le negoce de machines-outils. 30+ OEM analyses.' },
+  'machine-tool': { title: 'Secteur Machine-Outil', desc: 'Conseil digital pour le negoce de machines-outils.' },
   'industrial-restructuring': { title: 'Restructuration Industrielle', desc: 'Accompagnement digital des PME/ETI en restructuration.' },
-  'industrial-services': { title: 'Services Industriels', desc: 'Transformation digitale des entreprises de services industriels.' },
+  'industrial-services': { title: 'Services Industriels', desc: 'Transformation digitale des services industriels.' },
 };
 export async function generateMetadata({ params: p }) {
   const params = await p;
@@ -12,5 +12,20 @@ export async function generateMetadata({ params: p }) {
 }
 export default async function SectorDetailPage({ params: p }) {
   const params = await p;
-  return <SectorsClient sectorId={params.sectorId} />;
+  const meta = sectorMeta[params.sectorId] || {};
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Industrial Decision",
+    "description": meta.desc,
+    "url": `https://www.industrialdecision.com/sectors/${params.sectorId}`,
+    "areaServed": "FR",
+    "knowsAbout": meta.title
+  };
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <SectorsClient sectorId={params.sectorId} />
+    </>
+  );
 }
