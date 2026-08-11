@@ -21,7 +21,10 @@ import {
   Zap
 } from 'lucide-react';
 
-const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
+const API_URL =
+  process.env.NEXT_PUBLIC_BACKEND_URL ||
+  process.env.REACT_APP_BACKEND_URL ||
+  '';
 
 const gateTypes = [
   { id: 'discreet', labelEn: 'Discreet', labelFr: 'Discret', descEn: 'Confidential, no obligation', descFr: 'Échange confidentiel, sans engagement', time: '48-72h', color: '#e89565' },
