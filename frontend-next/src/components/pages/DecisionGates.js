@@ -5,10 +5,7 @@ import { toast } from 'sonner';
 import { DoorOpen, Send, Clock, Shield, Zap, AlertTriangle, CheckCircle } from 'lucide-react';
 import { decisionGates as decisionGatesData } from '@/data/decision_gates';
 
-const API_URL =
-  process.env.NEXT_PUBLIC_BACKEND_URL ||
-  process.env.REACT_APP_BACKEND_URL ||
-  '';
+const API_URL = 'https://audit-industrial-decision-production-cb0c.up.railway.app';
 
 export default function DecisionGates() {
   const { t, i18n } = useTranslation();
