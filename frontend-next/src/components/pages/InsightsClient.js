@@ -17,7 +17,7 @@ export default function Insights() {
       <section className="pt-8 pb-16 md:pt-12 md:pb-20 bg-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="relative overflow-hidden rounded-2xl">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1400" alt="Data analytics" className="w-full h-[200px] md:h-[340px] object-cover" />
+            <img loading="lazy" decoding="async" src="/images/data-analytics.webp" alt="Data analytics" className="w-full h-[200px] md:h-[340px] object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/50 to-transparent" />
             <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-[#207bff]">
@@ -79,7 +79,7 @@ export default function Insights() {
 
             {/* ── Col 2, Rows 1-3: MAIN FEATURE — DRS Benchmark (tall center) ── */}
             <div className="md:col-span-1 md:row-span-3 rounded-2xl overflow-hidden relative group">
-              <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=600" alt="CNC" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <img loading="lazy" decoding="async" src="/images/usinage-cnc.webp" alt="CNC" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/95 via-[#1a1a1a]/40 to-transparent" />
               <div className="absolute top-5 left-5 z-10 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1.5">
                 <p className="text-sm font-bold text-[#207bff] tracking-tight">DRS Benchmark 2025</p>
@@ -125,7 +125,7 @@ export default function Insights() {
 
             {/* ── Col 1, Row 2: Industrial Pressure Map (image card) ── */}
             <div className="md:col-span-1 md:row-span-1 rounded-2xl overflow-hidden relative group">
-              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600" alt="Industrial" className="absolute inset-0 w-full h-full object-cover" />
+              <img loading="lazy" decoding="async" src="/images/audit-digital.webp" alt="Industrial" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/80 to-transparent" />
               <div className="relative flex flex-col justify-end h-full p-5">
                 <div className="flex items-center gap-2 mb-2">
@@ -295,7 +295,7 @@ export default function Insights() {
             {/* ALMA Machines Outils */}
             <div className="bg-white rounded-2xl overflow-hidden border border-[#e2e8f0] hover:border-[#207bff]/20 transition-all group">
               <div className="relative h-52 overflow-hidden">
-                <img src="/alma-logo.png" style={{objectFit:"contain",background:"#fff",padding:"2rem"}} alt="ALMA Machines Outils" className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
+                <img loading="lazy" decoding="async" src="/alma-logo.png" style={{objectFit:"contain",background:"#fff",padding:"2rem"}} alt="ALMA Machines Outils" className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/80 to-transparent" />
                 <div className="absolute bottom-4 left-5 right-5">
                   <h3 className="text-xl font-bold text-white">ALMA Machines Outils</h3>
@@ -328,7 +328,7 @@ export default function Insights() {
             {/* Jean-Baptiste Borron */}
             <div className="bg-white rounded-2xl overflow-hidden border border-[#e2e8f0] hover:border-[#207bff]/20 transition-all group">
               <div className="relative h-52 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=600" alt="Jean-Baptiste Borron" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img loading="lazy" decoding="async" src="/images/atelier-industriel.webp" alt="Jean-Baptiste Borron" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/80 to-transparent" />
                 <div className="absolute bottom-4 left-5 right-5">
                   <h3 className="text-xl font-bold text-white">Jean-Baptiste Borron</h3>

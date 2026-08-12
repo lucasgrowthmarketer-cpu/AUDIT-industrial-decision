@@ -24,7 +24,7 @@ const services = [
     deliverableFr: 'Rapport chiffré + plan d\'action + présentation',
     durationEn: '2-3 weeks', durationFr: '2-3 semaines',
     stat: { value: '30+', labelEn: 'OEMs in benchmark', labelFr: 'OEM dans le benchmark' },
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600',
+    image: '/images/data-analytics.webp',
   },
   {
     id: 'site-decisionnel',
@@ -45,7 +45,7 @@ const services = [
     deliverableFr: 'Site complet + CMS + analytics',
     durationEn: '8-12 weeks', durationFr: '8-12 semaines',
     stat: { value: '4', labelEn: 'decision axes covered', labelFr: 'axes décisionnels couverts' },
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=600',
+    image: '/images/infrastructure-tech.webp',
   },
   {
     id: 'strategie-acquisition',
@@ -66,7 +66,7 @@ const services = [
     deliverableFr: 'Document stratégique + roadmap 6 mois + dashboard KPI',
     durationEn: '4-6 weeks', durationFr: '4-6 semaines',
     stat: { value: '6', labelEn: 'month roadmap', labelFr: 'mois de roadmap' },
-    image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&q=80&w=600',
+    image: '/images/strategie-acquisition.webp',
   },
   {
     id: 'accompagnement',
@@ -87,7 +87,7 @@ const services = [
     deliverableFr: 'Rapport mensuel + session de pilotage',
     durationEn: 'Ongoing (min. 6 months)', durationFr: 'Continu (min. 6 mois)',
     stat: { value: '12', labelEn: 'KPIs tracked', labelFr: 'KPIs suivis' },
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=600',
+    image: '/images/atelier-industriel.webp',
   },
 ];
 
@@ -107,8 +107,8 @@ export default function ExpertiseClient({ serviceId }) {
       <section className="pt-8 pb-16 md:pt-12 md:pb-20 bg-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="relative overflow-hidden rounded-2xl">
-            <img
-              src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=1400"
+            <img loading="lazy" decoding="async"
+              src="/images/usinage-cnc.webp"
               alt={L === 'fr' ? 'Environnement industriel' : 'Industrial environment'}
               className="w-full h-[240px] md:h-[400px] object-cover"
             />
@@ -295,7 +295,7 @@ function ServiceCardStack({ services, lang }) {
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Image */}
           <div className="relative h-[260px] md:h-auto overflow-hidden">
-            <img
+            <img loading="lazy" decoding="async"
               src={active.image}
               alt={lang === 'fr' ? active.titleFr : active.titleEn}
               className="w-full h-full object-cover"
@@ -428,7 +428,7 @@ function ServiceDetail({ service, lang }) {
       <section className="pt-8 pb-16 md:pt-12 md:pb-20 bg-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="relative overflow-hidden rounded-2xl">
-            <img src={service.image} alt="" className="w-full h-[240px] md:h-[400px] object-cover" />
+            <img loading="lazy" decoding="async" src={service.image} alt="" className="w-full h-[240px] md:h-[400px] object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/60 to-transparent" />
             <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 flex items-center gap-3">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-[#207bff]">

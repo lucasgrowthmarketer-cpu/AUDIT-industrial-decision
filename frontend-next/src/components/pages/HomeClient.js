@@ -30,10 +30,10 @@ import {
 
 /* ─── DATA ─── */
 const services = [
-  { id: 'audit-drs', icon: Search, titleEn: 'Decision Readiness Audit', titleFr: 'Audit de Maturité Décisionnelle', descEn: 'Full DRS scoring of your website against 30+ industrial OEMs.', descFr: 'Scoring DRS complet de votre site face à 30+ OEM industriels.', deliverableEn: 'Scored report + action plan', deliverableFr: 'Rapport chiffré + plan d\'action', duration: '2-3 sem.', image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80', year: '2025' },
-  { id: 'site-decisionnel', icon: Target, titleEn: 'Decision-Grade Website', titleFr: 'Site Web Décisionnel', descEn: 'Full website redesign as a decision support system.', descFr: 'Refonte complète du site comme outil d\'aide à la décision.', deliverableEn: 'Full website delivery', deliverableFr: 'Livraison site complet', duration: '8-12 sem.', image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80', year: '2025' },
-  { id: 'strategie-acquisition', icon: Zap, titleEn: 'Acquisition Strategy', titleFr: 'Stratégie d\'Acquisition', descEn: 'SEO, content clusters, and visibility layer for industrial buyers.', descFr: 'SEO, clusters de contenu et couche de visibilité pour décideurs.', deliverableEn: 'Strategy + 6-month roadmap', deliverableFr: 'Stratégie + roadmap 6 mois', duration: '4-6 sem.', image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&q=80&w=600', year: '2025' },
-  { id: 'accompagnement', icon: Shield, titleEn: 'Ongoing Advisory', titleFr: 'Accompagnement Continu', descEn: 'Monthly KPI tracking, content updates, strategic adjustments.', descFr: 'Suivi mensuel KPI, mises à jour contenu, ajustements stratégiques.', deliverableEn: 'Monthly report + steering', deliverableFr: 'Rapport mensuel + pilotage', duration: 'Continu', image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=600', year: '2024' },
+  { id: 'audit-drs', icon: Search, titleEn: 'Decision Readiness Audit', titleFr: 'Audit de Maturité Décisionnelle', descEn: 'Full DRS scoring of your website against 30+ industrial OEMs.', descFr: 'Scoring DRS complet de votre site face à 30+ OEM industriels.', deliverableEn: 'Scored report + action plan', deliverableFr: 'Rapport chiffré + plan d\'action', duration: '2-3 sem.', image: '/images/data-analytics.webp', year: '2025' },
+  { id: 'site-decisionnel', icon: Target, titleEn: 'Decision-Grade Website', titleFr: 'Site Web Décisionnel', descEn: 'Full website redesign as a decision support system.', descFr: 'Refonte complète du site comme outil d\'aide à la décision.', deliverableEn: 'Full website delivery', deliverableFr: 'Livraison site complet', duration: '8-12 sem.', image: '/images/audit-digital.webp', year: '2025' },
+  { id: 'strategie-acquisition', icon: Zap, titleEn: 'Acquisition Strategy', titleFr: 'Stratégie d\'Acquisition', descEn: 'SEO, content clusters, and visibility layer for industrial buyers.', descFr: 'SEO, clusters de contenu et couche de visibilité pour décideurs.', deliverableEn: 'Strategy + 6-month roadmap', deliverableFr: 'Stratégie + roadmap 6 mois', duration: '4-6 sem.', image: '/images/strategie-acquisition.webp', year: '2025' },
+  { id: 'accompagnement', icon: Shield, titleEn: 'Ongoing Advisory', titleFr: 'Accompagnement Continu', descEn: 'Monthly KPI tracking, content updates, strategic adjustments.', descFr: 'Suivi mensuel KPI, mises à jour contenu, ajustements stratégiques.', deliverableEn: 'Monthly report + steering', deliverableFr: 'Rapport mensuel + pilotage', duration: 'Continu', image: '/images/atelier-industriel.webp', year: '2024' },
 ];
 
 const differentiators = [
@@ -214,7 +214,7 @@ const ServiceShowcase = ({ services, lang }) => {
       >
         <div className="relative w-[300px] h-[190px] bg-[#f5f7fa] rounded-2xl overflow-hidden">
           {services.map((s, i) => (
-            <img
+            <img loading="lazy" decoding="async"
               key={s.id}
               src={s.image}
               alt={lang === 'fr' ? s.titleFr : s.titleEn}
@@ -340,7 +340,7 @@ const TeamShowcase = ({ lang }) => {
                 onMouseEnter={() => setHoveredId(member.id)}
                 onMouseLeave={() => setHoveredId(null)}
               >
-                <img
+                <img loading="lazy" decoding="async"
                   src={member.image}
                   alt={member.name}
                   className="w-full h-full object-cover object-top transition-all duration-500"
@@ -434,7 +434,7 @@ export default function Home() {
         <div
           className="absolute inset-0 z-0 bg-cover bg-center opacity-20"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&q=80&w=1400)',
+            backgroundImage: 'url(/images/production-industrielle.webp)',
             maskImage: 'linear-gradient(180deg, transparent 0%, black 10%, black 60%, transparent 100%)',
             WebkitMaskImage: 'linear-gradient(180deg, transparent 0%, black 10%, black 60%, transparent 100%)',
           }}

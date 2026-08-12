@@ -72,7 +72,7 @@ function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/home" className="flex items-center gap-2.5 group">
-            <img src="/logo-id.png" alt="ID" className="w-12 h-12 rounded-lg bg-white p-0.5 transition-transform group-hover:scale-105" />
+            <img loading="lazy" decoding="async" src="/logo-id.png" alt="ID" className="w-12 h-12 rounded-lg bg-white p-0.5 transition-transform group-hover:scale-105" />
             <div className="hidden sm:block">
               <span className="text-base font-bold text-[#1a1a1a]">Industrial</span>
               <span className="text-base font-bold text-[#207bff]">Decision</span>
@@ -202,7 +202,7 @@ function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <img src="/logo-id.png" alt="ID" className="w-12 h-12 rounded-lg bg-white p-0.5" />
+              <img loading="lazy" decoding="async" src="/logo-id.png" alt="ID" className="w-12 h-12 rounded-lg bg-white p-0.5" />
               <div>
                 <span className="text-base font-bold text-white">Industrial</span>
                 <span className="text-base font-bold text-[#207bff]">Decision</span>

@@ -74,7 +74,7 @@ function TeamMemberCard({ member, isExpanded, onToggle, lang }) {
     >
       {/* Photo */}
       <div className="relative h-80 overflow-hidden">
-        <img 
+        <img loading="lazy" decoding="async" 
           src={member.photo} 
           alt={member.name} 
           className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105"

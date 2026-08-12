@@ -8,11 +8,11 @@ import { proofBlocks } from '@/data/proof_blocks';
 /* Accent colors per case study for visual variety */
 const accents = ['#207bff', '#4ea5ff', '#10b981', '#e89565', '#207bff'];
 const images = [
-  'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600',
-  'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&q=80&w=600',
-  'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=600',
-  'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=600',
-  'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=600',
+  '/images/tableau-de-bord.webp',
+  '/images/strategie-acquisition.webp',
+  '/images/infrastructure-tech.webp',
+  '/images/usinage-cnc.webp',
+  '/images/equipe-industrielle.webp',
 ];
 
 export default function CaseStudiesClient() {
@@ -26,8 +26,8 @@ export default function CaseStudiesClient() {
       <section className="pt-8 pb-16 md:pt-12 md:pb-20 bg-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="relative overflow-hidden rounded-2xl">
-            <img
-              src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=1400"
+            <img loading="lazy" decoding="async"
+              src="/images/atelier-industriel.webp"
               alt="Industrial"
               className="w-full h-[200px] md:h-[360px] object-cover"
             />
@@ -100,7 +100,7 @@ function CaseStudyBento({ pb, lang, accent, image, index }) {
 
       {/* ─ Card 1: Company + sector — tall (span 2 col, 3 rows) ─ */}
       <div className={`md:col-span-2 md:row-span-3 rounded-2xl overflow-hidden relative ${isEven ? 'md:order-1' : 'md:order-4'}`}>
-        <img src={image} alt={pb.company} className="absolute inset-0 w-full h-full object-cover" />
+        <img loading="lazy" decoding="async" src={image} alt={pb.company} className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/90 via-[#1a1a1a]/40 to-transparent" />
         <div className="relative h-full flex flex-col justify-end p-7">
           <div className="flex items-center gap-2 mb-3">

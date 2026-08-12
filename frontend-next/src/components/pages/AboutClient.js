@@ -24,8 +24,8 @@ export default function AboutClient() {
       <section className="pt-8 pb-16 md:pt-12 md:pb-20 bg-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="relative overflow-hidden rounded-2xl">
-            <img
-              src="https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&q=80&w=1400"
+            <img loading="lazy" decoding="async"
+              src="/images/machine-outil.webp"
               alt={L === 'fr' ? 'Usinage industriel' : 'Industrial machining'}
               className="w-full h-[240px] md:h-[420px] object-cover"
             />
@@ -102,7 +102,7 @@ export default function AboutClient() {
             {/* Card 1: DRS Audit — tall, spans 1 col 2 rows on desktop */}
             <div className="md:row-span-2 bg-[#1a1a1a] rounded-2xl overflow-hidden text-white flex flex-col">
               <div className="relative h-52 md:h-64 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600" alt="Audit" className="w-full h-full object-cover" />
+                <img loading="lazy" decoding="async" src="/images/audit-digital.webp" alt="Audit" className="w-full h-full object-cover" />
                 <div className="absolute bottom-0 h-28 w-full bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/70 to-transparent" />
               </div>
               <div className="p-7 flex-1 flex flex-col">

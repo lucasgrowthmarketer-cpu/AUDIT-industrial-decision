@@ -13,8 +13,8 @@ const sectors = [
     nameFr: 'OEM & Intégrateurs Machines-Outils',
     shortEn: 'Decision-grade websites for industrial equipment manufacturers.',
     shortFr: 'Sites décisionnels pour fabricants d\'équipements industriels.',
-    image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&q=80&w=800',
-    heroImage: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&q=80&w=1400',
+    image: '/images/production-industrielle.webp',
+    heroImage: '/images/production-industrielle.webp',
     descEn: 'Your buyers are technical decision-makers comparing DMG MORI, Mazak, Hermle — and your site needs to compete at their level. We help OEMs and integrators build websites that reduce decision uncertainty.',
     descFr: 'Vos acheteurs sont des décideurs techniques qui comparent DMG MORI, Mazak, Hermle — et votre site doit rivaliser à ce niveau. Nous aidons les OEM et intégrateurs à réduire l\'incertitude décisionnelle.',
     challenges: [
@@ -43,8 +43,8 @@ const sectors = [
     nameFr: 'Acteurs de la Restructuration Industrielle',
     shortEn: 'Digital entry points for crisis and transition management.',
     shortFr: 'Points d\'entrée digitaux pour la gestion de crise et transition.',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800',
-    heroImage: 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=1400',
+    image: '/images/audit-digital.webp',
+    heroImage: '/images/usinage-cnc.webp',
     descEn: 'Site closures, asset liquidation, activity transfers — leaders managing these situations need discreet, process-visible, proof-backed digital entry points.',
     descFr: 'Fermetures de sites, liquidation d\'actifs, transferts d\'activité — les dirigeants ont besoin de points d\'entrée digitaux discrets, visibles en processus et étayés par des preuves.',
     challenges: [
@@ -73,8 +73,8 @@ const sectors = [
     nameFr: 'Prestataires de Services Industriels',
     shortEn: 'Digital credibility for maintenance, tooling, and SAV.',
     shortFr: 'Crédibilité digitale pour maintenance, outillage et SAV.',
-    image: 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=800',
-    heroImage: 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=1400',
+    image: '/images/usinage-cnc.webp',
+    heroImage: '/images/usinage-cnc.webp',
     descEn: 'Maintenance, tooling, after-sales, integration — if your clients are industrial decision-makers, your website is your first proof of reliability.',
     descFr: 'Maintenance, outillage, SAV, intégration — si vos clients sont des décideurs industriels, votre site est votre première preuve de fiabilité.',
     challenges: [
@@ -105,7 +105,7 @@ const AccordionItem = ({ sector, isActive, onMouseEnter, lang }) => {
       className={`relative rounded-2xl overflow-hidden cursor-pointer transition-all duration-700 ease-in-out h-[420px] ${isActive ? 'w-[380px]' : 'w-[70px]'}`}
       onMouseEnter={onMouseEnter}
     >
-      <img src={sector.image} alt={lang === 'fr' ? sector.nameFr : sector.nameEn} className="absolute inset-0 w-full h-full object-cover" />
+      <img loading="lazy" decoding="async" src={sector.image} alt={lang === 'fr' ? sector.nameFr : sector.nameEn} className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-[#1a1a1a]/50" />
 
       {/* Active content */}
@@ -245,7 +245,7 @@ function SectorDetail({ sector, lang }) {
       <section className="pt-8 pb-16 md:pt-12 md:pb-20 bg-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="relative overflow-hidden rounded-2xl">
-            <img src={sector.heroImage} alt="" className="w-full h-[240px] md:h-[400px] object-cover" />
+            <img loading="lazy" decoding="async" src={sector.heroImage} alt="" className="w-full h-[240px] md:h-[400px] object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/60 to-transparent" />
             <div className="absolute top-6 left-6">
               <Link href="/sectors" className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-[#1a1a1a] hover:bg-white transition-all">
