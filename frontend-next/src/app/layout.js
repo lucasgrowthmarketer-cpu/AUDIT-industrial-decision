@@ -28,26 +28,129 @@ export const metadata = {
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": ["Organization", "ProfessionalService"],
+  "@id": "https://www.industrialdecision.com/#organization",
   "name": "Industrial Decision",
+  "alternateName": "Industrial Decision - Agence Web Industrie",
   "url": "https://www.industrialdecision.com",
-  "logo": "https://www.industrialdecision.com/logo-id.png",
-  "description": "Cabinet de conseil digital specialise dans l'industrie francaise. Intelligence decisionnelle, audit DRS, strategie d'acquisition digitale.",
-  "founder": { "@type": "Person", "name": "Lucas Ansel" },
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.industrialdecision.com/logo-id.png",
+    "width": 571,
+    "height": 580
+  },
+  "image": "https://www.industrialdecision.com/logo-id.png",
+  "description": "Agence web et SEO specialisee dans l'industrie francaise. Creation de sites internet, referencement naturel, optimisation pour les moteurs IA et generation de leads B2B pour les PME et ETI industrielles.",
+  "slogan": "Engineering Better Decisions",
+  "foundingDate": "2025",
+  "founder": {
+    "@type": "Person",
+    "name": "Lucas Ansel",
+    "jobTitle": "Fondateur et Architecte Strategique",
+    "sameAs": "https://www.linkedin.com/in/lucas-ansel-growth-hacker/"
+  },
+  "employee": [
+    {
+      "@type": "Person",
+      "name": "Lucas Ansel",
+      "jobTitle": "Fondateur et Architecte Strategique",
+      "sameAs": "https://www.linkedin.com/in/lucas-ansel-growth-hacker/"
+    },
+    {
+      "@type": "Person",
+      "name": "Ayoub Bouzalmad",
+      "jobTitle": "Directeur Technique",
+      "sameAs": "https://www.linkedin.com/in/ayoub-bouzalmad-ba17a8139/"
+    },
+    {
+      "@type": "Person",
+      "name": "David Ansel",
+      "jobTitle": "Operations et Conseil Industriel",
+      "sameAs": "https://www.linkedin.com/in/david-ansel-7ab435a8/"
+    }
+  ],
   "address": {
     "@type": "PostalAddress",
+    "addressLocality": "Paris",
     "addressCountry": "FR"
   },
-  "areaServed": "FR",
+  "email": "direction@industrialdecision.com",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "direction@industrialdecision.com",
+    "availableLanguage": ["French", "English"],
+    "areaServed": "FR"
+  },
+  "areaServed": [
+    { "@type": "Country", "name": "France" },
+    { "@type": "AdministrativeArea", "name": "Auvergne-Rhone-Alpes" },
+    { "@type": "AdministrativeArea", "name": "Hauts-de-France" },
+    { "@type": "AdministrativeArea", "name": "Grand Est" },
+    { "@type": "AdministrativeArea", "name": "Bourgogne-Franche-Comte" }
+  ],
   "sameAs": [
     "https://www.linkedin.com/company/industrial-decision"
   ],
   "knowsAbout": [
-    "Machine-outil",
-    "Restructuration industrielle",
-    "Intelligence decisionnelle",
-    "Audit digital industriel",
-    "Strategie d'acquisition"
-  ]
+    "Creation de site internet industriel",
+    "Referencement naturel SEO industriel",
+    "Referencement IA et GEO",
+    "Agence web pour l'industrie",
+    "Generation de leads B2B industriels",
+    "Negoce de machines-outils",
+    "Mecanique de precision",
+    "Maintenance industrielle",
+    "Transformation digitale industrielle"
+  ],
+  "serviceType": [
+    "Creation de site web",
+    "Referencement SEO",
+    "Optimisation pour moteurs generatifs (GEO)",
+    "Audit digital",
+    "Strategie d'acquisition B2B"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services Industrial Decision",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Audit SEO de site industriel",
+          "description": "Diagnostic complet de la visibilite digitale : SEO technique, contenu, positionnement Google et citations par les moteurs IA.",
+          "url": "https://www.industrialdecision.com/expertise/audit-drs"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Creation de site web industriel",
+          "description": "Conception de sites internet pour PME et ETI industrielles : catalogue produits, fiches machines, SEO integre des la conception.",
+          "url": "https://www.industrialdecision.com/expertise/site-decisionnel"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Referencement SEO et generation de leads B2B",
+          "description": "Strategie de referencement pour l'industrie : SEO technique, contenu metier, visibilite locale et generation de demandes entrantes qualifiees.",
+          "url": "https://www.industrialdecision.com/expertise/strategie-acquisition"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Accompagnement digital continu",
+          "description": "Suivi mensuel de la visibilite : production de contenu, optimisations SEO, reporting de performance.",
+          "url": "https://www.industrialdecision.com/expertise/accompagnement"
+        }
+      }
+    ]
+  }
 };
 
 export default function RootLayout({ children }) {

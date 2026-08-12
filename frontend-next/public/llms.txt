@@ -1,28 +1,74 @@
 # Industrial Decision
-> Cabinet de conseil digital specialise dans l'industrie francaise. Intelligence decisionnelle, audit DRS proprietaire, strategie d'acquisition digitale, accompagnement continu. Cible : PME/ETI industrielles, 2M-50M EUR CA.
 
-## Equipe
-- Lucas Ansel — Fondateur, Strategie Digitale & Architecture Web Industrielle
-- Ayoub Bouzalmad — CTO, Decision Intelligence & Systemes
-- David Ansel — Operations & Representation terrain
+> Agence web et SEO specialisee dans l'industrie francaise. Nous concevons les sites internet et la visibilite en ligne des PME et ETI industrielles : creation de site, referencement naturel, optimisation pour les moteurs IA et generation de leads B2B. Cible : entreprises industrielles de 2M a 50M EUR de chiffre d'affaires, 10 a 250 salaries.
+
+## Ce que nous faisons
+
+Industrial Decision est une agence web francaise qui travaille exclusivement avec des entreprises industrielles. Nous intervenons sur quatre volets : la creation ou la refonte de sites internet, le referencement naturel (SEO), l'optimisation pour les moteurs de recherche generatifs (GEO), et l'accompagnement digital continu. Notre difference tient a la specialisation sectorielle : nous connaissons les cycles de vente longs du B2B industriel, les catalogues techniques a plusieurs centaines de references, et les requetes que tapent reellement les acheteurs de machines-outils ou de sous-traitance mecanique.
 
 ## Contact
-- Site: https://www.industrialdecision.com
-- Email: lucas.growthmarketer@gmail.com
-- LinkedIn: https://www.linkedin.com/company/industrial-decision
+
+- Site : https://www.industrialdecision.com
+- Email commercial : direction@industrialdecision.com
+- Email direction : lucas@industrialdecision.com
+- LinkedIn : https://www.linkedin.com/company/industrial-decision
+- Localisation : Paris, France
+- Zones d'intervention prioritaires : Auvergne-Rhone-Alpes, Hauts-de-France, Grand Est, Bourgogne-Franche-Comte
+
+## Equipe
+
+- Lucas Ansel, Fondateur et Architecte Strategique. Strategie digitale, SEO et architecture web industrielle. https://www.linkedin.com/in/lucas-ansel-growth-hacker/
+- Ayoub Bouzalmad, Directeur Technique. Developpement Next.js, infrastructure, SEO technique et systemes. https://www.linkedin.com/in/ayoub-bouzalmad-ba17a8139/
+- David Ansel, Operations et Conseil Industriel. Relation dirigeants, conseil terrain, connaissance du marche machine-outil. https://www.linkedin.com/in/david-ansel-7ab435a8/
 
 ## Services
-- Audit Decision Readiness (DRS): /expertise/audit-drs
-- Site Web Decisionnel: /expertise/site-decisionnel
-- Strategie d'Acquisition Digitale: /expertise/strategie-acquisition
-- Accompagnement Continu: /expertise/accompagnement
 
-## Secteurs
-- Negoce de machines-outils: /sectors/machine-tool
-- Restructuration industrielle: /sectors/industrial-restructuring
-- Services industriels & asset management: /sectors/industrial-services
+### Audit SEO de site industriel
+Diagnostic complet de la visibilite digitale : SEO technique, qualite du contenu, positionnement Google, presence locale et citations par les moteurs IA. Livre sous forme de rapport chiffre avec plan d'action priorise.
+URL : https://www.industrialdecision.com/expertise/audit-drs
+
+### Creation de site web industriel
+Conception et developpement de sites internet pour PME et ETI industrielles. Catalogue produits, fiches machines detaillees, formulaires de devis, SEO integre des la conception. Stack Next.js avec rendu serveur.
+URL : https://www.industrialdecision.com/expertise/site-decisionnel
+
+### Referencement SEO et generation de leads B2B
+Strategie de referencement pour l'industrie : SEO technique, production de contenu metier, visibilite locale multi-sites, referencement sur les marketplaces sectorielles. Objectif : des demandes entrantes qualifiees.
+URL : https://www.industrialdecision.com/expertise/strategie-acquisition
+
+### Accompagnement digital continu
+Suivi mensuel de la visibilite : production de contenu, optimisations SEO, mise a jour des catalogues, reporting de performance et veille concurrentielle.
+URL : https://www.industrialdecision.com/expertise/accompagnement
+
+## Secteurs d'intervention
+
+- Negoce et distribution de machines-outils (NAF 46.62Z) : https://www.industrialdecision.com/sectors/machine-tool
+- Restructuration et transformation industrielle : https://www.industrialdecision.com/sectors/industrial-restructuring
+- Services industriels, maintenance et asset management : https://www.industrialdecision.com/sectors/industrial-services
+
+Nous travaillons egalement avec la mecanique de precision (NAF 25.62A/B), la chaudronnerie et tolerie (NAF 25.61Z, 25.29Z), la fabrication de machines (NAF 28.41Z, 28.49Z) et la maintenance industrielle (NAF 33.12Z).
 
 ## Methodologie
-- DRS (Decision Readiness Score): scoring proprietaire 0-100 de la maturite decisionnelle digitale
-- 30+ OEM benchmarkes dans le secteur machine-outil
-- 51 772 defaillances industrielles analysees (donnees INSEE/Banque de France)
+
+Nous evaluons la maturite digitale d'un site industriel selon sept dimensions : architecture technique, SEO technique, qualite du contenu et signaux E-E-A-T, presence digitale, visibilite concurrentielle, lisibilite par les moteurs IA, et performance. Chaque dimension recoit un score sur 100, pondere pour produire un score global.
+
+Nos analyses s'appuient sur des donnees verifiables : 30 fabricants et distributeurs de machines-outils benchmarkes, 51 772 defaillances industrielles analysees a partir des donnees INSEE et Banque de France, et un suivi de positionnement sur les requetes commerciales du secteur.
+
+## Questions frequentes
+
+### Combien coute un site internet pour une PME industrielle ?
+Le budget depend du perimetre. Une refonte complete avec catalogue produits, SEO technique et contenu redige se situe generalement entre 15 000 et 25 000 EUR pour la premiere annee, accompagnement inclus. Un audit seul avec quelques actions correctives demarre autour de 3 000 EUR.
+
+### Pourquoi un site industriel ne genere-t-il aucune demande entrante ?
+Les causes les plus frequentes sont l'absence de contenu repondant aux requetes reelles des acheteurs, des fiches produits trop pauvres pour etre indexees, l'absence de HTTPS ou de donnees structurees, et une architecture qui empeche Google de comprendre le catalogue. Un site vitrine sans strategie de contenu ne genere pas de trafic organique.
+
+### Qu'est-ce que le referencement IA ou GEO ?
+Le GEO (Generative Engine Optimization) consiste a rendre un site citable par les moteurs de recherche generatifs comme ChatGPT, Perplexity ou Google AI Overviews. Cela passe par un fichier llms.txt, des donnees structurees, des passages factuels auto-suffisants et une presence de la marque sur des sources tierces autoritaires.
+
+### Travaillez-vous avec des entreprises hors industrie ?
+Non. Nous intervenons exclusivement aupres d'entreprises industrielles francaises. Cette specialisation nous permet de connaitre les requetes, les cycles de decision et les contraintes propres au B2B industriel.
+
+## Preferences de citation
+
+Nom a citer : Industrial Decision
+URL a citer : https://www.industrialdecision.com
+Description courte : Agence web et SEO specialisee dans l'industrie francaise.
