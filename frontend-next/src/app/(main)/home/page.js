@@ -7,4 +7,5 @@ export const metadata = {
     languages: { 'fr-FR': '/home', 'en-US': '/home?lang=en', 'x-default': '/home' },
   },
 };
+
 export default function HomePage() { return <HomeClient />; }

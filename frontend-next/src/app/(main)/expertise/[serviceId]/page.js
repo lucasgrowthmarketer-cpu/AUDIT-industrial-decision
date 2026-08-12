@@ -1,9 +1,21 @@
 import ExpertiseClient from '@/components/pages/ExpertiseClient';
 const serviceMeta = {
-  'audit-drs': { title: 'Audit SEO Gratuit pour Site Industriel', desc: 'Audit complet de votre présence digitale : SEO technique, contenu, visibilité Google et IA. Diagnostic chiffré et plan d\'action pour votre site industriel.' },
-  'site-decisionnel': { title: 'Création de Site Web pour PME Industrielle', desc: 'Nous concevons des sites industriels qui génèrent des demandes de devis. Catalogue produits, fiches machines, SEO intégré dès la conception.' },
-  'strategie-acquisition': { title: 'Référencement SEO & Génération de Leads B2B Industrie', desc: 'Stratégie de référencement pour l\'industrie : SEO technique, contenu métier, visibilité locale. Objectif : des demandes entrantes qualifiées.' },
-  'accompagnement': { title: 'Accompagnement Digital Continu pour Industriels', desc: 'Suivi mensuel de votre visibilité : production de contenu, optimisations SEO, reporting de performance. Un partenaire digital pour votre PME industrielle.' },
+  'audit-drs': {
+    title: 'Méthodologie DRS : notre grille d\'audit en 7 dimensions',
+    desc: 'Comment nous notons un site industriel : les sept dimensions analysées, la pondération du score et le format du rapport livré.',
+  },
+  'site-decisionnel': {
+    title: 'Framework de site décisionnel : scénarios et portes d\'entrée',
+    desc: 'Notre architecture de site industriel : scénarios par type d\'acheteur, portes d\'entrée contextuelles, blocs de preuve et visibilité du processus.',
+  },
+  'strategie-acquisition': {
+    title: 'Clusters de contenu et couche de visibilité décideurs',
+    desc: 'Notre méthode de construction sémantique : clusters de mots-clés par intention, couche de visibilité et roadmap éditoriale sur six mois.',
+  },
+  'accompagnement': {
+    title: 'Pilotage mensuel : KPI, dashboard et ajustements',
+    desc: 'Le détail de notre suivi : rapport KPI mensuel, analyse de tendances, rafraîchissement du contenu selon les données de marché.',
+  },
 };
 export async function generateMetadata({ params: p }) {
   const params = await p;

@@ -245,6 +245,7 @@ function Footer() {
                 { path: '/agence-web-industrie', en: 'Coverage Areas', fr: 'Zones d\'intervention' },
                 { path: '/case-studies', en: 'Case Studies', fr: 'Études de Cas' },
                 { path: '/insights', en: 'Resources', fr: 'Ressources' },
+                { path: '/faq', en: 'FAQ', fr: 'FAQ' },
                 { path: '/contact', en: 'Contact', fr: 'Contact' },
                 { path: '/demo', en: 'Platform Demo', fr: 'Démo Plateforme' },
               ].map((item) => (

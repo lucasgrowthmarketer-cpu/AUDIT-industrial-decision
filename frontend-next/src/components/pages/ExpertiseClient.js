@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { ArrowRight, Search, Target, Zap, Shield, CheckCircle, ChevronRight, Eye, BarChart3, Route } from 'lucide-react';
+import { LANDINGS, LANDING_SLUGS } from '@/data/landings';
 
 const services = [
   {
@@ -24,7 +25,7 @@ const services = [
     deliverableFr: 'Rapport chiffré + plan d\'action + présentation',
     durationEn: '2-3 weeks', durationFr: '2-3 semaines',
     stat: { value: '30+', labelEn: 'OEMs in benchmark', labelFr: 'OEM dans le benchmark' },
-    image: '/images/data-analytics.webp',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600',
   },
   {
     id: 'site-decisionnel',
@@ -45,7 +46,7 @@ const services = [
     deliverableFr: 'Site complet + CMS + analytics',
     durationEn: '8-12 weeks', durationFr: '8-12 semaines',
     stat: { value: '4', labelEn: 'decision axes covered', labelFr: 'axes décisionnels couverts' },
-    image: '/images/infrastructure-tech.webp',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=600',
   },
   {
     id: 'strategie-acquisition',
@@ -66,7 +67,7 @@ const services = [
     deliverableFr: 'Document stratégique + roadmap 6 mois + dashboard KPI',
     durationEn: '4-6 weeks', durationFr: '4-6 semaines',
     stat: { value: '6', labelEn: 'month roadmap', labelFr: 'mois de roadmap' },
-    image: '/images/strategie-acquisition.webp',
+    image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&q=80&w=600',
   },
   {
     id: 'accompagnement',
@@ -87,7 +88,7 @@ const services = [
     deliverableFr: 'Rapport mensuel + session de pilotage',
     durationEn: 'Ongoing (min. 6 months)', durationFr: 'Continu (min. 6 mois)',
     stat: { value: '12', labelEn: 'KPIs tracked', labelFr: 'KPIs suivis' },
-    image: '/images/atelier-industriel.webp',
+    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=600',
   },
 ];
 
@@ -107,8 +108,8 @@ export default function ExpertiseClient({ serviceId }) {
       <section className="pt-8 pb-16 md:pt-12 md:pb-20 bg-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="relative overflow-hidden rounded-2xl">
-            <img loading="lazy" decoding="async"
-              src="/images/usinage-cnc.webp"
+            <img
+              src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=1400"
               alt={L === 'fr' ? 'Environnement industriel' : 'Industrial environment'}
               className="w-full h-[240px] md:h-[400px] object-cover"
             />
@@ -259,6 +260,53 @@ export default function ExpertiseClient({ serviceId }) {
           </div>
         </div>
       </section>
+
+      {/* NOS DOMAINES D'INTERVENTION — maillage vers les landings */}
+      <section className="py-20 md:py-28 bg-[#f5f7fa] border-t border-[#e2e8f0]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span className="text-sm font-semibold tracking-widest uppercase text-[#207bff] mb-3 block">
+            {L === 'fr' ? 'Nos domaines d\'intervention' : 'Our areas of expertise'}
+          </span>
+          <h2
+            className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-4"
+            style={{ fontFamily: 'Manrope, sans-serif' }}
+          >
+            {L === 'fr' ? 'Six sujets sur lesquels nous intervenons' : 'Six areas we work on'}
+          </h2>
+          <p className="text-[#4a5568] leading-relaxed text-lg mb-12 max-w-2xl">
+            {L === 'fr'
+              ? 'Chaque page détaille le problème traité, la méthode appliquée et les résultats obtenus chez nos clients industriels.'
+              : 'Each page details the problem addressed, the method applied and the results achieved with our industrial clients.'}
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {LANDING_SLUGS.map((slug) => {
+              const d = LANDINGS[slug];
+              return (
+                <Link
+                  key={slug}
+                  href={`/${slug}`}
+                  className="group block p-6 bg-white border border-[#e2e8f0] rounded-2xl hover:border-[#207bff]/40 hover:shadow-sm transition-all"
+                >
+                  <span className="text-xs font-semibold uppercase tracking-wider text-[#207bff] mb-3 block">
+                    {d.kicker}
+                  </span>
+                  <h3 className="text-lg font-bold text-[#1a1a1a] mb-2 leading-snug group-hover:text-[#207bff] transition-colors">
+                    {d.hero.headline}
+                  </h3>
+                  <p className="text-sm text-[#4a5568] leading-relaxed mb-4">
+                    {d.hero.subheadline}
+                  </p>
+                  <span className="inline-flex items-center gap-1.5 text-sm font-medium text-[#207bff]">
+                    {L === 'fr' ? 'En savoir plus' : 'Learn more'}
+                    <ChevronRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
@@ -295,7 +343,7 @@ function ServiceCardStack({ services, lang }) {
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Image */}
           <div className="relative h-[260px] md:h-auto overflow-hidden">
-            <img loading="lazy" decoding="async"
+            <img
               src={active.image}
               alt={lang === 'fr' ? active.titleFr : active.titleEn}
               className="w-full h-full object-cover"
@@ -428,7 +476,7 @@ function ServiceDetail({ service, lang }) {
       <section className="pt-8 pb-16 md:pt-12 md:pb-20 bg-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="relative overflow-hidden rounded-2xl">
-            <img loading="lazy" decoding="async" src={service.image} alt="" className="w-full h-[240px] md:h-[400px] object-cover" />
+            <img src={service.image} alt="" className="w-full h-[240px] md:h-[400px] object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/60 to-transparent" />
             <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 flex items-center gap-3">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-[#207bff]">
