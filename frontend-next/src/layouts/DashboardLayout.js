@@ -30,7 +30,7 @@ export default function DashboardLayout({ children }) {
             </p>
             <div className="flex gap-4 mt-2 text-sm">
               <a 
-                href="mailto:direction@industrialdecision.com" 
+                href="mailto:lucas@industrialdecision.com" 
                 className="text-[#e89565] hover:underline"
               >
                 Contact Us

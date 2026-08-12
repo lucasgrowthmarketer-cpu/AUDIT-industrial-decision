@@ -233,7 +233,7 @@ export default function Contact() {
 
               {/* Contact cards */}
               {[
-                { icon: Mail, title: 'Email', desc: 'direction@industrialdecision.com', link: 'mailto:direction@industrialdecision.com', accent: '#207bff' },
+                { icon: Mail, title: 'Email', desc: 'lucas@industrialdecision.com', link: 'mailto:lucas@industrialdecision.com', accent: '#207bff' },
                 { icon: Mail, title: 'LinkedIn', desc: 'Industrial Decision', link: 'https://www.linkedin.com/company/industrial-decision', accent: '#207bff' },
                 { icon: MapPin, title: L === 'fr' ? 'Localisation' : 'Location', desc: 'Paris, France', link: '#', accent: '#10b981' },
               ].map((m, i) => {
@@ -307,7 +307,7 @@ export default function Contact() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a1a] mb-4">{L === 'fr' ? 'Plutôt une démo en direct ?' : 'Prefer a live demo?'}</h2>
           <p className="text-[#4a5568] mb-8 max-w-xl mx-auto">{L === 'fr' ? 'Nous vous montrons notre plateforme avec vos propres données de marché.' : 'We\'ll show you our decision intelligence platform with your market data.'}</p>
-          <a href="mailto:direction@industrialdecision.com?subject=Demo%20Request" className="btn-primary text-lg px-10 py-4">
+          <a href="mailto:lucas@industrialdecision.com?subject=Demo%20Request" className="btn-primary text-lg px-10 py-4">
             {L === 'fr' ? 'Réserver une démo gratuite' : 'Book a demo'}
             <ArrowRight size={18} />
           </a>

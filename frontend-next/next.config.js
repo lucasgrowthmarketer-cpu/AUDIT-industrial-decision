@@ -6,6 +6,8 @@ const nextConfig = {
   async redirects() {
     return [
       // Old WordPress / legacy redirects if any
+      // La page d'accueil est /home : la racine y redirige en 301
+      { source: '/', destination: '/home', permanent: true },
       { source: '/accueil', destination: '/home', permanent: true },
     ];
   },

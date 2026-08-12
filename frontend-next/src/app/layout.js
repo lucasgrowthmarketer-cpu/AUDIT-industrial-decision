@@ -20,8 +20,8 @@ export const metadata = {
   twitter: { card: 'summary_large_image' },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: '/',
-    languages: { 'fr-FR': '/', 'en-US': '/?lang=en', 'x-default': '/' },
+    canonical: '/home',
+    languages: { 'fr-FR': '/home', 'en-US': '/home?lang=en', 'x-default': '/home' },
   },
 };
 
@@ -73,11 +73,11 @@ const organizationJsonLd = {
     "addressLocality": "Paris",
     "addressCountry": "FR"
   },
-  "email": "direction@industrialdecision.com",
+  "email": "lucas@industrialdecision.com",
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "sales",
-    "email": "direction@industrialdecision.com",
+    "email": "lucas@industrialdecision.com",
     "availableLanguage": ["French", "English"],
     "areaServed": "FR"
   },
@@ -101,13 +101,6 @@ const organizationJsonLd = {
     "Mecanique de precision",
     "Maintenance industrielle",
     "Transformation digitale industrielle"
-  ],
-  "serviceType": [
-    "Creation de site web",
-    "Referencement SEO",
-    "Optimisation pour moteurs generatifs (GEO)",
-    "Audit digital",
-    "Strategie d'acquisition B2B"
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",

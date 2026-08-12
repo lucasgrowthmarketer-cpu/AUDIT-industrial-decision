@@ -1,10 +1,11 @@
+import { REGION_SLUGS } from '@/data/regions';
+
 const BASE = 'https://www.industrialdecision.com';
 
 export default function sitemap() {
   const now = new Date().toISOString();
   return [
-    { url: `${BASE}/`, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
-    { url: `${BASE}/home`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE}/home`, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${BASE}/about`, lastModified: now, priority: 0.8 },
     { url: `${BASE}/team`, lastModified: now, priority: 0.7 },
     { url: `${BASE}/expertise`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
@@ -20,5 +21,12 @@ export default function sitemap() {
     { url: `${BASE}/insights`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/contact`, lastModified: now, priority: 0.9 },
     { url: `${BASE}/demo`, lastModified: now, priority: 0.6 },
+    { url: `${BASE}/agence-web-industrie`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    ...REGION_SLUGS.map((slug) => ({
+      url: `${BASE}/agence-web-industrie/${slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    })),
   ];
 }

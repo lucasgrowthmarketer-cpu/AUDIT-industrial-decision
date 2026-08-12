@@ -195,11 +195,11 @@ function CorporateFooter() {
             <ul className="space-y-3">
               <li>
                 <a 
-                  href="mailto:direction@industrialdecision.com"
+                  href="mailto:lucas@industrialdecision.com"
                   className="flex items-center gap-2 text-muted-foreground hover:text-[#e89565] transition-colors"
                 >
                   <Mail size={16} />
-                  <span>direction@industrialdecision.com</span>
+                  <span>lucas@industrialdecision.com</span>
                 </a>
               </li>
               <li>

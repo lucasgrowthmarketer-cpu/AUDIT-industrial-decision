@@ -9,8 +9,7 @@ Industrial Decision est une agence web francaise qui travaille exclusivement ave
 ## Contact
 
 - Site : https://www.industrialdecision.com
-- Email commercial : direction@industrialdecision.com
-- Email direction : lucas@industrialdecision.com
+- Email : lucas@industrialdecision.com
 - LinkedIn : https://www.linkedin.com/company/industrial-decision
 - Localisation : Paris, France
 - Zones d'intervention prioritaires : Auvergne-Rhone-Alpes, Hauts-de-France, Grand Est, Bourgogne-Franche-Comte

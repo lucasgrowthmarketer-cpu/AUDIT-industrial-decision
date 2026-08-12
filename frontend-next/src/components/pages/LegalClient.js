@@ -26,7 +26,7 @@ function Mentions({ lang }) {
             <p><strong>Industrial Decision</strong><br/>
             {lang === 'fr' ? 'Conseil digital spécialisé dans l\'industrie' : 'Digital advisory specialized in industry'}<br/>
             Paris, France<br/>
-            Email : direction@industrialdecision.com</p>
+            Email : lucas@industrialdecision.com</p>
           </section>
           <section>
             <h2 className="text-lg font-bold text-[#1a1a1a] mb-3">{lang === 'fr' ? 'Directeur de la publication' : 'Publication Director'}</h2>
@@ -74,7 +74,7 @@ function Privacy({ lang }) {
         <div className="prose prose-slate max-w-none space-y-6 text-[#4a5568] text-sm leading-relaxed">
           <section>
             <h2 className="text-lg font-bold text-[#1a1a1a] mb-3">{lang === 'fr' ? 'Responsable du traitement' : 'Data Controller'}</h2>
-            <p>Industrial Decision — direction@industrialdecision.com<br/>
+            <p>Industrial Decision — lucas@industrialdecision.com<br/>
             Paris, France</p>
           </section>
           <section>
@@ -110,8 +110,8 @@ function Privacy({ lang }) {
           <section>
             <h2 className="text-lg font-bold text-[#1a1a1a] mb-3">{lang === 'fr' ? 'Vos droits' : 'Your Rights'}</h2>
             <p>{lang === 'fr'
-              ? 'Conformément au RGPD, vous disposez des droits d\'accès, de rectification, d\'effacement, de limitation, de portabilité et d\'opposition au traitement de vos données. Pour exercer ces droits : direction@industrialdecision.com'
-              : 'Under GDPR, you have the right to access, rectify, erase, restrict, port, and object to the processing of your data. To exercise these rights: direction@industrialdecision.com'}</p>
+              ? 'Conformément au RGPD, vous disposez des droits d\'accès, de rectification, d\'effacement, de limitation, de portabilité et d\'opposition au traitement de vos données. Pour exercer ces droits : lucas@industrialdecision.com'
+              : 'Under GDPR, you have the right to access, rectify, erase, restrict, port, and object to the processing of your data. To exercise these rights: lucas@industrialdecision.com'}</p>
           </section>
           <section>
             <h2 className="text-lg font-bold text-[#1a1a1a] mb-3">{lang === 'fr' ? 'Cookies et analytics' : 'Cookies & Analytics'}</h2>
