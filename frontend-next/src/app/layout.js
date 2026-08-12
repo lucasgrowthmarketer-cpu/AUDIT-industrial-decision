@@ -5,11 +5,11 @@ import I18nProvider from '@/components/providers/I18nProvider';
 export const metadata = {
   metadataBase: new URL('https://www.industrialdecision.com'),
   title: {
-    default: 'Industrial Decision — Engineering Better Decisions',
+    default: 'Agence Web & SEO pour l\'Industrie Française | Industrial Decision',
     template: '%s | Industrial Decision',
   },
-  description: 'Audit et conseil digital pour l\'industrie francaise. Machine-outil, restructuration, services industriels. Methodologie DRS proprietaire.',
-  keywords: 'audit digital industriel, machine-outil, DRS, site web decisionnel, restructuration industrielle, conseil digital industrie France',
+  description: 'Agence web spécialisée industrie française. Création de sites, référencement SEO et IA pour PME et ETI industrielles. Machine-outil, mécanique, maintenance.',
+  keywords: 'agence web industrie, création site internet industriel, SEO industriel, référencement IA, agence web machine outil, site web PME industrielle, référencement B2B industrie',
   authors: [{ name: 'Industrial Decision' }],
   openGraph: {
     type: 'website',
@@ -19,6 +19,10 @@ export const metadata = {
   },
   twitter: { card: 'summary_large_image' },
   robots: { index: true, follow: true },
+  alternates: {
+    canonical: '/',
+    languages: { 'fr-FR': '/', 'en-US': '/?lang=en', 'x-default': '/' },
+  },
 };
 
 const organizationJsonLd = {

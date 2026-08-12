@@ -1,8 +1,10 @@
-export const dynamic = "force-dynamic";
 import TeamClient from '@/components/pages/TeamClient';
 export const metadata = {
-  title: 'Equipe',
-  description: 'Les experts derriere Industrial Decision. Strategie digitale, architecture web industrielle, operations.',
-  alternates: { canonical: '/team' },
+  title: 'L\'Équipe — Experts Web & SEO Industrie',
+  description: 'Lucas Ansel, Ayoub Bouzalmad et David Ansel. Stratégie digitale, développement web et conseil terrain pour l\'industrie française.',
+  alternates: {
+    canonical: '/team',
+    languages: { 'fr-FR': '/team', 'en-US': '/team?lang=en', 'x-default': '/team' },
+  },
 };
 export default function TeamPage() { return <TeamClient />; }

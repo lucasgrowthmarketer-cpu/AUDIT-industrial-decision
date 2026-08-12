@@ -1,4 +1,3 @@
-export const dynamic = "force-dynamic";
 import LegalClient from '@/components/pages/LegalClient';
 export async function generateMetadata({ params: p }) {
   const params = await p;

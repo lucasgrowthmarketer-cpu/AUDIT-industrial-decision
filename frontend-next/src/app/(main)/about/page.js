@@ -1,8 +1,10 @@
-export const dynamic = "force-dynamic";
 import AboutClient from '@/components/pages/AboutClient';
 export const metadata = {
-  title: 'A propos',
-  description: 'Industrial Decision, cabinet de conseil digital specialise dans l\'industrie francaise. Notre mission, notre approche, nos valeurs.',
-  alternates: { canonical: '/about' },
+  title: 'Notre Agence Web Spécialisée Industrie Française',
+  description: 'Industrial Decision accompagne les PME et ETI industrielles françaises dans leur visibilité digitale. Notre approche, notre méthode, nos convictions.',
+  alternates: {
+    canonical: '/about',
+    languages: { 'fr-FR': '/about', 'en-US': '/about?lang=en', 'x-default': '/about' },
+  },
 };
 export default function AboutPage() { return <AboutClient />; }

@@ -1,9 +1,11 @@
-export const dynamic = "force-dynamic";
 import ExpertiseClient from '@/components/pages/ExpertiseClient';
 export const metadata = {
-  title: 'Services — Audit DRS, Site Decisionnel, Strategie',
-  description: 'Nos services : Audit Decision Readiness (DRS), site web decisionnel, strategie d acquisition digitale, accompagnement continu.',
-  alternates: { canonical: '/expertise' },
+  title: 'Nos Services — Site Web, SEO et Référencement IA',
+  description: 'Création de sites industriels, référencement SEO, optimisation pour les moteurs IA et accompagnement continu. Services pensés pour les PME et ETI industrielles.',
+  alternates: {
+    canonical: '/expertise',
+    languages: { 'fr-FR': '/expertise', 'en-US': '/expertise?lang=en', 'x-default': '/expertise' },
+  },
 };
 const jsonLd = {
   "@context": "https://schema.org",

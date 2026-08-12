@@ -1,9 +1,11 @@
-export const dynamic = "force-dynamic";
 import SectorsClient from '@/components/pages/SectorsClient';
 export const metadata = {
-  title: 'Secteurs — Machine-outil, Restructuration, Services industriels',
-  description: 'Nos secteurs : negoce de machines-outils, restructuration industrielle, services industriels et asset management.',
-  alternates: { canonical: '/sectors' },
+  title: 'Secteurs — Machine-Outil, Mécanique, Maintenance',
+  description: 'Nous intervenons auprès des distributeurs de machines-outils, mécaniciens de précision, chaudronniers et prestataires de maintenance industrielle.',
+  alternates: {
+    canonical: '/sectors',
+    languages: { 'fr-FR': '/sectors', 'en-US': '/sectors?lang=en', 'x-default': '/sectors' },
+  },
 };
 const jsonLd = {
   "@context": "https://schema.org",
