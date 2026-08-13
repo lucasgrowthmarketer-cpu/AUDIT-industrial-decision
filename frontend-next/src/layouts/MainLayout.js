@@ -30,7 +30,14 @@ const navItems = [
     ]
   },
   { path: '/sectors', labelEn: 'Sectors', labelFr: 'Secteurs' },
-  { path: '/case-studies', labelEn: 'Case Studies', labelFr: 'Études de Cas' },
+  {
+    path: '/case-studies',
+    labelEn: 'Case Studies',
+    labelFr: 'Études de Cas',
+    dropdown: [
+      { path: '/etudes-de-cas/alma-machines-outils', labelEn: 'ALMA Machines-Outils', labelFr: 'ALMA Machines-Outils' },
+    ],
+  },
   { path: '/insights', labelEn: 'Insights', labelFr: 'Ressources' },
 ];
 
@@ -159,13 +166,29 @@ function Header() {
         <div className="lg:hidden bg-white border-t border-slate-100 animate-fade-in">
           <nav className="max-w-7xl mx-auto px-4 py-6 space-y-2">
             {navItems.map((item) => (
-              <Link
-                key={item.path}
-                href={item.path}
-                className="block px-4 py-3 rounded-lg text-base font-medium transition-colors text-[#4a5568] hover:text-[#207bff] hover:bg-[#f0f7ff]"
-              >
-                {currentLang === 'fr' ? item.labelFr : item.labelEn}
-              </Link>
+              <div key={item.path}>
+                <Link
+                  href={item.path}
+                  className="block px-4 py-3 rounded-lg text-base font-medium transition-colors text-[#4a5568] hover:text-[#207bff] hover:bg-[#f0f7ff]"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {currentLang === 'fr' ? item.labelFr : item.labelEn}
+                </Link>
+                {item.dropdown && (
+                  <div className="ml-4 border-l border-slate-100 pl-3 space-y-1 mb-1">
+                    {item.dropdown.map((subItem) => (
+                      <Link
+                        key={subItem.path}
+                        href={subItem.path}
+                        className="block px-4 py-2 rounded-lg text-sm text-[#718096] hover:text-[#207bff] hover:bg-[#f0f7ff] transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {currentLang === 'fr' ? subItem.labelFr : subItem.labelEn}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
             <div className="flex gap-2 mt-4">
               <Link

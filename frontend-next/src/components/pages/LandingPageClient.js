@@ -299,6 +299,30 @@ export default function LandingPageClient({ data, landings }) {
         </section>
       )}
 
+      {/* ─── ETUDE DE CAS ─── */}
+      <section className="py-14 bg-[#fafbfc] border-t border-[#e2e8f0]">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <Link
+            href="/etudes-de-cas/alma-machines-outils"
+            className="group flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 p-6 md:p-8 bg-white border border-[#e2e8f0] rounded-2xl hover:border-[#207bff]/40 transition-all"
+          >
+            <div className="flex-1">
+              <span className="text-xs font-semibold uppercase tracking-widest text-[#207bff] mb-2 block">
+                Étude de cas
+              </span>
+              <h2 className="text-lg font-bold text-[#1a1a1a] mb-2 group-hover:text-[#207bff] transition-colors">
+                ALMA Machines-Outils : de 8 à 91 sur 100 en cinq mois
+              </h2>
+              <p className="text-sm text-[#4a5568] leading-relaxed max-w-2xl">
+                Sept pages indexées au départ, 203 aujourd&apos;hui. Le détail complet du chantier,
+                y compris le bug qui empêchait les formulaires de fonctionner.
+              </p>
+            </div>
+            <ArrowRight className="w-5 h-5 text-[#207bff] flex-shrink-0 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
+      </section>
+
       {/* ─── CTA FINAL ─── */}
       <section className="py-20 bg-gradient-to-br from-[#207bff] to-[#1a62cc]">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center">

@@ -1,5 +1,6 @@
 import { REGION_SLUGS } from '@/data/regions';
 import { LANDING_SLUGS, LANDINGS } from '@/data/landings';
+import { CAS_SLUGS, CAS_CLIENTS } from '@/data/casClients';
 
 const BASE = 'https://www.industrialdecision.com';
 
@@ -44,6 +45,14 @@ export default function sitemap() {
     { url: `${BASE}/sectors/machine-tool`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/sectors/industrial-restructuring`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/sectors/industrial-services`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+
+    // ── Etudes de cas ──────────────────────────────────────
+    ...CAS_SLUGS.map((slug) => ({
+      url: `${BASE}/etudes-de-cas/${slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: CAS_CLIENTS[slug].priority ?? 0.8,
+    })),
 
     // ── Contenu et preuve ──────────────────────────────────
     { url: `${BASE}/faq`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
