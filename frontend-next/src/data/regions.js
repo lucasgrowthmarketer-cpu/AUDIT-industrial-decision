@@ -115,7 +115,7 @@ export const REGIONS = {
         nom: 'ALMA Machines-Outils',
         ville: null,
         secteur: 'Négoce de machines-outils',
-        resultat: 'Score SEO de 8 à 72 sur 100, 218 pages indexées',
+        resultat: 'Score SEO de 8 à 91 sur 100, 212 pages publiées',
       },
     ],
 

@@ -66,15 +66,15 @@ export const LANDINGS = {
       stats: [
         { v: '12 721', l: 'établissements cartographiés sur 4 régions' },
         { v: '30', l: 'fabricants et distributeurs benchmarkés' },
-        { v: '8 → 72', l: 'score SEO chez ALMA Machines-Outils' },
+        { v: '8 → 91', l: 'score SEO chez ALMA Machines-Outils' },
         { v: '218', l: 'pages indexées en 6 semaines' },
       ],
       caseStudy: {
         client: 'ALMA Machines-Outils',
         secteur: 'Distribution de machines-outils',
         avant: 'Score SEO 8/100, catalogue non indexable',
-        apres: 'Score 72/100, 218 pages indexées, formulaires segmentés par type de demande',
-        delai: '3 mois',
+        apres: 'Score 91/100, 212 pages publiées dont 203 indexées, formulaires segmentés',
+        delai: '5 mois',
       },
     },
 
@@ -161,7 +161,7 @@ export const LANDINGS = {
     benefits: {
       h2: 'Pourquoi maintenant, et pas dans deux ans',
       items: [
-        { t: 'Le terrain est encore libre', d: "Sur les 30 industriels français que nous avons audités, aucun n'avait de fichier llms.txt. Deux seulement avaient des données structurées exploitables." },
+        { t: 'Le terrain est encore libre', d: "Sur les 56 sites du secteur que nous avons audités en août 2026, quatre seulement disposent d'un fichier llms.txt et trois autorisent explicitement les crawlers IA." },
         { t: 'Une position difficile à déloger', d: "Comme pour le SEO en 2003, les premiers à structurer leur contenu prennent une place que les suivants peinent à reprendre." },
         { t: 'Un effet cumulatif avec le SEO', d: "Les données structurées et les passages citables améliorent aussi le référencement classique. Aucun effort n'est perdu." },
         { t: 'Une fenêtre de dix-huit mois', d: "Quand les grandes agences auront intégré le GEO à leurs offres standard, l'avantage aura disparu." },
@@ -175,10 +175,10 @@ export const LANDINGS = {
         "Ce n'est pas une démonstration commerciale : c'est exactement ce que nous déployons chez nos clients. Vous pouvez le vérifier en consultant notre llms.txt, ou en demandant à ChatGPT quelle agence web intervient auprès des industriels français.",
       ],
       stats: [
+        { v: '3/56', l: 'sites du secteur autorisant les crawlers IA' },
+        { v: '4/56', l: 'sites avec un fichier llms.txt' },
         { v: '74', l: 'lignes dans notre propre llms.txt' },
-        { v: '60+', l: 'propriétés dans notre schema Organization' },
         { v: '0', l: 'erreur au validateur schema.org' },
-        { v: '15', l: 'crawlers IA explicitement autorisés' },
       ],
     },
 
@@ -276,7 +276,7 @@ export const LANDINGS = {
       h2: 'Un exemple de ce que ça donne',
       body: [
         "Chez ALMA Machines-Outils, l'audit initial relevait un score de 8 sur 100 : catalogue non indexable, absence de données structurées, aucune page positionnée sur les marques distribuées.",
-        "Trois mois après application du plan d'action, le score atteignait 72 sur 100 avec 218 pages indexées. Le site est en ligne et ces chiffres sont vérifiables.",
+        "Cinq mois après le début du chantier, le score atteignait 91 sur 100. Le sitemap déclare 212 URLs, dont 203 sont indexées par Google. Le site est en ligne et ces chiffres sont vérifiables.",
       ],
       stats: [
         { v: '7', l: 'dimensions analysées' },
@@ -288,8 +288,8 @@ export const LANDINGS = {
         client: 'ALMA Machines-Outils',
         secteur: 'Distribution de machines-outils',
         avant: 'Score 8/100 : catalogue invisible, zéro donnée structurée',
-        apres: 'Score 72/100, 218 pages indexées, demandes entrantes qualifiées',
-        delai: '3 mois',
+        apres: 'Score 91/100, 212 pages publiées dont 203 indexées, demandes entrantes qualifiées',
+        delai: '5 mois',
       },
     },
 
@@ -389,20 +389,20 @@ export const LANDINGS = {
       h2: 'Le cas ALMA Machines-Outils',
       body: [
         "Distributeur de machines-outils, site refait intégralement. Le catalogue vivait dans des PDF, le score de visibilité était de 8 sur 100, et le site ne générait aucune demande entrante.",
-        "Trois mois plus tard : score de 72 sur 100, 218 pages indexées, système de téléchargement de documentation technique avec qualification des demandeurs, et formulaires segmentés par type de besoin.",
+        "Cinq mois plus tard : score de 91 sur 100, 212 pages publiées dont 203 indexées, système de téléchargement de documentation technique avec qualification des demandeurs, et formulaires segmentés par type de besoin.",
       ],
       stats: [
         { v: '2 mois', l: 'de la validation à la mise en ligne' },
         { v: '218', l: 'pages indexées en 6 semaines' },
-        { v: '8 → 72', l: 'score de visibilité' },
+        { v: '8 → 91', l: 'score de visibilité' },
         { v: '600+', l: 'fiches machines sur nos plus gros projets' },
       ],
       caseStudy: {
         client: 'ALMA Machines-Outils',
         secteur: 'Distribution de machines-outils',
         avant: 'Catalogue en PDF, score 8/100, zéro demande entrante',
-        apres: '218 pages indexées, score 72/100, formulaires qualifiants',
-        delai: '3 mois',
+        apres: '212 pages publiées dont 203 indexées, score 91/100, formulaires qualifiants',
+        delai: '5 mois',
       },
     },
 

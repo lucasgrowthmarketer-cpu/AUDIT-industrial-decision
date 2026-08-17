@@ -9,7 +9,7 @@ export const metadata = {
     "Vos questions sur le référencement industriel, la conception de sites, la refonte sans perte de positions et la visibilité dans les moteurs IA. Réponses sourcées.",
   alternates: {
     canonical: '/faq',
-    languages: { 'fr-FR': '/faq', 'en-US': '/faq?lang=en', 'x-default': '/faq' },
+    languages: { 'fr-FR': '/faq', 'x-default': '/faq' },
   },
 };
 

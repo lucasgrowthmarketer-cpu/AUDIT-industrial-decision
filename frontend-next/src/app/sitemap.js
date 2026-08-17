@@ -46,6 +46,9 @@ export default function sitemap() {
     { url: `${BASE}/sectors/industrial-restructuring`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/sectors/industrial-services`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
 
+    // ── Etude sectorielle ──────────────────────────────────
+    { url: `${BASE}/barometre-digital-machine-outil`, lastModified: now, changeFrequency: 'yearly', priority: 0.9 },
+
     // ── Etudes de cas ──────────────────────────────────────
     ...CAS_SLUGS.map((slug) => ({
       url: `${BASE}/etudes-de-cas/${slug}`,

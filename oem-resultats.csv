@@ -1,0 +1,29 @@
+nom,url,type,pays,score,https,rendu_serveur,catalogue_indexable,sitemap,robots_txt,crawlers_ia,llms_txt,donnees_structurees,title_ok,description_ok,h1_unique,viewport,images_alt,blog,encodage_utf8
+DMG MORI,https://en.dmgmori.com/,OEM,Allemagne,71,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1
+Mazak,https://www.mazak.com/us-en/,OEM,Japon,49,1,1,1,0,0,0,0,0,1,0,0,1,0,1,1
+Okuma Europe,https://www.okuma.eu/,OEM,Japon,73,1,1,1,1,1,0,0,0,1,1,1,1,0,1,1
+Makino,https://www.makino.com/,OEM,Japon,78,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+HURON Graffenstaden,https://huron.fr/,OEM,France,69,1,1,1,1,1,0,0,1,0,0,0,1,1,1,1
+SOMAB,https://www.somab.fr/en/,OEM,France,34,1,1,0,0,0,0,0,0,1,0,0,1,0,0,1
+INDEX-TRAUB France,https://www.index-france.fr/fr/,OEM,Allemagne,73,1,1,1,1,1,0,0,0,1,1,1,1,0,1,1
+Tornos,https://www.tornos.com/,OEM,Suisse,54,1,1,1,0,1,0,0,0,1,0,0,1,0,1,1
+Citizen Machinery Europe,https://www.citizen.de/en/,OEM,Japon,78,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1
+TSUGAMI Europe,https://www.yamazen.de/tsugami,OEM,Japon,52,1,1,0,1,1,0,1,0,1,0,0,1,0,0,1
+GROB,https://www.grobgroup.com/en/,OEM,Allemagne,58,1,1,1,0,1,0,0,0,0,0,1,1,1,1,1
+Hermle France,https://www.hermle.fr/,OEM,Allemagne,52,1,1,0,1,1,0,0,0,1,1,0,1,0,0,1
+Starrag,https://www.starrag.com/,OEM,Suisse,59,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1
+CHIRON Group,https://chiron-group.com/,OEM,Allemagne,66,1,1,1,0,1,0,0,0,1,1,1,1,0,1,1
+Brother Machine Tools,https://machinetool.global.brother/en-us,OEM,Japon,73,1,1,1,1,1,0,0,0,1,1,1,1,0,1,1
+Hurco France,https://www.hurco.com/fr,OEM,Etats-Unis,64,1,1,1,1,1,0,0,0,1,1,0,1,0,0,1
+United Grinding,https://www.grinding.ch/en/,OEM,Suisse,67,1,1,1,1,1,0,0,0,1,1,0,1,0,1,1
+Sodick Europe,https://sodick.eu/,OEM,Japon,73,1,1,1,1,1,0,0,0,1,1,1,1,0,1,1
+Fives Machining,https://www.fivesgroup.com/,Integrateur,France,66,1,1,1,1,1,0,0,0,0,1,1,1,0,1,1
+GF Machining Solutions,https://www.gfms.com/,OEM,Suisse,61,1,1,0,1,1,0,0,0,1,1,1,1,0,1,1
+Danobat,https://www.danobat.com/en,OEM,Espagne,82,1,1,1,1,1,0,0,1,1,0,1,1,1,1,1
+Junker Group,https://www.junker-group.com/,OEM,Allemagne,67,1,1,1,1,1,0,0,0,1,0,1,1,0,1,1
+LIPEMEC,https://www.lipemec.com/en_index.php,Integrateur,France,38,1,1,0,0,0,0,0,0,0,0,1,1,1,0,1
+KASTO,https://www.kasto.com/en/,OEM,Allemagne,73,1,1,1,1,1,0,0,0,1,1,1,1,0,1,1
+BEHRINGER France,https://www.behringerfrance.fr/,OEM,Allemagne,65,1,1,1,0,0,0,0,1,1,1,0,1,0,1,1
+AMADA France,https://www.amada.eu/fr-fr/,OEM,Japon,54,1,1,1,1,1,0,0,0,0,0,0,1,0,1,1
+Kaltenbach,https://www.kaltenbach.com/de/,OEM,Allemagne,67,1,1,1,1,1,0,0,0,1,1,0,1,0,1,1
+ZAYER,https://www.zayer.com/en/,OEM,Espagne,61,1,1,1,0,0,0,0,0,1,1,1,1,0,1,1

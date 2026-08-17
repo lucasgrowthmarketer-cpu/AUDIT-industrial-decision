@@ -18,7 +18,7 @@ export const CAS_CLIENTS = {
 
     title: 'Étude de cas ALMA Machines-Outils : de 8 à 91 sur 100',
     description:
-      "Un distributeur de machines-outils invisible sur Google. Cinq mois plus tard : 203 pages indexées, 2 060 impressions mensuelles, score SEO 91/100. Le détail complet.",
+      "Un distributeur de machines-outils invisible sur Google. Cinq mois plus tard : 212 pages publiées, 203 indexées, 2 060 impressions mensuelles, score SEO 91/100. Le détail complet.",
 
     hero: {
       kicker: 'Étude de cas · Machine-outil',
@@ -29,7 +29,7 @@ export const CAS_CLIENTS = {
 
     kpis: [
       { v: '8 → 91', l: 'score SEO sur 100' },
-      { v: '7 → 203', l: 'pages indexées' },
+      { v: '7 → 212', l: 'pages publiées' },
       { v: '2 060', l: 'impressions mensuelles' },
       { v: '224', l: 'clics organiques cumulés' },
     ],
@@ -49,7 +49,7 @@ export const CAS_CLIENTS = {
     bento: {
       h2: 'Ce qu\u2019on a construit',
       intro:
-        "203 pages indexées, ce n'est pas un chiffre gonflé artificiellement. Chaque page correspond à une intention de recherche réelle : une machine précise, une marque, un bassin géographique, un service.",
+        "212 pages publiées, dont 203 déjà indexées par Google : ce n'est pas un chiffre gonflé artificiellement. Chaque page correspond à une intention de recherche réelle : une machine précise, une marque, un bassin géographique, un service.",
       items: [
         {
           t: 'Fiches machines',
@@ -141,7 +141,7 @@ export const CAS_CLIENTS = {
       kicker: 'Août 2026',
       h2: 'Où en est le site aujourd\u2019hui',
       body: [
-        "Cinq mois après le début du chantier, le site obtient un score de 91 sur 100. Google Search Console ne relève aucun problème d'exploration sur les quatre-vingt-dix derniers jours.",
+        "Cinq mois après le début du chantier, le site obtient un score de 91 sur 100. Le sitemap déclare 212 URLs, dont 203 sont indexées par Google. Search Console ne relève aucun problème d'exploration sur les quatre-vingt-dix derniers jours.",
         "Le détail par catégorie : contenu 100 sur 100, SEO technique 92, performance 90, balises meta 83. Le trafic est à 74 % français, ce qui correspond au marché visé.",
       ],
       image: '/images/cas/alma/alma-duo-iphone-transparent.png',
@@ -152,7 +152,8 @@ export const CAS_CLIENTS = {
         { l: 'Balises meta', v: 83 },
       ],
       details: [
-        { l: 'Pages indexées', v: '203' },
+        { l: 'URLs au sitemap', v: '212' },
+        { l: 'Pages indexées par Google', v: '203' },
         { l: 'Impressions sur 28 jours', v: '2 060' },
         { l: 'Clics cumulés', v: '224' },
         { l: 'Mots sur la page d\u2019accueil', v: '1 870' },

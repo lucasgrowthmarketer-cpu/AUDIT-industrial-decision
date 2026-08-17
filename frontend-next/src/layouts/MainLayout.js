@@ -38,7 +38,19 @@ const navItems = [
       { path: '/etudes-de-cas/alma-machines-outils', labelEn: 'ALMA Machines-Outils', labelFr: 'ALMA Machines-Outils' },
     ],
   },
-  { path: '/insights', labelEn: 'Insights', labelFr: 'Ressources' },
+  {
+    path: '/insights',
+    labelEn: 'Insights',
+    labelFr: 'Ressources',
+    dropdown: [
+      {
+        path: '/barometre-digital-machine-outil',
+        labelEn: 'Machine Tool Digital Barometer 2026',
+        labelFr: 'Baromètre digital machine-outil 2026',
+      },
+      { path: '/faq', labelEn: 'FAQ', labelFr: 'FAQ' },
+    ],
+  },
 ];
 
 function Header() {

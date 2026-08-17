@@ -80,7 +80,7 @@ const SECTIONS = [
     stats: [
       { valeur: '2 mois', label: 'de la validation à la mise en ligne' },
       { valeur: '600+', label: 'fiches machines indexables sur nos plus gros projets' },
-      { valeur: '8→72', label: 'score SEO chez ALMA Machines-Outils' },
+      { valeur: '8→91', label: 'score SEO chez ALMA Machines-Outils' },
       { valeur: '218', label: 'pages indexées en 6 semaines' },
     ],
     actions: [
