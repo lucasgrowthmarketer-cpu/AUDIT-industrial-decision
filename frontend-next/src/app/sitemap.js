@@ -39,6 +39,7 @@ export default function sitemap() {
     { url: `${BASE}/expertise/site-decisionnel`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/expertise/strategie-acquisition`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/expertise/accompagnement`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/experience-produit-3d`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
 
     // ── Secteurs ───────────────────────────────────────────
     { url: `${BASE}/sectors`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },

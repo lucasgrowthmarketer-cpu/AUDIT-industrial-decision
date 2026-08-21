@@ -27,6 +27,7 @@ const navItems = [
       { path: '/expertise/site-decisionnel', labelEn: 'Decision-Grade Website', labelFr: 'Site Décisionnel' },
       { path: '/expertise/strategie-acquisition', labelEn: 'Acquisition Strategy', labelFr: 'Stratégie d\'Acquisition' },
       { path: '/expertise/accompagnement', labelEn: 'Ongoing Advisory', labelFr: 'Accompagnement' },
+      { path: '/experience-produit-3d', labelEn: '3D Product Experience', labelFr: 'Expérience Produit 3D' },
     ]
   },
   { path: '/sectors', labelEn: 'Sectors', labelFr: 'Secteurs' },
