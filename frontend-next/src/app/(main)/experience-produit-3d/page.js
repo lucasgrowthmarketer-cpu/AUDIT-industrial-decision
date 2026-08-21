@@ -13,7 +13,7 @@ export const metadata = {
     description: DESC,
     url: 'https://www.industrialdecision.com/experience-produit-3d',
     type: 'website',
-    images: [{ url: '/images/experience/capture-2.png', width: 1200, height: 750 }],
+    images: [{ url: '/images/experience/capture-2.jpg', width: 1200, height: 750 }],
   },
 };
 

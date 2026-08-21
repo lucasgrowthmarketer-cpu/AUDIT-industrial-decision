@@ -30,7 +30,7 @@ function Frame({ n, label, className = '' }) {
       </div>
       <div className="relative aspect-[16/10]">
         {!failed ? (
-          <img src={`/images/experience/capture-${n}.png`} alt={label}
+          <img src={`/images/experience/capture-${n}.jpg`} alt={label}
                className="absolute inset-0 h-full w-full object-cover"
                onError={() => setFailed(true)} />
         ) : (
